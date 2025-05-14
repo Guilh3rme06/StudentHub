@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/carousel.css">
+</head>
+<body>
+    <header>
+        <div class="div-nav">
+            <nav>
+                <div class="logo"><a href="#"><img class="image-logo" src="src/Ipluso_logo.webp" alt="Logo"></a></div>
+                <ul>
+                    <li><a class="home" href="#">Início</a></li>
+                    <li><a class="spaces_and_events" href="#">Espaços e Eventos</a></li>
+                    <li><a class="services" href="#">Serviços</a></li>
+                    <li><a class="contact" href="#">Contactos</a></li>
+                    <li><a class="login_register" href="#">Login/Registar</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <h1 class="welcome">Boas-vindas!</h1>
+    </header>
+    <main>
+        <section class="main">
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="src/Carrosell Student Hub 1.webp" alt="Image1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="src/Carrosell Student Hub 2.webp" alt="Image2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="src/Carrosell Student Hub 3.webp" alt="Image3">
+                    </div>
+                </div>
+                <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+                <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+                <div class="carousel-indicators">
+                    <span onclick="goToSlide(0)" class="active"></span>
+                    <span onclick="goToSlide(1)"></span>
+                    <span onclick="goToSlide(2)"></span>
+                </div>
+            </div>
+        </section>
+
+
+    <script src="components/carousel.js"></script>
+</body>
+</html>

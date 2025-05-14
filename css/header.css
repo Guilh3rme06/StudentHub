@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    text-align: center;
+}
+
+.div-nav{
+    background-color: #1B1B1B;
+    padding: 0.7rem;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+li{
+    margin: 0 0rem;
+    transition: 0.3s ease-in-out;
+}
+
+.home, .spaces_and_events, .services, .contact, .login_register{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+}
+
+.home:hover, .spaces_and_events:hover, .services:hover, .contact:hover, .login_register:hover{
+    background-color: white;
+    color: black;
+    border-radius: 0.2rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.image-logo{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 70rem;
+    margin: auto;
+}
+
+.welcome{
+    margin: 2rem;
+}
