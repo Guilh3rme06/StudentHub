@@ -1,0 +1,28 @@
+.mosaic{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.image-sec3-1, .image-sec3-2, .image-sec3-3{
+    width: 13rem;
+    height: 13rem;
+    object-fit:cover;
+    box-shadow: 2px 2px 5px #888888;
+}
+
+.image-sec3-4, .image-sec3-5{
+    width: 13rem;
+    height: 13rem;
+    object-fit:scale-down;
+    box-shadow: 2px 2px 5px #888888;
+}
+
+.text-cards{
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 20px;
+    margin: 1rem;
+}
