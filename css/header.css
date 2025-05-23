@@ -1,7 +1,5 @@
 * {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
@@ -17,11 +15,6 @@ body {
 ul{
     list-style: none;
     display: flex;
-}
-
-li{
-    margin: 0 0rem;
-    transition: 0.3s ease-in-out;
 }
 
 .home, .spaces_and_events, .services, .contact, .login_register{
@@ -50,8 +43,4 @@ nav{
     align-items: center;
     max-width: 70rem;
     margin: auto;
-}
-
-.welcome{
-    margin: 2rem;
 }

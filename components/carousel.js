@@ -1,24 +1,27 @@
-// Variável que armazena o índice do slide atualmente visível
+// Índice do slide atualmente visível
 let currentSlide = 0;
 
-// Seleciona todos os elementos que representam os slides do carrossel
+// Seleciona todos os slides do carrossel
 const slides = document.querySelectorAll('.carousel-item');
 
-// Seleciona todos os indicadores (pontos) do carrossel
+// Seleciona todos os indicadores (os "pontos" abaixo do carrossel)
 const indicators = document.querySelectorAll('.carousel-indicators span');
+
+// Inicia o avanço automático dos slides a cada 3 segundos
+let autoSlide = setInterval(nextSlide, 3000);
 
 /**
  * Mostra o slide correspondente ao índice fornecido.
- * Atualiza a posição dos slides e o estado ativo dos indicadores.
- * 
- * @param {number} index - Índice do slide a ser exibido
+ * Atualiza também o indicador ativo.
  */
 function showSlide(index) {
     slides.forEach((slide, i) => {
-        // Move os slides horizontalmente para mostrar o slide correto
-        slide.style.transform = `translateX(-${index * 100}%)`;
-        // Atualiza o estado ativo do indicador correspondente
-        indicators[i].classList.toggle('active', i === index);
+        // Só o slide com índice igual ao atual recebe a classe 'active'
+        slide.classList.toggle('active', i === index);
+    });
+    indicators.forEach((number, i) => {
+        // Só o indicador correspondente ao slide atual recebe a classe 'active'
+        number.classList.toggle('active', i === index);
     });
     // Atualiza o índice do slide atual
     currentSlide = index;
@@ -26,30 +29,43 @@ function showSlide(index) {
 
 /**
  * Avança para o próximo slide.
- * Se estiver no último slide, volta para o primeiro.
+ * Se estiver no último, volta ao primeiro.
  */
 function nextSlide() {
-    const nextIndex = (currentSlide + 1) % slides.length; // Calcula o índice do próximo slide
-    showSlide(nextIndex); // Mostra o próximo slide
+    let next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+}
+
+/**
+ * Função chamada ao clicar no botão "next".
+ * Avança para o próximo slide e para o avanço automático.
+ */
+function nextSlideManual() {
+    nextSlide();
+    clearInterval(autoSlide);
 }
 
 /**
  * Volta para o slide anterior.
- * Se estiver no primeiro slide, vai para o último.
+ * Se estiver no primeiro, vai para o último.
  */
 function prevSlide() {
-    const prevIndex = (currentSlide - 1 + slides.length) % slides.length; // Calcula o índice do slide anterior
-    showSlide(prevIndex); // Mostra o slide anterior
+    let prev = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(prev);
 }
 
 /**
- * Vai diretamente para o slide especificado pelo índice.
- * 
- * @param {number} index - Índice do slide a ser exibido
+ * Função chamada ao clicar no botão "prev".
+ * Volta para o slide anterior e para o avanço automático.
  */
-function goToSlide(index) {
-    showSlide(index); // Mostra o slide correspondente ao índice fornecido
+function prevSlideManual() {
+    prevSlide();
+    clearInterval(autoSlide);
 }
 
-// Alterna automaticamente entre os slides a cada 3 segundos
-setInterval(nextSlide, 3000);
+/**
+ * Vai diretamente para o slide com o índice indicado (usado pelos indicadores).
+ */
+function goToSlide(index) {
+    showSlide(index);
+}

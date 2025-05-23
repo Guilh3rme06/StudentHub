@@ -1,0 +1,109 @@
+:root {
+    --primary-color: #0056b3; /* Azul escuro principal */
+    --secondary-color: #f8f9fa; /* Cinza claro para fundos */
+    --text-color: #333;
+    --light-text-color: #fff;
+    --border-color: #ddd;
+    --spacing-unit: 1.5rem; /* Unidade de espaçamento base */
+    --card-bg-color: #fff;
+    --shadow-light: 0 4px 10px rgba(0,0,0,0.05);
+    --shadow-medium: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.main-footer {
+    background-color: #222;
+    color: var(--light-text-color);
+    padding: 3rem 15rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+.main-footer .footer-columns.simplified {
+    display: flex; /* Usa flexbox para alinhamento horizontal */
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: flex-start; /* Alinha o conteúdo ao topo de cada coluna */
+    margin-bottom: 2rem;
+    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+}
+
+.main-footer .footer-col {
+    width: auto; /* Deixa o flexbox controlar a largura */
+    margin-bottom: 1rem; /* Espaçamento para responsividade */
+}
+
+.main-footer h4 {
+    color: var(--light-text-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.main-footer ul {
+    list-style: none;
+}
+
+.main-footer ul li {
+    margin-bottom: 0.6rem;
+}
+
+.main-footer ul li a {
+    color: var(--light-text-color);
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.main-footer ul li a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.main-footer .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.main-footer .social-icons img {
+    width: 35px;
+    height: 35px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.main-footer .social-icons img:hover {
+    transition: 0.3s ease-in-out;
+    filter: none; /* Retorna à cor original ou use uma cor específica */
+}
+
+/* Estilos específicos para as colunas do footer simplificado */
+.footer-col.social-col {
+    text-align: left; /* Alinha "Siga-nos" à esquerda */
+}
+
+.footer-col.contact-col {
+    text-align: right; /* Alinha "Contacte-nos" à direita */
+}
+
+.footer-col.contact-col p {
+    margin-bottom: 0.5rem; /* Espaçamento entre as linhas de contato */
+}
+
+.footer-col.contact-col p a {
+    color: var(--light-text-color); /* Garante que o e-mail e telefone fiquem brancos */
+}
+
+
+.main-footer .footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+}
+
+.main-footer .footer-bottom a {
+    color: var(--primary-color);
+    font-weight: bold;
+}

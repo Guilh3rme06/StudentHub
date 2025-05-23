@@ -1,10 +1,10 @@
 .carousel {
     position: relative;
     width: 70%;
-    height: 500px;
+    height: 31.25rem;
     margin: auto;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 1.25rem;
 }
 
 .carousel-inner {
@@ -13,8 +13,13 @@
 }
 
 .carousel-item {
+    display: none;
     min-width: 100%;
     transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+    display: block;
 }
 
 .carousel-item img {
@@ -26,36 +31,36 @@
 .carousel-control {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     font-size: 2rem;
     cursor: pointer;
     padding: 0.5rem 1rem;
-    z-index: 10;
 }
 
 .carousel-control.prev {
-    left: 10px;
+    left: 0.625rem;
 }
 
 .carousel-control.next {
-    right: 10px;
+    right: 0.625rem;
 }
 
 .carousel-indicators {
     position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 0.625rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     display: flex;
+    justify-content: center;
     gap: 0.5rem;
 }
 
 .carousel-indicators span {
-    width: 10px;
-    height: 10px;
+    width: 0.625rem;
+    height: 0.625rem;
     background-color: white;
     border-radius: 50%;
     cursor: pointer;
