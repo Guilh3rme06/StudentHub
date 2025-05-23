@@ -1,25 +1,7 @@
-/* Variáveis CSS para fácil customização */
-:root {
-    --primary-color: #0056b3; /* Azul escuro principal */
-    --secondary-color: #f8f9fa; /* Cinza claro para fundos */
-    --text-color: #333;
-    --light-text-color: #fff;
-    --border-color: #ddd;
-    --spacing-unit: 1.5rem; /* Unidade de espaçamento base */
-    --card-bg-color: #fff;
-    --shadow-light: 0 4px 10px rgba(0,0,0,0.05);
-    --shadow-medium: 0 5px 15px rgba(0,0,0,0.1);
-}
-
 /* Reset básico e estilos globais */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--secondary-color);
@@ -105,58 +87,7 @@ a:hover {
     display: block;
 }
 
-.main-nav ul {
-    list-style: none;
-    display: flex;
-    gap: var(--spacing-unit);
-}
-
-.main-nav ul li a {
-    color: var(--text-color);
-    font-weight: 600;
-    padding: 0.5rem 0;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-.main-nav ul li a.active,
-.main-nav ul li a:hover {
-    color: var(--primary-color);
-}
-
 /* Efeito sublinhado na navegação */
-.main-nav ul li a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 100%;
-    height: 2px;
-    background-color: var(--primary-color);
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
-}
-
-.main-nav ul li a.active::after,
-.main-nav ul li a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-.main-nav ul li .contact-link-header {
-    background-color: var(--primary-color);
-    color: var(--light-text-color);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.main-nav ul li .contact-link-header:hover {
-    background-color: #004085;
-    text-decoration: none;
-    transform: translateY(-1px); /* Pequena animação no hover */
-}
 
 /* Hero Section */
 .hero-section {
