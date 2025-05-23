@@ -1,7 +1,25 @@
+/* Variáveis CSS para fácil customização */
+:root {
+    --primary-color: #0056b3; /* Azul escuro principal */
+    --secondary-color: #f8f9fa; /* Cinza claro para fundos */
+    --text-color: #333;
+    --light-text-color: #fff;
+    --border-color: #ddd;
+    --spacing-unit: 1.5rem; /* Unidade de espaçamento base */
+    --card-bg-color: #fff;
+    --shadow-light: 0 4px 10px rgba(0,0,0,0.05);
+    --shadow-medium: 0 5px 15px rgba(0,0,0,0.1);
+}
+
 /* Reset básico e estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--secondary-color);
@@ -87,7 +105,58 @@ a:hover {
     display: block;
 }
 
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-unit);
+}
+
+.main-nav ul li a {
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a.active,
+.main-nav ul li a:hover {
+    color: var(--primary-color);
+}
+
 /* Efeito sublinhado na navegação */
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.main-nav ul li a.active::after,
+.main-nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.main-nav ul li .contact-link-header {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.main-nav ul li .contact-link-header:hover {
+    background-color: #004085;
+    text-decoration: none;
+    transform: translateY(-1px); /* Pequena animação no hover */
+}
 
 /* Hero Section */
 .hero-section {
@@ -343,4 +412,227 @@ a:hover {
 .contact-cta .btn:hover {
     background-color: #e2e6ea;
     color: #004085;
+}
+
+/* 4. Footer */
+/* ... (Seu CSS existente, até a seção do footer) ... */
+
+/* 4. Footer */
+.main-footer {
+    background-color: #222;
+    color: var(--light-text-color);
+    padding: 3rem 0;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+.main-footer .footer-columns.simplified {
+    display: flex; /* Usa flexbox para alinhamento horizontal */
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: flex-start; /* Alinha o conteúdo ao topo de cada coluna */
+    margin-bottom: 2rem;
+    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+}
+
+.main-footer .footer-col {
+    width: auto; /* Deixa o flexbox controlar a largura */
+    margin-bottom: 1rem; /* Espaçamento para responsividade */
+}
+
+.main-footer h4 {
+    color: var(--light-text-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.main-footer ul {
+    list-style: none;
+}
+
+.main-footer ul li {
+    margin-bottom: 0.6rem;
+}
+
+.main-footer ul li a {
+    color: var(--light-text-color);
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.main-footer ul li a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.main-footer .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.main-footer .social-icons img {
+    width: 35px;
+    height: 35px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.main-footer .social-icons img:hover {
+    transform: translateY(-3px) scale(1.1);
+    filter: none; /* Retorna à cor original ou use uma cor específica */
+}
+
+/* Estilos específicos para as colunas do footer simplificado */
+.footer-col.social-col {
+    text-align: left; /* Alinha "Siga-nos" à esquerda */
+}
+
+.footer-col.contact-col {
+    text-align: right; /* Alinha "Contacte-nos" à direita */
+}
+
+.footer-col.contact-col p {
+    margin-bottom: 0.5rem; /* Espaçamento entre as linhas de contato */
+}
+
+.footer-col.contact-col p a {
+    color: var(--light-text-color); /* Garante que o e-mail e telefone fiquem brancos */
+}
+
+
+.main-footer .footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+}
+
+.main-footer .footer-bottom a {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* ... (Restante do seu CSS para outras seções) ... */
+/* Responsividade */
+@media (max-width: 992px) {
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.2rem; }
+    h3 { font-size: 1.6rem; }
+
+    .hero-section {
+        padding: 4rem 0;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem 1rem;
+        margin-top: 1rem;
+    }
+
+    .main-header .container {
+        flex-direction: column;
+    }
+
+    .main-header .logo {
+        margin-bottom: 1rem;
+    }
+
+    .interlaced-blocks {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-auto-rows: minmax(250px, auto);
+    }
+    /* Resetando as áreas para telas menores */
+    .interlaced-blocks > div { grid-area: auto !important; }
+
+    .carousel-item {
+        flex: 0 0 50%; /* 2 itens por vista no tablet */
+        min-width: 50%;
+        margin: 0 0.5rem;
+    }
+
+    .event-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .contact-cta p {
+        font-size: 1.5rem;
+    }
+
+    .main-footer .footer-columns.simplified {
+        flex-direction: column; /* Empilha as colunas verticalmente em telas pequenas */
+        align-items: center; /* Centraliza o conteúdo */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .footer-col.social-col,
+    .footer-col.contact-col {
+        text-align: center; /* Centraliza o texto e os ícones */
+        width: 100%; /* Ocupa a largura total */
+    }
+
+    .main-footer .social-icons {
+        justify-content: center; /* Centraliza os ícones sociais */
+    }
+}
+
+@media (max-width: 767px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.4rem; }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    .main-nav ul li {
+        margin: 0.5rem 0.5rem;
+    }
+
+    .interlaced-blocks, .event-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    }
+
+    .space-block img, .event-card img {
+        height: 150px;
+    }
+
+    .carousel-item {
+        flex: 0 0 100%; /* Um item por vista no mobile */
+        min-width: 100%;
+        margin: 0;
+    }
+
+    .contact-cta p {
+        font-size: 1.2rem;
+    }
+
+    .main-footer .footer-columns {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .main-footer .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+    .btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
 }
