@@ -1,0 +1,598 @@
+/* Variáveis CSS para fácil customização */
+:root {
+    --primary-color: #0056b3; /* Azul escuro principal */
+    --secondary-color: #f8f9fa; /* Cinza claro para fundos */
+    --text-color: #333;
+    --light-text-color: #fff;
+    --border-color: #ddd;
+    --spacing-unit: 1.5rem; /* Unidade de espaçamento base */
+    --card-bg-color: #fff;
+    --shadow-light: 0 4px 10px rgba(0,0,0,0.05);
+    --shadow-medium: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Reset básico e estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-unit);
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-unit);
+    line-height: 1.2;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.8rem; }
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #004085;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #004085;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+.primary-btn:hover {
+    background-color: #003366;
+}
+
+/* 1. Header */
+.main-header {
+    background-color: var(--card-bg-color);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para responsividade */
+}
+
+.main-header .logo img {
+    height: 50px;
+    display: block;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-unit);
+}
+
+.main-nav ul li a {
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a.active,
+.main-nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Efeito sublinhado na navegação */
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.main-nav ul li a.active::after,
+.main-nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.main-nav ul li .contact-link-header {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.main-nav ul li .contact-link-header:hover {
+    background-color: #004085;
+    text-decoration: none;
+    transform: translateY(-1px); /* Pequena animação no hover */
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 86, 179, 0.75), rgba(0, 86, 179, 0.75)), url('https://via.placeholder.com/1500x500?text=Campus+Universitario') no-repeat center center/cover;
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 6rem 0;
+    margin-bottom: 3rem;
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.hero-section h1 {
+    color: var(--light-text-color);
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-section p {
+    font-size: 1.3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Seções de Conteúdo */
+.spaces-section, .events-section, .contact-cta {
+    padding: 3rem 0;
+}
+
+.spaces-section h2, .events-section h2 {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.spaces-section h2::after, .events-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* Blocos Entrelaçados (Padrão para Espaços) */
+.interlaced-blocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-unit);
+    grid-auto-rows: minmax(280px, auto); /* Altura mínima para blocos */
+}
+
+.space-block {
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow-light);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.space-block:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.space-block img {
+    width: 100%;
+    height: 200px; /* Altura fixa para as imagens */
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.space-block h3 {
+    margin: 1.2rem 1rem 0.5rem;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+}
+
+.space-block p {
+    flex-grow: 1; /* Permite que o parágrafo ocupe o espaço restante */
+    padding: 0 1.2rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.space-block .btn {
+    align-self: center; /* Centraliza o botão */
+    margin-bottom: 1.2rem;
+}
+
+/* Ajustes para o layout entrelaçado em telas maiores */
+@media (min-width: 768px) {
+    .interlaced-blocks {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas padrão */
+        grid-auto-rows: minmax(350px, auto); /* Altura mínima ajustada para o entrelaçado */
+    }
+
+    /* Definindo áreas para um layout entrelaçado mais interessante */
+    .interlaced-blocks > div:nth-child(1) { grid-area: 1 / 1 / 2 / 3; } /* Grande, ocupa 2 colunas */
+    .interlaced-blocks > div:nth-child(2) { grid-area: 1 / 3 / 2 / 4; } /* Pequeno */
+    .interlaced-blocks > div:nth-child(3) { grid-area: 2 / 1 / 3 / 2; } /* Pequeno */
+    .interlaced-blocks > div:nth-child(4) { grid-area: 2 / 2 / 3 / 4; } /* Grande, ocupa 2 colunas */
+    .interlaced-blocks > div:nth-child(5) { grid-area: 3 / 1 / 4 / 3; } /* Grande, ocupa 2 colunas */
+    .interlaced-blocks > div:nth-child(6) { grid-area: 3 / 3 / 4 / 4; } /* Pequeno */
+}
+
+
+/* Carrossel Slider (Opcional - Ative via JS/HTML) */
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    border-radius: 10px;
+    box-shadow: var(--shadow-medium);
+}
+
+.carousel-slider {
+    display: flex;
+    transition: transform 0.8s ease-in-out; /* Transição suave para o deslizamento */
+}
+
+.carousel-item {
+    flex: 0 0 25%; /* Para desktop: 4 itens por vista (100%/4) */
+    min-width: 25%;
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin: 0 1rem; /* Espaçamento entre os itens */
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item:hover {
+    transform: translateY(-3px);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.carousel-item h3 {
+    margin: 0 1rem 0.5rem;
+    font-size: 1.4rem;
+}
+
+.carousel-item p {
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    flex-grow: 1;
+}
+
+/* 3. Secção de Eventos (Grelha) */
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-unit);
+    max-width: 1000px; /* Limita a largura da grelha para melhor visualização */
+    margin: 0 auto;
+}
+
+.event-card {
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow-light);
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.event-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.event-card h3 {
+    margin: 1.2rem 1rem 0.5rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.event-card p {
+    padding: 0 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.event-card .summary {
+    flex-grow: 1; /* Permite que o resumo ocupe o espaço restante */
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.event-card .btn {
+    align-self: center;
+    margin-bottom: 1.2rem;
+}
+
+/* Botão de Contactos */
+.contact-cta {
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(45deg, var(--primary-color), #007bff);
+    color: var(--light-text-color);
+    margin-top: 4rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-medium);
+    font-size: 1.2rem;
+}
+
+.contact-cta p {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.contact-cta .btn {
+    background-color: var(--light-text-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 50px; /* Botão mais arredondado */
+}
+
+.contact-cta .btn:hover {
+    background-color: #e2e6ea;
+    color: #004085;
+}
+
+/* 4. Footer */
+.main-footer {
+    background-color: #222;
+    color: var(--light-text-color);
+    padding: 3rem 0;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+.main-footer .footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-unit);
+    margin-bottom: 2rem;
+}
+
+.main-footer h4 {
+    color: var(--light-text-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.main-footer ul {
+    list-style: none;
+}
+
+.main-footer ul li {
+    margin-bottom: 0.6rem;
+}
+
+.main-footer ul li a {
+    color: var(--light-text-color);
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.main-footer ul li a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.main-footer .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.main-footer .social-icons img {
+    width: 35px;
+    height: 35px;
+    filter: brightness(0) invert(1); /* Torna os ícones brancos */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.main-footer .social-icons img:hover {
+    transform: translateY(-3px) scale(1.1);
+    filter: none; /* Retorna à cor original ou use uma cor específica */
+}
+
+.main-footer .footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+}
+
+.main-footer .footer-bottom a {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.2rem; }
+    h3 { font-size: 1.6rem; }
+
+    .hero-section {
+        padding: 4rem 0;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem 1rem;
+        margin-top: 1rem;
+    }
+
+    .main-header .container {
+        flex-direction: column;
+    }
+
+    .main-header .logo {
+        margin-bottom: 1rem;
+    }
+
+    .interlaced-blocks {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-auto-rows: minmax(250px, auto);
+    }
+    /* Resetando as áreas para telas menores */
+    .interlaced-blocks > div { grid-area: auto !important; }
+
+    .carousel-item {
+        flex: 0 0 50%; /* 2 itens por vista no tablet */
+        min-width: 50%;
+        margin: 0 0.5rem;
+    }
+
+    .event-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .contact-cta p {
+        font-size: 1.5rem;
+    }
+
+    .main-footer .footer-columns {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 767px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.4rem; }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    .main-nav ul li {
+        margin: 0.5rem 0.5rem;
+    }
+
+    .interlaced-blocks, .event-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    }
+
+    .space-block img, .event-card img {
+        height: 150px;
+    }
+
+    .carousel-item {
+        flex: 0 0 100%; /* Um item por vista no mobile */
+        min-width: 100%;
+        margin: 0;
+    }
+
+    .contact-cta p {
+        font-size: 1.2rem;
+    }
+
+    .main-footer .footer-columns {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .main-footer .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+    .btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
