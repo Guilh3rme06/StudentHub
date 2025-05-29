@@ -1,28 +1,26 @@
-.mosaic{
+.mosaics{
     display: grid;
-    grid-template-columns: repeat(5, auto);
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(4, auto);
+    gap: 1rem;
+    width: 80%; 
+    margin: 0 auto;
 }
 
-.image-sec3-1, .image-sec3-2, .image-sec3-3{
-    width: 13rem;
-    height: 13rem;
+.img-sec3-1, .img-sec3-3{
+    width: 15rem;
+    height: 15rem;
     object-fit:cover;
     box-shadow: 2px 2px 5px #888888;
 }
 
-.image-sec3-4, .image-sec3-5{
+.img-sec3-4, .img-sec3-5{
     width: 13rem;
-    height: 13rem;
+    height: 15rem;
     object-fit:scale-down;
-    box-shadow: 2px 2px 5px #888888;
+    box-shadow: 1px 1px 5px #888888;
 }
 
-.text-cards{
-    font-weight: bold;
-    font-family: Arial;
-    font-size: 20px;
+.text-mosaic{
+    font-size: 0.8rem;
     margin: 1rem;
 }

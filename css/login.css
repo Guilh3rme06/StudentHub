@@ -29,6 +29,10 @@ body {
     border-right: 0.0625rem solid #eee;
 }
 
+#submit_login{
+    margin-top: 15.5rem;
+}
+
 .registar-container {
     /* deixar a parte da esquerda da box tem o radios*/
     border-top-left-radius: 0;

@@ -11,6 +11,7 @@
 </head>
 <body>
     <header>
+        <!-- 1. Navbar -->
         <div class="div-nav">
             <nav>
                 <div class="logo"><a href="index.html"><img class="image-logo" src="src/index/Ipluso_logo.webp" alt="Logo"></a></div>
@@ -26,18 +27,20 @@
 
         <h1 style="margin: 2rem">Boas-vindas!</h1>
     </header>
+
     <main>
         <section class="main">
+            <!-- 2. Carousel -->
             <div class="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="src/index/Carrosell Student Hub 1.webp" alt="Image1">
+                        <img src="src/index/carousel/Carrosell Student Hub 1.webp" alt="Image1">
                     </div>
                     <div class="carousel-item">
-                        <img src="src/index/Carrosell Student Hub 2.webp" alt="Image2">
+                        <img src="src/index/carousel/Carrosell Student Hub 2.webp" alt="Image2">
                     </div>
                     <div class="carousel-item">
-                        <img src="src/index/Carrosell Student Hub 3.webp" alt="Image3">
+                        <img src="src/index/carousel/Carrosell Student Hub 3.webp" alt="Image3">
                     </div>
                 </div>
                 <button class="carousel-control prev" onclick="prevSlideManual()">&#10094;</button>
@@ -47,7 +50,56 @@
                     <span onclick="goToSlide(1)"></span>
                     <span onclick="goToSlide(2)"></span>
                 </div>
-            </div><br><br><br>  
+            </div>
+
+            <hr style="margin: 4rem auto; width: 80%; border: 1px solid #ccc;">
+
+            <!-- 3. Informative Mosaics -->
+            <div class="mosaics">
+                <!-- Oliver -->
+                <div id="cards">
+                    <img class="img-sec3-1" src="src/index/mosaics/sec3-1.webp" alt="Mosaic1">
+                    <p class="text-mosaic">
+                        Text 1
+                    </p>
+                    <p class="text-mosaic">
+                        Text 2
+                    </p>
+                </div>
+
+                <!-- Mimi -->
+                <div id="cards">
+                    <img class="img-sec3-3" src="src/index/mosaics/sec3-3.webp" alt="Mosaic2">
+                    <p class="text-mosaic">
+                        Text 1
+                    </p>
+                    <p class="text-mosaic">
+                        Text 2
+                    </p>
+                </div>
+
+                <!-- Rex -->
+                <div id="cards">
+                    <img class="img-sec3-4" src="src/index/mosaics/sec3-4.webp" alt="Mosaic3">
+                    <p class="text-mosaic">
+                        Text 1
+                    </p>
+                    <p class="text-mosaic">
+                        Text 2
+                    </p>
+                </div>
+
+                 <!-- Tom -->
+                <div id="cards">
+                    <img class="img-sec3-5" src="src/index/mosaics/sec3-5.webp" alt="Mosaic4">
+                    <p class="text-mosaic">
+                        Text 1
+                    </p>
+                    <p class="text-mosaic">
+                        Text 2
+                    </p>
+                </div>
+            </div>
         </section>
 
         <footer class="main-footer">
