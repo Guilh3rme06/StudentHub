@@ -36,41 +36,50 @@
             <h2>Nossos Esaços</h2>
 
             <div class="interlaced-blocks">
-                <div class="space-block large">
+                <!-- Bloco 1: Imagem à esquerda, texto à direita -->
+                <div class="space-block interlace-normal">
                     <img src="../src/espacoeeventos/img-5.webp" alt="Biblioteca Central">
-                    <h3>Biblioteca Central</h3>
-                    <p>Um ambiente moderno e tranquilo para estudo e pesquisa, com um vasto acervo.</p>
-                    <a href="#" class="btn">Saber Mais</a>
+                    <div class="space-info">
+                        <h3>Biblioteca Central</h3>
+                        <p>Ambiente moderno e tranquilo para estudo e pesquisa, com vasto acervo.</p>
+                        <a href="#" class="btn">Saber Mais</a>
+                    </div>
                 </div>
-                <div class="space-block small">
-                    <img src="https://via.placeholder.com/300x200?text=Laboratorios+Inovacao" alt="Laboratórios de Inovação">
-                    <h3>Laboratórios de Inovação</h3>
-                    <p>Equipados com tecnologia de ponta para projetos e desenvolvimento de pesquisa.</p>
-                    <a href="#" class="btn">Saber Mais</a>
+                <!-- Bloco 2: Imagem à direita, texto à esquerda -->
+                <div class="space-block interlace-reverse">
+                    <img src="../src/espacoeeventos/img-9.webp" alt="Laboratórios de Inovação">
+                    <div class="space-info">
+                        <h3>Laboratórios de Inovação</h3>
+                        <p>Equipados com tecnologia de ponta para projetos e pesquisa.</p>
+                        <a href="#" class="btn">Saber Mais</a>
+                    </div>
                 </div>
-                <div class="space-block small">
-                    <img src="https://via.placeholder.com/300x200?text=Pista+Atletismo" alt="Pista de Atletismo">
-                    <h3>Pista de Atletismo</h3>
-                    <p>Espaço para treinos, competições e atividades físicas ao ar livre.</p>
-                    <a href="#" class="btn">Saber Mais</a>
+                <!-- Bloco 3: Imagem à esquerda, texto à direita -->
+                <div class="space-block interlace-normal">
+                    <img src="https://via.placeholder.com/320x200?text=Pista+Atletismo" alt="Pista de Atletismo">
+                    <div class="space-info">
+                        <h3>Pista de Atletismo</h3>
+                        <p>Espaço para treinos, competições e atividades físicas ao ar livre.</p>
+                        <a href="#" class="btn">Saber Mais</a>
+                    </div>
                 </div>
-                <div class="space-block large">
-                    <img src="https://via.placeholder.com/600x400?text=Auditorio+Principal" alt="Auditório Principal">
-                    <h3>Auditório Principal</h3>
-                    <p>Ideal para conferências, palestras e eventos de grande escala.</p>
-                    <a href="#" class="btn">Saber Mais</a>
+                <!-- Bloco 4: Imagem à direita, texto à esquerda -->
+                <div class="space-block interlace-reverse">
+                    <img src="https://via.placeholder.com/320x200?text=Espaco+Coworking" alt="Espaço Coworking">
+                    <div class="space-info">
+                        <h3>Espaço Coworking</h3>
+                        <p>Área colaborativa para projetos em grupo e networking entre estudantes.</p>
+                        <a href="#" class="btn">Saber Mais</a>
+                    </div>
                 </div>
-                <div class="space-block small">
-                    <img src="https://via.placeholder.com/300x200?text=Espaco+Coworking" alt="Espaço Coworking">
-                    <h3>Espaço Coworking</h3>
-                    <p>Área colaborativa para projetos em grupo e networking entre estudantes.</p>
-                    <a href="#" class="btn">Saber Mais</a>
-                </div>
-                <div class="space-block small">
-                    <img src="https://via.placeholder.com/300x200?text=Cantina+Universitaria" alt="Cantina Universitária">
-                    <h3>Cantina Universitária</h3>
-                    <p>Refeições nutritivas e variadas num ambiente acolhedor para todos.</p>
-                    <a href="#" class="btn">Saber Mais</a>
+                <!-- Bloco 5: Imagem à esquerda, texto à direita -->
+                <div class="space-block interlace-normal">
+                    <img src="https://via.placeholder.com/320x200?text=Cantina+Universitaria" alt="Cantina Universitária">
+                    <div class="space-info">
+                        <h3>Cantina Universitária</h3>
+                        <p>Refeições nutritivas e variadas num ambiente acolhedor para todos.</p>
+                        <a href="#" class="btn">Saber Mais</a>
+                    </div>
                 </div>
             </div>
 
@@ -129,35 +138,28 @@
                 </div>
             </div>
         </section>
-
-        <section class="contact-cta container">
-            <p>Tem alguma questão ou precisa de mais informações?</p>
-            <a href="contactos.html" class="btn primary-btn">Contacte-nos Agora!</a>
-        </section>
     </main>
 
     <footer class="main-footer">
-        <div class="footer-columns simplified">
-            <div class="footer-col social-col">
-                <h4>Siga-nos</h4>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/iplusofonia/"><img src="../src/footer/facebook.webp" alt="Facebook"></a>
-                    <a href="https://www.instagram.com/iplusofonia/"><img src="../src/footer/instagram.webp" alt="Instagram"></a>
-                    <a href="https://www.linkedin.com/school/iplusofonia/"><img src="../src/footer/linkedin.webp" alt="LinkedIn"></a>
+            <div class="footer-columns simplified">
+                <div class="footer-col social-col">
+                    <h4>Siga-nos</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/iplusofonia/"><img class="social-images" style="object-fit:scale-down; width: 4rem; height: 4rem;" src="../src/footer/facebook.webp" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/iplusofonia/"><img class="social-images" style="object-fit:scale-down; width: 4rem; height: 4rem;" src="../src/footer/instagram.webp" alt="Instagram"></a>
+                        <a href="https://www.linkedin.com/school/iplusofonia/"><img class="social-images" style="object-fit:scale-down; width: 4rem; height: 4rem;" src="../src/footer/linkedin.webp" alt="LinkedIn"></a>
+                    </div>
                 </div>
+                <div class="footer-col contact-col">
+                    <h4>Contacte-nos</h4>
+                    <p><a href="mailto:info@universidade.pt">info@universidade.pt</a></p>
+                    <p>+351 123 456 789</p> </div>
             </div>
-            <div class="footer-col contact-col">
-                <h4>Contacte-nos</h4>
-                <p><a href="mailto:info@universidade.pt">info@universidade.pt</a></p>
-                <p>+351 123 456 789</p> </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Universidade. Todos os direitos reservados.</p>
-        </div>
-    </foot
-    linkr>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Universidade. Todos os direitos reservados.</p>
+            </div>
+        </footer>
 
-
-    <script src="/js/espacoeeventos.js"></script>
+    <script src="../components/espacoeeventos.js"></script>
 </body>
 </html>

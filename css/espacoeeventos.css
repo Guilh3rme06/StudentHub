@@ -19,7 +19,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--secondary-color);
@@ -256,6 +256,43 @@ a:hover {
     margin-bottom: 1.2rem;
 }
 
+/* Blocos entrelaçados com imagem e texto lado a lado */
+.interlaced-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.space-block.interlace-normal,
+.space-block.interlace-reverse {
+    display: flex;
+    align-items: center;
+    background: var(--card-bg-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow-light);
+    overflow: hidden;
+    min-height: 220px;
+}
+
+.space-block.interlace-normal img,
+.space-block.interlace-reverse img {
+    width: 320px;
+    height: 200px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.space-block.interlace-normal .space-info,
+.space-block.interlace-reverse .space-info {
+    padding: 2rem;
+    flex: 1;
+    text-align: left;
+}
+
+.space-block.interlace-reverse {
+    flex-direction: row-reverse;
+}
+
 /* Carrossel Slider (Opcional - Ative via JS/HTML) */
 .carousel-container {
     overflow: hidden;
@@ -365,34 +402,3 @@ a:hover {
     margin-bottom: 1.2rem;
 }
 
-/* Botão de Contactos */
-.contact-cta {
-    text-align: center;
-    padding: 4rem 0;
-    background: linear-gradient(45deg, var(--primary-color), #007bff);
-    color: var(--light-text-color);
-    margin-top: 4rem;
-    border-radius: 10px;
-    box-shadow: var(--shadow-medium);
-    font-size: 1.2rem;
-}
-
-.contact-cta p {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    font-weight: 300;
-}
-
-.contact-cta .btn {
-    background-color: var(--light-text-color);
-    color: var(--primary-color);
-    font-weight: bold;
-    padding: 1rem 2.5rem;
-    font-size: 1.1rem;
-    border-radius: 50px; /* Botão mais arredondado */
-}
-
-.contact-cta .btn:hover {
-    background-color: #e2e6ea;
-    color: #004085;
-}
