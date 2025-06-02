@@ -2,19 +2,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const carouselSlider = document.querySelector('.carousel-slider');
     const carouselItems = document.querySelectorAll('.carousel-item');
 
-    // Check if the carousel exists before trying to run its logic
+    // Verifica se o carrossel existe antes de executar a lógica
     if (carouselSlider && carouselItems.length > 0) {
         let currentIndex = 0;
         const totalItems = carouselItems.length;
-        const intervalTime = 3000; // 3 seconds per slide
+        const intervalTime = 3000; // 3 segundos por slide
 
-        // Function to determine how many items are visible based on screen width
+        // Função para determinar quantos itens são visíveis consoante a largura do ecrã
         const getItemsPerView = () => {
             if (window.innerWidth >= 992) { // Desktop
                 return 4;
             } else if (window.innerWidth >= 768) { // Tablet
                 return 2;
-            } else { // Mobile
+            } else { // Telemóvel
                 return 1;
             }
         };
@@ -22,34 +22,34 @@ document.addEventListener('DOMContentLoaded', () => {
         let itemsPerView = getItemsPerView();
 
         const slideCarousel = () => {
-            // Calculate the width of one item, including its margin
-            // The margin is 1rem (16px) on each side for desktop/tablet, 0 for mobile
-            const itemMargin = (window.innerWidth >= 768) ? 32 : 0; // 2rem total margin
+            // Calcula a largura de um item, incluindo a margem
+            // A margem é 1rem (16px) de cada lado para desktop/tablet, 0 para telemóvel
+            const itemMargin = (window.innerWidth >= 768) ? 32 : 0; // 2rem de margem total
             const itemWidth = carouselItems[0].offsetWidth + itemMargin;
 
             currentIndex = (currentIndex + 1) % totalItems;
 
-            // When the last item (or last visible set of items) is reached, reset to the start
-            // This creates a continuous loop.
-            if (currentIndex >= totalItems - itemsPerView + 1) { // Adjusted condition
-                 // If we're about to show items beyond the end, reset to the first logical item
-                carouselSlider.style.transition = 'none'; // Disable transition for instant reset
-                carouselSlider.style.transform = `translateX(0)`; // Reset position
-                currentIndex = 0; // Reset index
+            // Quando o último item (ou último conjunto visível de itens) é atingido, volta ao início
+            // Isto cria um loop contínuo.
+            if (currentIndex >= totalItems - itemsPerView + 1) { // Condição ajustada
+                // Se estamos prestes a mostrar itens para além do fim, volta ao primeiro item lógico
+                carouselSlider.style.transition = 'none'; // Desativa a transição para reset instantâneo
+                carouselSlider.style.transform = `translateX(0)`; // Volta à posição inicial
+                currentIndex = 0; // Reinicia o índice
                 
-                // Re-enable transition after a very brief moment
+                // Reativa a transição após um pequeno momento
                 setTimeout(() => {
                     carouselSlider.style.transition = 'transform 0.8s ease-in-out';
-                }, 50); // Small delay to ensure transition is toggled
+                }, 50); // Pequeno atraso para garantir que a transição é alternada
             } else {
-                 carouselSlider.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+                carouselSlider.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
             }
         };
 
-        // Start the automatic carousel
+        // Inicia o carrossel automático
         let carouselInterval = setInterval(slideCarousel, intervalTime);
 
-        // Optional: Pause on hover
+        // Opcional: Pausa ao passar o rato por cima
         carouselSlider.addEventListener('mouseover', () => {
             clearInterval(carouselInterval);
         });
@@ -58,12 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
             carouselInterval = setInterval(slideCarousel, intervalTime);
         });
 
-        // Handle resize to adjust itemsPerView and reset position
+        // Lida com o redimensionamento para ajustar itemsPerView e reiniciar a posição
         window.addEventListener('resize', () => {
             const newItemsPerView = getItemsPerView();
             if (itemsPerView !== newItemsPerView) {
                 itemsPerView = newItemsPerView;
-                // Reset carousel to the beginning to avoid strange jumps on resize
+                // Reinicia o carrossel para o início para evitar saltos estranhos ao redimensionar
                 carouselSlider.style.transition = 'none';
                 carouselSlider.style.transform = `translateX(0)`;
                 currentIndex = 0;
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Smooth scroll for anchor links (if you add them to your page)
+    // Scroll suave para links âncora (se os adicionares à tua página)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -84,14 +84,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Ensure contact links work
+    // Garante que os links de contacto funcionam
     const contactLinks = document.querySelectorAll('.contact-link-header, .contact-cta .btn');
     contactLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            // Only prevent default if it's not a real link to another page
+            // Só previne o comportamento padrão se não for um link real para outra página
             if (link.getAttribute('href') === 'contactos.html' || link.getAttribute('href') === '#') {
                 e.preventDefault();
-                window.location.href = 'contactos.html'; // Redirect to actual contacts page
+                window.location.href = 'contactos.html'; // Redireciona para a página de contactos
             }
         });
     });
