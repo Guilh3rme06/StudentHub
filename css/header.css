@@ -44,3 +44,23 @@ nav{
     max-width: 70rem;
     margin: auto;
 }
+
+.welcome-title{
+    color: #0056b3;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    margin-bottom: 2.5rem;
+    margin-top: 2rem;
+}
+
+.welcome-title::after {
+    content: "";
+    display: block;
+    width: 6rem;
+    height: 0.3rem;
+    background: #0056b3;
+    border-radius: 2px;
+    margin: 0.5rem auto 0 auto;
+}
