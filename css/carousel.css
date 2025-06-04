@@ -1,8 +1,9 @@
 .carousel {
-    border-radius: 1.5rem;
-    width: 65%;
+    width: 100%;
+    max-width: 100%;
     height: 31.25rem;
-    margin: auto;
+    margin: 0;
+    border-radius: 0;
     overflow: hidden;
     position: relative;
 }
@@ -10,13 +11,12 @@
 .carousel-background {
     background: #fff;
     display: flex;
-    padding: 1.5rem;
-    padding-bottom: 4rem;
-    margin: 2rem auto;
+    padding: 0;
+    margin: 0;
     justify-content: center;
     align-items: center;
     border-radius: 0.5rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
 }
 
 .carousel-inner {

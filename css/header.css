@@ -100,3 +100,14 @@ nav{
 .home:hover::after, .spaces_and_events:hover::after, .services:hover::after, .contact:hover::after {
     transform: scaleX(1);
 }
+
+.welcome-title {
+    background-color: #fff;
+    font-family: 'Montserrat','Arial', sans-serif;
+    font-size: 3.125rem;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+    margin-top: 4rem;
+    padding: 2.5rem 0;
+}
