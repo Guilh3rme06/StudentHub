@@ -9,137 +9,132 @@
     <link rel="stylesheet" href="../css/footer.css">
 </head>
 <body>
-    <header>
+<!-- Navbar -->
         <div class="div-nav">
             <nav>
-                <div class="logo"><a href="../index.html"><img class="image-logo" src="../src/index/Ipluso_logo.webp" alt="Logo"></a></div>
-                <ul>
+                <div class="logo">
+                    <a href="index.html">
+                        <img class="image-logo" src="../src/index/Ipluso_logo.webp" alt="Logo">
+                    </a>
+                </div>
+                <ul class="nav-links">
                     <li><a class="home" href="../index.html">Início</a></li>
-                    <li><a class="spaces_and_events" href="../public/espacoeeventos.html">Espaços e Eventos</a></li>
+                    <li><a class="spaces_and_events" href="espacoeeventos.html">Espaços e Eventos</a></li>
                     <li><a class="services" href="#">Serviços</a></li>
-                    <li><a class="contact" href="../public/contactos.html">Contactos</a></li>
-                    <li><a class="login_register" href="../public/login.html">Login</a></li>
+                    <li><a class="contact" href="contactos.html">Contactos</a></li>
                 </ul>
+                <div class="nav-login">
+                    <a class="login_register" href="login.html">Login</a>
+                </div>
             </nav>
         </div>
-    </header>
 
-        <section class="spaces-section">
-            <h2>Nossos Esaços</h2>
+<!-- blocos entrelaçados -->
+<section class="spaces-section">            
+    <h2 class="section-title">Nossos Espaços</h2>
+    <div class="space-container-normal">
+        <img class="image-normal" src="../src/espacoeeventos/img-5.webp" alt="Biblioteca Central">
+        <div class="space-info">
+            <h3>Biblioteca Central</h3>
+            <p>Ambiente moderno e tranquilo para estudo e pesquisa, com vasto acervo.</p>
+        </div>
+    </div>
+    <div class="space-container-reverse">
+        <img class="image-reverse" src="../src/espacoeeventos/img-9.webp" alt="Laboratórios de Inovação">
+        <div class="space-info">
+            <h3>Laboratórios de Inovação</h3>
+            <p>Equipados com tecnologia de ponta para projetos e pesquisa.</p>
+        </div>
+    </div>
+    <div class="space-container-normal">
+        <img class="image-normal" src="../src/espacoeeventos/pista_no_1_eh_5.webp" alt="Pista de Atletismo">
+        <div class="space-info">
+            <h3>Pista de Atletismo</h3>
+            <p>Espaço para treinos, competições e atividades físicas ao ar livre.</p>
+        </div>
+    </div>
+    <div class="space-container-reverse">
+        <img class="image-reverse" src="../src/espacoeeventos/img-15.webp" alt="Espaço Coworking">
+        <div class="space-info">
+            <h3>Espaço Coworking</h3>
+            <p>Área colaborativa para projetos em grupo e networking entre estudantes.</p>
+        </div>
+    </div>
+</section>
 
-            <div class="interlaced-blocks">
-                <!-- Bloco 1: Imagem à esquerda, texto à direita -->
-                <div class="space-block interlace-normal">
-                    <img class="imagem1" src="../src/espacoeeventos/img-5.webp" alt="Biblioteca Central">
-                    <div class="space-info">
-                        <h3>Biblioteca Central</h3>
-                        <p>Ambiente moderno e tranquilo para estudo e pesquisa, com vasto acervo.</p>
-                    </div>
-                </div>
-                <!-- Bloco 2: Imagem à direita, texto à esquerda -->
-                <div class="space-block interlace-reverse">
-                    <img src="../src/espacoeeventos/img-9.webp" alt="Laboratórios de Inovação">
-                    <div class="space-info">
-                        <h3>Laboratórios de Inovação</h3>
-                        <p>Equipados com tecnologia de ponta para projetos e pesquisa.</p>
-                    </div>
-                </div>
-                <!-- Bloco 3: Imagem à esquerda, texto à direita -->
-                <div class="space-block interlace-normal">
-                    <img src="../src/espacoeeventos/pista_no_1_eh_5.webp" alt="Pista de Atletismo">
-                    <div class="space-info">
-                        <h3>Pista de Atletismo</h3>
-                        <p>Espaço para treinos, competições e atividades físicas ao ar livre.</p>
-                    </div>
-                </div>
-                <!-- Bloco 4: Imagem à direita, texto à esquerda -->
-                <div class="space-block interlace-reverse">
-                    <img src="../src/espacoeeventos/img-15.webp" alt="Espaço Coworking">
-                    <div class="space-info">
-                        <h3>Espaço Coworking</h3>
-                        <p>Área colaborativa para projetos em grupo e networking entre estudantes.</p>
-                    </div>
-                </div>
-                <!-- Bloco 5: Imagem à esquerda, texto à direita -->
-                <div class="space-block interlace-normal">
-                    <img src="../src/espacoeeventos/img-3.webp" alt="Cantina Universitária">
-                    <div class="space-info">
-                        <h3>Cantina Universitária</h3>
-                        <p>Refeições nutritivas e variadas num ambiente acolhedor para todos.</p>
-                    </div>
+<!-- Carrosel -->
+<section class="space-carrosel">
+    <h2 class="carrosel-title">Próximo Evento</h2>
+    <div class="event-grid">
+        <div class="event-card">
+            <img class="image-card" src="../src/espacoeeventos/img-16.webp" alt="Dia Aberto da Universidade">
+            <h3>Dia Aberto da Universidade</h3>
+            <p><strong>Data:</strong> 15 Junho 2025</p>
+            <p><strong>Local:</strong> Campus Principal</p>
+            <p class="summary">Explore os cursos, conheça professores e estudantes, e sinta o ambiente universitário!</p>
+        </div>
+        <div class="event-card">
+            <img class="image-card" src="../src/espacoeeventos/20231130163916_IMG_9320-scaled.webp" alt="Semana da Ciência e Tecnologia">
+            <h3>Semana da Ciência e Tecnologia</h3>
+            <p><strong>Data:</strong> 22-26 Julho 2025</p>
+            <p><strong>Local:</strong> Laboratórios de Engenharia</p>
+            <p class="summary">Workshops interativos, palestras com especialistas e demonstrações de projetos inovadores.</p>
+        </div>
+        <div class="event-card">
+            <img class="image-card" src="../src/espacoeeventos/1611165.webp" alt="Feira do Livro e Cultura">
+            <h3>Feira do Livro e Cultura</h3>
+            <p><strong>Data:</strong> 10 Agosto 2025</p>
+            <p><strong>Local:</strong> Biblioteca Central</p>
+            <p class="summary">Descubra novos autores, participe de leituras e troque ideias com a comunidade académica.</p>    
+        </div>
+        <div class="event-card">
+            <img class="image-card" src="../src/espacoeeventos/52965095176_171f893d67_k-1200x800.webp" alt="Torneio de E-Sports Universitário">
+            <h3>Torneio de E-Sports Universitário</h3>
+            <p><strong>Data:</strong> 05 Setembro 2025</p>
+            <p><strong>Local:</strong> Ginásio Universitário</p>
+            <p class="summary">Compita nos seus jogos favoritos e mostre suas habilidades contra outros estudantes!</p>
+        </div>
+        <div class="event-card">
+            <img class="image-card" src="../src/espacoeeventos/img-9.webp" alt="Workshop de Desenvolvimento de Carreiras">
+            <h3>Workshop de Desenvolvimento de Carreiras</h3>
+            <p><strong>Data:</strong> 18 Setembro 2025</p>
+            <p><strong>Local:</strong> Sala de Apoio ao Estudante</p>
+            <p class="summary">Prepare-se para o mercado de trabalho com dicas de especialistas em recrutamento.</p>
+        </div>
+        <div class="event-card">
+            <img class="image-card" src="../src/espacoeeventos/67569268082957.webp" alt="Noite Internacional da Universidade">
+            <h3>Noite Internacional da Universidade</h3>
+            <p><strong>Data:</strong> 25 Outubro 2025</p>
+            <p><strong>Local:</strong> Praça Central</p>
+            <p class="summary">Celebre a diversidade cultural do nosso campus com comida, música e dança de todo o mundo.</p>
+        </div>
+    </div>
+    <div class="button-contact">
+        <button href="contactos.html" id="button-contact">Contacte-nos</button>
+    </div>
+</section>
+
+
+<!-- fotter -->
+<footer class="main-footer">
+        <div class="footer-columns simplified">
+            <div class="footer-col social-col">
+                <h4>Siga-nos</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/iplusofonia/"><img class="social-images" style="object-fit:scale-down; width: 4rem; height: 4rem;" src="../src/footer/facebook.webp" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/iplusofonia/"><img class="social-images" style="object-fit:scale-down; width: 4rem; height: 4rem;" src="../src/footer/instagram.webp" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com/school/iplusofonia/"><img class="social-images" style="object-fit:scale-down; width: 4rem; height: 4rem;" src="../src/footer/linkedin.webp" alt="LinkedIn"></a>
                 </div>
             </div>
-
-            </section>
-
-        <section class="events-section container">
-            <h2>Próximos Eventos</h2>
-            <div class="event-grid">
-                <div class="event-card">
-                    <img src="../src/espacoeeventos/img-16.webp" alt="Dia Aberto da Universidade">
-                    <h3>Dia Aberto da Universidade</h3>
-                    <p><strong>Data:</strong> 15 Junho 2025</p>
-                    <p><strong>Local:</strong> Campus Principal</p>
-                    <p class="summary">Explore os cursos, conheça professores e estudantes, e sinta o ambiente universitário!</p>
-                </div>
-                <div class="event-card">
-                    <img src="../src/espacoeeventos/20231130163916_IMG_9320-scaled.webp" alt="Semana da Ciência e Tecnologia">
-                    <h3>Semana da Ciência e Tecnologia</h3>
-                    <p><strong>Data:</strong> 22-26 Julho 2025</p>
-                    <p><strong>Local:</strong> Laboratórios de Engenharia</p>
-                    <p class="summary">Workshops interativos, palestras com especialistas e demonstrações de projetos inovadores.</p>
-                </div>
-                <div class="event-card">
-                    <img src="../src/espacoeeventos/1611165.webp" alt="Feira do Livro e Cultura">
-                    <h3>Feira do Livro e Cultura</h3>
-                    <p><strong>Data:</strong> 10 Agosto 2025</p>
-                    <p><strong>Local:</strong> Biblioteca Central</p>
-                    <p class="summary">Descubra novos autores, participe de leituras e troque ideias com a comunidade académica.</p>
-                </div>
-                <div class="event-card">
-                    <img src="../src/espacoeeventos/52965095176_171f893d67_k-1200x800.webp" alt="Torneio de E-Sports Universitário">
-                    <h3>Torneio de E-Sports Universitário</h3>
-                    <p><strong>Data:</strong> 05 Setembro 2025</p>
-                    <p><strong>Local:</strong> Ginásio Universitário</p>
-                    <p class="summary">Compita nos seus jogos favoritos e mostre suas habilidades contra outros estudantes!</p>
-                </div>
-                <div class="event-card">
-                    <img src="https://via.placeholder.com/300x180?text=Workshop+Carreiras" alt="Workshop de Desenvolvimento de Carreiras">
-                    <h3>Workshop de Desenvolvimento de Carreiras</h3>
-                    <p><strong>Data:</strong> 18 Setembro 2025</p>
-                    <p><strong>Local:</strong> Sala de Apoio ao Estudante</p>
-                    <p class="summary">Prepare-se para o mercado de trabalho com dicas de especialistas em recrutamento.</p>
-                </div>
-                <div class="event-card">
-                    <img src="../src/espacoeeventos/67569268082957.webp" alt="Noite Internacional da Universidade">
-                    <h3>Noite Internacional da Universidade</h3>
-                    <p><strong>Data:</strong> 25 Outubro 2025</p>
-                    <p><strong>Local:</strong> Praça Central</p>
-                    <p class="summary">Celebre a diversidade cultural do nosso campus com comida, música e dança de todo o mundo.</p>
-                </div>
-            </div>
-        </section>
-
-    <footer class="main-footer">
-            <div class="footer-columns simplified">
-                <div class="footer-col social-col">
-                    <h4>Siga-nos</h4>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/iplusofonia/"><img class="social-images" style="object-fit:scale-down; width: 4rem; height: 4rem;" src="../src/footer/facebook.webp" alt="Facebook"></a>
-                        <a href="https://www.instagram.com/iplusofonia/"><img class="social-images" style="object-fit:scale-down; width: 4rem; height: 4rem;" src="../src/footer/instagram.webp" alt="Instagram"></a>
-                        <a href="https://www.linkedin.com/school/iplusofonia/"><img class="social-images" style="object-fit:scale-down; width: 4rem; height: 4rem;" src="../src/footer/linkedin.webp" alt="LinkedIn"></a>
-                    </div>
-                </div>
-                <div class="footer-col contact-col">
-                    <h4>Contacte-nos</h4>
-                    <p><a href="mailto:info@universidade.pt">info@universidade.pt</a></p>
-                    <p>+351 123 456 789</p> </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Universidade. Todos os direitos reservados.</p>
-            </div>
-        </footer>
-
+            <div class="footer-col contact-col">
+                <h4>Contacte-nos</h4>
+                <p><a href="mailto:info@universidade.pt">info@universidade.pt</a></p>
+                <p>+351 123 456 789</p> </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Universidade. Todos os direitos reservados.</p>
+        </div>
+    </footer>
     <script src="../components/espacoeeventos.js"></script>
 </body>
 </html>
