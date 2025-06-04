@@ -12,7 +12,7 @@ body {
     padding: 0.7rem;
 }
 
-ul{
+ul{ 
     list-style: none;
     display: flex;
 }
@@ -46,13 +46,14 @@ nav{
 }
 
 .welcome-title{
+    background-color: #ffffff;
+    padding: 2rem;
     color: #0056b3;
     font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
     position: relative;
-    margin-bottom: 2.5rem;
-    margin-top: 2rem;
+    margin-bottom: -2rem;
 }
 
 .welcome-title::after {
