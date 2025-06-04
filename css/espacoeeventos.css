@@ -1,403 +1,161 @@
-/* Variáveis CSS para fácil customização */
-:root {
-    --primary-color: #0056b3; /* Azul escuro principal */
-    --secondary-color: #f8f9fa; /* Cinza claro para fundos */
-    --text-color: #333;
-    --light-text-color: #fff;
-    --border-color: #ddd;
-    --spacing-unit: 1.5rem; /* Unidade de espaçamento base */
-    --card-bg-color: #fff;
-    --shadow-light: 0 4px 10px rgba(0,0,0,0.05);
-    --shadow-medium: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* Reset básico e estilos globais */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
+body{
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--secondary-color);
-    scroll-behavior: smooth;
+
 }
 
-.container {
-    max-width: 1200px;
+.spaces-section{
+    padding: 2rem;
     margin: 0 auto;
-    padding: 0 var(--spacing-unit);
 }
 
-h1, h2, h3 {
-    color: var(--primary-color);
-    margin-bottom: var(--spacing-unit);
-    line-height: 1.2;
-}
-
-h1 { font-size: 3rem; }
-h2 { font-size: 2.5rem; }
-h3 { font-size: 1.8rem; }
-
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #004085;
-}
-
-/* Botões */
-.btn {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--light-text-color);
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    text-decoration: none;
-    margin-top: 1rem;
+.section-title{
+    background-color: #ffffff;
+    padding: 2rem;
+    color: #0056b3;
+    font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
 }
 
-.btn:hover {
-    background-color: #004085;
-    transform: translateY(-2px);
-    text-decoration: none;
-}
-
-.primary-btn {
-    background-color: var(--primary-color);
-    color: var(--light-text-color);
-}
-
-.primary-btn:hover {
-    background-color: #003366;
-}
-
-/* 1. Header */
-.main-header {
-    background-color: var(--card-bg-color);
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--border-color);
-    box-shadow: var(--shadow-light);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.main-header .container {
+.space-container-normal {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Para responsividade */
-}
-
-.main-header .logo img {
-    height: 50px;
-    display: block;
-}
-
-.main-nav ul {
-    list-style: none;
-    display: flex;
-    gap: var(--spacing-unit);
-}
-
-.main-nav ul li a {
-    color: var(--text-color);
-    font-weight: 600;
-    padding: 0.5rem 0;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-.main-nav ul li a.active,
-.main-nav ul li a:hover {
-    color: var(--primary-color);
-}
-
-/* Efeito sublinhado na navegação */
-.main-nav ul li a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 100%;
-    height: 2px;
-    background-color: var(--primary-color);
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
-}
-
-.main-nav ul li a.active::after,
-.main-nav ul li a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-.main-nav ul li .contact-link-header {
-    background-color: var(--primary-color);
-    color: var(--light-text-color);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.main-nav ul li .contact-link-header:hover {
-    background-color: #004085;
-    text-decoration: none;
-    transform: translateY(-1px); /* Pequena animação no hover */
-}
-
-/* Hero Section */
-.hero-section {
-    background: linear-gradient(rgba(0, 86, 179, 0.75), rgba(0, 86, 179, 0.75)), url('https://via.placeholder.com/1500x500?text=Campus+Universitario') no-repeat center center/cover;
-    color: var(--light-text-color);
-    text-align: center;
-    padding: 6rem 0;
-    margin-bottom: 3rem;
-    border-radius: 10px; /* Bordas arredondadas */
-}
-
-.hero-section h1 {
-    color: var(--light-text-color);
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-.hero-section p {
-    font-size: 1.3rem;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* Seções de Conteúdo */
-.spaces-section, .events-section, .contact-cta {
-    padding: 3rem 0;
-}
-
-.spaces-section h2, .events-section h2 {
-    text-align: center;
-    margin-bottom: 3.5rem;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.spaces-section h2::after, .events-section h2::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background-color: var(--primary-color);
-    border-radius: 2px;
-}
-
-/* Blocos Entrelaçados (Padrão para Espaços) */
-.interlaced-blocks {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-unit);
-    grid-auto-rows: minmax(280px, auto); /* Altura mínima para blocos */
-}
-
-.space-block {
-    background-color: var(--card-bg-color);
-    border-radius: 10px;
-    box-shadow: var(--shadow-light);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.space-block:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-medium);
-}
-
-.imagem1 {
-    display: grid;
-    grid-template-columns: 1fr;
-    overflow: hidden;
-
-}
-
-.space-block h3 {
-    margin: 1.2rem 1rem 0.5rem;
-    font-size: 1.6rem;
-    color: var(--primary-color);
-}
-
-.space-block p {
-    flex-grow: 1; /* Permite que o parágrafo ocupe o espaço restante */
-    padding: 0 1.2rem;
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-.space-block .btn {
-    align-self: center; /* Centraliza o botão */
-    margin-bottom: 1.2rem;
-}
-
-/* Blocos entrelaçados com imagem e texto lado a lado */
-.interlaced-blocks {
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     gap: 2rem;
+    margin-bottom: 2rem;
 }
 
-.space-block.interlace-normal,
-.space-block.interlace-reverse {
+.image-normal {
+    width: 28vw;
+    min-width: 30vw;
+    max-width: 40vw;;
+    display: block;
+    border-radius: 0.7em;
+    object-fit: cover;
+}
+
+.space-info {
+    color: #333;
+    text-align: left;
+    margin-left: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.space-container-reverse{
     display: flex;
     align-items: center;
-    background: var(--card-bg-color);
-    border-radius: 10px;
-    box-shadow: var(--shadow-light);
-    overflow: hidden;
-    min-height: 220px;
-}
-
-.space-block.interlace-normal img,
-.space-block.interlace-reverse img {
-    width: 320px;
-    height: 200px;
-    object-fit: cover;
-    flex-shrink: 0;
-}
-
-.space-block.interlace-normal .space-info,
-.space-block.interlace-reverse .space-info {
-    padding: 2rem;
-    flex: 1;
-    text-align: left;
-}
-
-.space-block.interlace-reverse {
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
     flex-direction: row-reverse;
 }
 
-/* Carrossel Slider (Opcional - Ative via JS/HTML) */
-.carousel-container {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    padding: 1rem 0;
-    border-radius: 10px;
-    box-shadow: var(--shadow-medium);
-}
-
-.carousel-slider {
-    display: flex;
-    transition: transform 0.8s ease-in-out; /* Transição suave para o deslizamento */
-}
-
-.carousel-item {
-    flex: 0 0 25%; /* Para desktop: 4 itens por vista (100%/4) */
-    min-width: 25%;
-    background-color: var(--card-bg-color);
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    margin: 0 1rem; /* Espaçamento entre os itens */
-    overflow: hidden;
-    text-align: center;
-    padding-bottom: 1rem;
-    transition: transform 0.3s ease;
-}
-
-.carousel-item:hover {
-    transform: translateY(-3px);
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
+.image-reverse {
+    width: 28vw;
+    min-width: 30vw;
+    max-width: 40vw;
     display: block;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid var(--border-color);
+    border-radius: 0.7em;
+    object-fit: cover;
 }
 
-.carousel-item h3 {
-    margin: 0 1rem 0.5rem;
-    font-size: 1.4rem;
+@media (max-width: 700px) {
+    .space-container-normal {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    .image-normal {
+        width: 90vw;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0 auto;
+    }
+    .space-info {
+        text-align: center;
+    }
+        .space-container-reverse {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    .image-reverse {
+        width: 90vw;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0 auto;
+    }
+
 }
 
-.carousel-item p {
-    padding: 0 1rem;
-    font-size: 0.9rem;
-    flex-grow: 1;
+.space-carrosel{
+    background-color: aliceblue;
+    padding: 2rem;
 }
 
-/* 3. Secção de Eventos (Grelha) */
+.carrosel-title{
+    padding: 2rem;
+    color: #0056b3;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
 .event-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-unit);
-    max-width: 1000px; /* Limita a largura da grelha para melhor visualização */
-    margin: 0 auto;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 1.2rem;
+    padding: 0 1.2rem;
 }
 
 .event-card {
-    background-color: var(--card-bg-color);
+    background: #fff;
     border-radius: 10px;
-    box-shadow: var(--shadow-light);
-    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);   
+    padding: 1.5rem;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
-.event-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-medium);
-}
-
-.event-card img {
-    width: 100%;
-    height: 180px;
+.image-card{
+    max-width: 20rem;
+    max-height: 20rem;
     object-fit: cover;
-    display: block;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.event-card h3 {
-    margin: 1.2rem 1rem 0.5rem;
-    font-size: 1.5rem;
-    color: var(--primary-color);
-}
-
-.event-card p {
-    padding: 0 1rem;
-    margin-bottom: 0.5rem;
-    font-size: 0.95rem;
-}
-
-.event-card .summary {
-    flex-grow: 1; /* Permite que o resumo ocupe o espaço restante */
+    border-radius: 10px;
     margin-bottom: 1rem;
+}
+
+.button-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#button-contact {
+    border: none;
+    color: #000;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
     font-size: 0.9rem;
 }
 
-.event-card .btn {
-    align-self: center;
-    margin-bottom: 1.2rem;
+#button-contact:hover {
+    background-color: snow;
+    color: #000;
+    transition: background-color 0.3s ease;
 }
 
+#button-contact:active {
+    background-color:lightgray;
+    color: #000;
+}
