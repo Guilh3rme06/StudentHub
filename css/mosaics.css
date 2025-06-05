@@ -73,3 +73,13 @@
     color: black;
     padding-bottom: 4rem;
 }
+
+.mosaic-title::after {
+    content: "";
+    display: block;
+    width: 25rem;
+    height: 0.3rem;
+    background: red;
+    border-radius: 2px;
+    margin: 0.5rem auto 0 auto;
+}

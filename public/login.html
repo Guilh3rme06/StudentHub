@@ -10,17 +10,24 @@
 
 </head>
 <body>
-    <header>
+   <header>
+        <!-- 1. Navbar -->
         <div class="div-nav">
             <nav>
-                <div class="logo"><a href="../index.html"><img class="image-logo" src="../src/index/Ipluso_logo.webp" alt="Logo"></a></div>
-                <ul>
+                <div class="logo">
+                    <a href="index.html">
+                        <img class="image-logo" src="../src/index/Ipluso_logo.webp" alt="Logo">
+                    </a>
+                </div>
+                <ul class="nav-links">
                     <li><a class="home" href="../index.html">Início</a></li>
                     <li><a class="spaces_and_events" href="../public/espacoeeventos.html">Espaços e Eventos</a></li>
                     <li><a class="services" href="#">Serviços</a></li>
                     <li><a class="contact" href="../public/contactos.html">Contactos</a></li>
-                    <li><a class="login_register" href="../public/login.html">Login</a></li>
                 </ul>
+                <div class="nav-login">
+                    <a class="login_register" href="../public/login.html">Login</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -31,7 +38,7 @@
                 <h2>Login</h2>
                 <form class="form-login">
                     <label class="username" for="username">Nome: <span class="required">*</span></label>
-                    <input type="text" id="username" name="username" placeholder="Nome completo:" required>
+                    <input type="text" id="username" name="username" placeholder="Nome Completo" required>
 
                     <label class="password" for="password">Password: <span class="required">*</span></label>
                     <input type="password" id="password" name="password" placeholder="Password" required>
@@ -44,7 +51,7 @@
                 <h2>Registar</h2>
                 <form class="form-registar">
                     <label class="username" for="username">Nome: <span class="required">*</span></label>
-                    <input type="text" id="username" name="username" placeholder="Nome completo:" required>
+                    <input type="text" id="username" name="username" placeholder="Nome Completo" required>
 
                     <label class="nif" for="nif">NIF: <span class="required">*</span></label>
                     <input type="number" id="nif" name="nif" placeholder="NIF" required>
@@ -76,7 +83,9 @@
             <div class="footer-col contact-col">
                 <h4>Contacte-nos</h4>
                 <p><a href="mailto:info@universidade.pt">info@universidade.pt</a></p>
-                <p>+351 123 456 789</p> </div>
+                <p>+351 123 456 789</p> 
+                <p>Campo Grande 400 | 1700-098 Lisboa</p>
+            </div>
         </div>
         <hr style="margin: 1.2rem auto 2.5rem auto; width: 80%; border: 1px solid #efefef;">
         <div class="footer-bottom">
