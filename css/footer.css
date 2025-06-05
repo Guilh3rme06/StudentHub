@@ -1,109 +1,116 @@
-:root {
-    --primary-color: #0056b3; /* Azul escuro principal */
-    --secondary-color: #f8f9fa; /* Cinza claro para fundos */
-    --text-color: #333;
-    --light-text-color: #fff;
-    --border-color: #ddd;
-    --spacing-unit: 1.5rem; /* Unidade de espaçamento base */
-    --card-bg-color: #fff;
-    --shadow-light: 0 4px 10px rgba(0,0,0,0.05);
-    --shadow-medium: 0 5px 15px rgba(0,0,0,0.1);
-}
-
 .main-footer {
-    background-color: #222;
-    color: var(--light-text-color);
-    padding: 3rem 15rem;
-    margin-top: 3rem;
-    font-size: 0.9rem;
+    background: #fff;
+    color: #222;
+    padding: 3rem 0 0.75rem 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    box-shadow: 1px 10px 22px rgba(0, 0, 0, 0.2);
 }
 
-.main-footer .footer-columns.simplified {
-    display: flex; /* Usa flexbox para alinhamento horizontal */
-    justify-content: space-between; /* Espaço entre os itens */
-    align-items: flex-start; /* Alinha o conteúdo ao topo de cada coluna */
-    margin-bottom: 2rem;
-    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
-}
-
-.main-footer .footer-col {
-    width: auto; /* Deixa o flexbox controlar a largura */
-    margin-bottom: 1rem; /* Espaçamento para responsividade */
-}
-
-.main-footer h4 {
-    color: var(--light-text-color);
-    margin-bottom: 1rem;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 0.5rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-.main-footer ul {
-    list-style: none;
-}
-
-.main-footer ul li {
-    margin-bottom: 0.6rem;
-}
-
-.main-footer ul li a {
-    color: var(--light-text-color);
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-}
-
-.main-footer ul li a:hover {
-    color: var(--primary-color);
-    text-decoration: underline;
-}
-
-.main-footer .social-icons {
+.footer-columns.simplified {
     display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+    max-width: 75rem;
+    width: 100%;    
+    margin: 0 auto 0.2rem auto; 
 }
 
-.main-footer .social-icons img {
-    width: 35px;
-    height: 35px;
-    filter: brightness(0) invert(1);
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.main-footer .social-icons img:hover {
-    transition: 0.3s ease-in-out;
-    filter: none; /* Retorna à cor original ou use uma cor específica */
-}
-
-/* Estilos específicos para as colunas do footer simplificado */
-.footer-col.social-col {
-    text-align: left; /* Alinha "Siga-nos" à esquerda */
+.footer-col {
+    flex: 1 1 0;
+    min-width: 15.625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .footer-col.contact-col {
-    text-align: right; /* Alinha "Contacte-nos" à direita */
+    align-items: flex-end; 
 }
 
-.footer-col.contact-col p {
-    margin-bottom: 0.5rem; /* Espaçamento entre as linhas de contato */
+.social-icons {
+    justify-content: flex-start;
+    margin-bottom: 0.2rem;
 }
 
-.footer-col.contact-col p a {
-    color: var(--light-text-color); /* Garante que o e-mail e telefone fiquem brancos */
+.footer-col.contact-col .social-icons {
+    justify-content: flex-end;
 }
 
+.footer-col h4 {
+    color: #222;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    position: relative;
+}
 
-.main-footer .footer-bottom {
+.footer-col h4::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.1875rem;
+    background: #ed1c24;
+    margin: 0.25rem auto 1rem auto;
+    border-radius: 0.125rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.social-icons img.social-images {
+    width: 1.8rem;
+    height: 1.8rem;
+    object-fit: contain;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    filter: none;
+}
+
+.social-icons img.social-images:hover {
+    transform: scale(1.15);
+    /* Link do filter: https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(22%) sepia(56%) saturate(6688%) hue-rotate(339deg) brightness(91%) contrast(104%);
+} 
+
+.contact-col a {
+    color: #222;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.contact-col a:hover {
+    color: #ed1c24;
+}
+
+.footer-col p {
+    margin: 0.3rem 0;
+    font-size: 1.1rem;
     text-align: center;
-    border-top: 1px solid rgba(255,255,255,0.15);
-    padding-top: 1.5rem;
-    margin-top: 2rem;
-    font-size: 0.85rem;
 }
 
-.main-footer .footer-bottom a {
-    color: var(--primary-color);
-    font-weight: bold;
+.footer-bottom {
+    text-align: center;
+    color: #ccc;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 56.25rem) {
+    .footer-columns.simplified {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+    .footer-col {
+        min-width: 0;
+        width: 100%;
+    }
 }
