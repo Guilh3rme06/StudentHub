@@ -6,13 +6,13 @@
 .div-nav{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 0.7rem;
+    padding: 0.7rem 4rem 0.7rem 2rem;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     background-color: #fff;
 }
@@ -20,21 +20,19 @@
 nav{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    max-width: 70rem;
-    margin: auto;
+    justify-content: center;
     background: transparent;
 }
 
 .logo{
-    flex: 0 0 auto;
+    margin-left: 10rem;
+    margin-right: 0;
 }
 
 .nav-links{
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    flex: 1 1 auto;
     justify-content: center;
     list-style: none;
     margin: 0;
@@ -43,7 +41,11 @@ nav{
 }
 
 .nav-login{
-    flex: 0 0 auto;
+    margin-left: 0;
+    margin-right: 13rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .home, .spaces_and_events, .services, .contact{
@@ -64,6 +66,7 @@ nav{
     background: #fff;
     text-decoration: none;
     font-size: 0.95rem;
+    margin : 0;
     padding: 0.5rem 1rem;
     position: relative;
     overflow: hidden;
@@ -118,7 +121,7 @@ nav{
 .welcome-title::after {
     content: "";
     display: block;
-    width: 15rem;
+    width: 35rem;
     height: 0.3rem;
     background: red;
     border-radius: 2px;

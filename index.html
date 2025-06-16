@@ -16,25 +16,23 @@
     <header>
         <!-- 1. Navbar -->
         <div class="div-nav">
-            <div class="top-bar">
-                <div class="logo">
-                    <a href="index.html">
-                        <img class="image-logo" src="src/index/Ipluso_logo.webp" alt="Logo">
-                    </a>
-                </div>
-                <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu">&#9776;</button>
+            <div class="logo">
+                <a href="index.html">
+                    <img class="image-logo" src="src/index/Ipluso_logo.webp" alt="Logo">
+                </a>
             </div>
             <nav>
                 <ul class="nav-links">
                     <li><a class="home" href="index.html">Início</a></li>
                     <li><a class="spaces_and_events" href="public/espacoeeventos.html">Espaços e Eventos</a></li>
-                    <li><a class="services" href="#">Serviços</a></li>
+                    <li><a class="services" href="public/servicos.html">Serviços</a></li>
                     <li><a class="contact" href="public/contactos.html">Contactos</a></li>
                 </ul>
-                <div class="nav-login">
-                    <a class="login_register" href="public/login.html">Login</a>
-                </div>
             </nav>
+            <div class="nav-login">
+                <a class="login_register" href="public/login.html">Login</a>
+            </div>
+            <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu">&#9776;</button>
         </div>
         <h1 class="welcome-title">Bem-Vindo ao StudentHub!</h1>
     </header>   
@@ -66,31 +64,47 @@
             </div>
 
             <hr style="margin: 4rem auto; width: 80%; border: 1px solid #ccc;">
-            <h1 class="mosaic-title">Sobre StudentHub</h1>
 
             <!-- 3. Informative Mosaics -->
-            <div class="event-grid">
-                <div class="event-mosaic">
-                    <img class="image-mosaic-1" src="src/index/mosaics/sec3-1.webp" alt="Mosaic1">
-                    <p class="summary mosaic-top">O StudentHub promove a organização dos estudantes, oferecendo acesso a recursos que os ajudam a gerir melhor o tempo e as suas atividades académicas.</p>
-                    <p class="summary">A disponibilização de espaços de estudo equipados com recursos tecnológicos permite aos estudantes realizar trabalhos de forma mais eficiente e colaborativa.</p>
+            <h1 class="mosaic-title">Sobre StudentHub</h1>
+            <div class="container">
+                <div class="image-box">
+                    <img src="src/index/mosaics/estudoIntensivo.webp" alt="CresCine Lançou o Volume 2 do Relatório">
+                    <div class="overlay"></div>
+                    <div class="title">Estudo <br> Intensivo</div>
+                    <div class="advantages">
+                        <p>Acesso a uma vasta biblioteca de conteúdos educativos</p>
+                        <p>Ambiente ideal para foco e concentração nos estudos</p>
+                    </div>
                 </div>
-                <div class="event-mosaic">
-                    <img class="image-mosaic-1" src="src/index/mosaics/sec3-3.webp" alt="Mosaic2">
-                    <p class="summary mosaic-top">Com o StudentHub, os estudantes ganham autonomia ao acederem a informações úteis sem dependerem diretamente de apoio administrativo.</p>
-                    <p class="summary">A personalização da experiência no StudentHub ajuda os estudantes a focarem-se apenas nas informações que lhes são mais relevantes, como notificações sobre disciplinas ou eventos específicos.</p>
+                <div class="image-box">
+                    <img src="src/index/mosaics/SuporteAcademico.webp" alt="Over & Out 2025">
+                    <div class="overlay"></div>
+                    <div class="title">Dicas & Suporte Académico</div>
+                    <div class="advantages">
+                        <p>Orientação clara para tirares o máximo partido dos teus estudos</p>
+                        <p>Apoio de tutores e mentores sempre disponível</p>
+                    </div>
                 </div>
-                <div class="event-mosaic">
-                    <img class="image-mosaic-2" src="src/index/mosaics/sec3-4.webp" alt="Mosaic3">
-                    <p class="summary mosaic-top">Eventos sociais e académicos promovem a integração dos estudantes na comunidade universitária, fortalecendo laços interpessoais e redes de apoio.</p>
-                    <p class="summary">Programas de mentoria entre estudantes e alumni ajudam a orientar os mais jovens no início das suas carreiras, proporcionando insights valiosos.</p>
+                <div class="image-box">
+                    <img src="src/index/mosaics/PartilhaConhecimento.webp" alt="IV Bio.Natural Conference">
+                    <div class="overlay"></div>
+                    <div class="title">Apresentações & Partilha</div>
+                    <div class="advantages">
+                        <p>Ferramentas para criar e partilhar ideias de forma visual</p>
+                        <p>Desenvolvimento de competências de comunicação e exposição</p>
+                    </div>
                 </div>
-                <div class="event-mosaic">
-                    <img class="image-mosaic-2" src="src/index/mosaics/sec3-5.webp" alt="Mosaic4">
-                    <p class="summary mosaic-top">Programas de apoio psicopedagógico ajudam os estudantes a lidarem com o stress e desafios da vida académica, promovendo a saúde mental e o sucesso académico.</p>
-                    <p class="summary">A disponibilização de espaços de estudo equipados com recursos tecnológicos permite aos estudantes realizar trabalhos de forma mais eficiente e colaborativa.O acesso a plataformas digitais permite aos estudantes organizarem os seus horários e tarefas de forma eficiente, utilizando calendários integrados e notificações.</p>
+                <div class="image-box">
+                    <img src="src/index/mosaics/cargaAcademica.webp" alt="NECS Conference 2025">
+                    <div class="overlay"></div>
+                    <div class="title">Gestão de Carga Académica</div>
+                    <div class="advantages">
+                        <p>Estratégias para lidar com períodos de alta pressão</p>
+                        <p>Recursos para organização eficaz do tempo e tarefas</p>
+                    </div>
                 </div>
-            </div><br><br><br>
+            </div>
 
             <!-- 4. Events and News -->
             <div class="envents-background">
