@@ -90,6 +90,7 @@ button:hover {
     font-size: 0.875rem;
 }
 
+
 @media (max-width: 768px) {
     .forms-container {
         flex-direction: column;
@@ -107,4 +108,19 @@ button:hover {
     .registar-container {
         margin-bottom: 0;
     }
+}
+
+.cliente{
+    margin:1rem 0;
+}
+
+.servicos{
+    background:#f9f9f9; 
+    padding:1rem; 
+    border-radius:0.5rem;
+}
+
+.tabela-utilizadores {
+    border: 1px solid #ccc;
+    margin:1rem 0;
 }
