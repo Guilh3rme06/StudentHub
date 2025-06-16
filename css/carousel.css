@@ -85,3 +85,17 @@
 .carousel-indicators .active {
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+@media (max-width: 900px) {
+    .carousel {
+        height: 18rem;
+    }
+}
+@media (max-width: 600px) {
+    .carousel {
+        height: 10rem;
+    }
+    .carousel-item img {
+        height: 10rem;
+    }
+}

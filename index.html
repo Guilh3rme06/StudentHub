@@ -32,11 +32,9 @@
             <div class="nav-login">
                 <a class="login_register" href="public/login.html">Login</a>
             </div>
-            <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu">&#9776;</button>
-        </div>
-        <h1 class="welcome-title">Bem-Vindo ao StudentHub!</h1>
+            <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu"><span>&#9776;</span></button>        
     </header>   
-
+            <h1 class="welcome-title">Bem-Vindo ao StudentHub!</h1>
     <main>
         <section class="main">
             <!-- 2. Carousel -->
@@ -138,10 +136,6 @@
     </footer>
 
     <script src="components/carousel.js"></script>
-    <script>
-        document.getElementById('hamburger-btn').onclick = function() {
-            document.querySelector('nav').classList.toggle('active');
-        };
-    </script>
+    <script  src="components/navbar.js"></script>
 </body>
 </html>
