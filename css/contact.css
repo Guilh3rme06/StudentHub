@@ -24,7 +24,7 @@
 .contact-title{
     background-color: #ffffff;
     padding: 2rem;
-    color: #0056b3;
+    color: red;
     font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
@@ -36,49 +36,11 @@
     display: block;
     width: 15rem;
     height: 0.3rem;
-    background: #0056b3;
+    background: red;
     border-radius: 2px;
     margin: 0.5rem auto 0 auto;
 }
 
-.text-contact {
-    font-family: 'Arial', sans-serif;
-    color: #222;
-    font-size: 1.2rem;
-    line-height: 1.7;
-    margin: 1rem 0.5rem;
-    letter-spacing: 0.01em;
-    text-align: left;
-    padding-left: 1.2rem;
-    position: relative;
-}
-
-.text-contact::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #0078d4;
-    font-size: 1.2rem;
-    top: -0.2rem;
-}
-
-.contact-form {
-    border: 2px solid #0056b3;
-    border-radius: 1rem;
-    background: #fff;
-    padding: 2rem 1.5rem 1.5rem 1.5rem;
-    box-shadow: 0 2px 12px rgba(124, 58, 237, 0.07);
-    max-width: 25rem;
-    width: 25rem;
-    height: 20rem;
-}
-
-.contact-form h2 {
-    color: #222;
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
 
 .form-group {
     margin-bottom: 1.2rem;
@@ -88,53 +50,14 @@
 
 .form-group label {
     margin-bottom: 0.4rem;
-    color: #0056b3;
+    color: red;
     font-weight: 600;
     font-size: 1rem;
 }
 
-.contact-form input,
-.contact-form textarea {
-    padding: 0.7rem;
-    border-radius: 0.5rem;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    font-family: inherit;
-    transition: border 0.2s;
-    outline: none;
-    resize: none;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border: 1.5px solid #0056b3;
-    background: #f6faff;
-}
-
-.contact-form textarea {
-    min-height: 90px;
-    max-width: 100%;
-}
-
-.contact-form button {
-    background: #0056b3;
-    color: #fff;
-    border: none;
-    padding: 0.8rem 2rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-top: 0.5rem;
-}
-
-.contact-form button:hover {
-    background: #0056b3;
-}
-
 .horarios {
     background: #f6faff;
-    border-left: 4px solid #0078d4;
+    border-left: 4px solid red;
     border-radius: 0.7rem;
     box-shadow: 0 2px 8px rgba(0,120,212,0.05);
     margin-bottom: 2rem;
@@ -143,7 +66,7 @@
 
 .horarios h3 {
     margin-top: 0;
-    color: #0056b3;
+    color: red;
     font-size: 1.15rem;
     margin-bottom: 0.7rem;
 }
@@ -159,18 +82,57 @@
     font-size: 1rem;
 }
 
-.contact-form select {
-    padding: 0.7rem;
-    border-radius: 0.5rem;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    font-family: inherit;
-    margin-bottom: 1rem;
-    background: #fff;
-    transition: border 0.2s;
+.form-contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    margin-bottom: 15rem;
 }
 
-.contact-form select:focus {
-    border: 1.5px solid #0056b3;
-    background: #f6faff;
+.contact-form {
+    width: 100%;
+    max-width: 30rem;
+    background: #fff;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.submit {
+    color: #fff;
+    background-color: red;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    align-self: center;
+    margin-top: 1rem;
 }
