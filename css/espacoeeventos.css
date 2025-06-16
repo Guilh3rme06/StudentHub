@@ -21,7 +21,6 @@ body {
     margin: 0 auto;
 }
 
-
 .spaces-section {
     padding: 2rem;
     margin: 0 auto;
@@ -39,7 +38,8 @@ body {
     margin-bottom: 2rem;
 }
 
-.space-container-normal {
+.space-container-normal,
+.space-container-reverse {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,9 +47,14 @@ body {
     margin-bottom: 2rem;
 }
 
-.image-normal {
+.space-container-reverse {
+    flex-direction: row-reverse;
+}
+
+.image-normal,
+.image-reverse {
     width: 28vw;
-    min-width: 30vw;
+    min-width: 30vw; /* Consider removing min-width if it causes issues on very small screens */
     max-width: 40vw;
     display: block;
     border-radius: 0.7em;
@@ -62,24 +67,6 @@ body {
     margin-left: 0;
     align-items: flex-start;
     justify-content: flex-start;
-}
-
-.space-container-reverse {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    flex-direction: row-reverse;
-}
-
-.image-reverse {
-    width: 28vw;
-    min-width: 30vw;
-    max-width: 40vw;
-    display: block;
-    border-radius: 0.7em;
-    object-fit: cover;
 }
 
 .space-carrosel {
@@ -114,11 +101,12 @@ body {
 }
 
 .image-card {
-    max-width: 20rem;
-    max-height: 20rem;
-    object-fit: cover;
+    max-width: 100%; /* Changed from 20rem for better responsiveness */
+    height: auto; /* Ensures aspect ratio is maintained */
+    display: block; /* To remove extra space below the image */
     border-radius: 10px;
     margin-bottom: 1rem;
+    object-fit: cover;
 }
 
 .button-contact {
@@ -151,39 +139,119 @@ body {
     color: #000;
 }
 
-@media (max-width: 700px) {
-    .space-container-normal {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
+/* --- Media Queries for Responsiveness --- */
+
+/* For screens smaller than 1024px (e.g., tablets and smaller laptops) */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 30px;
     }
-    .image-normal {
-        width: 90vw;
-        max-width: 100%;
-        min-width: 0;
-        margin: 0 auto;
+
+    .hero-description {
+        font-size: 16px;
     }
-    .space-info {
+
+    .section-title,
+    .carrosel-title {
+        font-size: 2rem;
+        padding: 1.5rem;
+    }
+
+    .space-container-normal,
+    .space-container-reverse {
+        flex-direction: column; /* Stack items vertically */
         text-align: center;
     }
-    .space-container-reverse {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-    }
+
+    .image-normal,
     .image-reverse {
-        width: 90vw;
-        max-width: 100%;
-        min-width: 0;
-        margin: 0 auto;
+        width: 80vw; /* Take up more width on smaller screens */
+        min-width: unset; /* Reset min-width */
+        max-width: 100%; /* Ensure it doesn't overflow */
     }
+
+    .space-info {
+        text-align: center;
+        margin-left: 0;
+        padding: 0 15px; /* Add some padding for better readability */
+    }
+
     .event-grid {
-        grid-template-columns: 1fr; /* Stacks cards vertically on smaller screens */
+        grid-template-columns: repeat(2, minmax(250px, 1fr)); /* 2 columns for tablets */
+        padding: 0 1rem;
+    }
+
+    .image-card {
+        max-width: 100%;
     }
 }
 
-@media (min-width: 701px) and (max-width: 1024px) {
+/* For screens smaller than 768px (e.g., most mobile devices) */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 10px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .section-title,
+    .carrosel-title {
+        font-size: 1.8rem;
+        padding: 1rem;
+    }
+
+    .spaces-section,
+    .space-carrosel {
+        padding: 1rem;
+    }
+
+    .space-container-normal,
+    .space-container-reverse {
+        gap: 1rem;
+    }
+
+    .image-normal,
+    .image-reverse {
+        width: 90vw; /* Almost full width on mobile */
+    }
+
     .event-grid {
-        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+        grid-template-columns: 1fr; /* Single column for mobile */
+        padding: 0 0.5rem;
+    }
+
+    .event-card {
+        padding: 1rem;
+    }
+
+    .button-cont {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* For very small screens (e.g., older phones) */
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 40px 5px;
+    }
+
+    .hero-title {
+        font-size: 20px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .section-title,
+    .carrosel-title {
+        font-size: 1.5rem;
     }
 }
