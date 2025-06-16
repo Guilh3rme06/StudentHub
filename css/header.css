@@ -95,13 +95,14 @@ nav {
 }
 
 .welcome-title {
+    background-color: #fff;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-size: 3rem;
     font-weight: bold;
     color: black;
-    margin-top: 6rem;
-    margin-bottom: 2rem;
+    margin-top: 2.5rem;
+    padding: 3.5rem;
 }
 
 .welcome-title::after {
