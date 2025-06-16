@@ -114,7 +114,7 @@
 
     .footer-col,
     .footer-col.contact-col {
-        align-items: flex-start !important;
+        align-items: flex-start;
         min-width: 0;
         width: 100%;
     }
@@ -128,7 +128,7 @@
     }
 
     .social-icons {
-        justify-content: flex-start !important;
+        justify-content: flex-start;
         gap: 1.5rem;
     }
 }
