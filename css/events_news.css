@@ -1,0 +1,105 @@
+.events-news-title {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: black;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+.events-news-title::after {
+    content: "";
+    display: block;
+    width: 25rem;
+    height: 0.3rem;
+    background: red;
+    border-radius: 2px;
+    margin: 0.5rem auto;
+}   
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 97.9%;
+    padding-left: 1rem; padding-right: 1rem;
+}
+
+.image-box {
+    position: relative;
+    width: 24%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.image-box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-box .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 80%);
+}
+
+.event-news-section{
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    transform: translateX(-50%);
+    width: auto;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.5rem;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+.image-box:hover .event-news-section {
+    transform: translate(-50%, -120%);
+}
+
+.image-box .title {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.image-box:hover .title {
+    transform: translate(-50%, -120%);
+}
+
+.events-news {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    transform: translateX(-50%);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.image-box:hover .events-news {
+    opacity: 1;
+    transform: translate(0%, -10%);
+}
