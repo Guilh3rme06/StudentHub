@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadados essenciais e responsividade -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login/Registar</title>
+    <!-- Ícone do site -->
     <link rel="icon" href="../src/index/Ipluso_logo.webp" type="Logo">
+    <!-- Estilos principais do header, login e footer -->
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/footer.css">
-
 </head>
 <body>
+    <!-- Header com navegação principal -->
     <header>
-        <!-- 1. Navbar -->
+        <!-- Container da barra de navegação -->
         <div class="div-nav">
+            <!-- Logo do site -->
             <div class="logo">
                 <a href="../index.html">
                     <img class="image-logo" src="../src/index/Ipluso_logo.webp" alt="Logo">
                 </a>
             </div>
+            <!-- Menu de navegação com links principais -->
             <nav>
                 <ul class="nav-links">
                     <li><a class="home" href="../index.html">Início</a></li>
@@ -27,24 +32,29 @@
                     <li><a class="contact" href="../public/contactos.html">Contactos</a></li>
                 </ul>
             </nav>
+            <!-- Botão de login (fica visível no menu lateral em mobile) -->
             <div class="nav-login">
                 <a class="login_register" href="../public/login.html">Login</a>
             </div>
+            <!-- Botão hamburguer para menu responsivo -->
             <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu"><span>&#9776;</span></button>        
+        </div>
     </header>
 
     <main>
         <div class="forms-container">
+            <!-- Formulário de Login -->
             <div class="login-container">
                 <h2>Login</h2>
-                    <form id="form-login" class="form-login">
-                        <label for="login-username">Nome: <span class="required">*</span></label>
-                        <input type="text" id="login-username" name="username" required>
-                        <label for="login-password">Password: <span class="required">*</span></label>
-                        <input type="password" id="login-password" name="password" required>
-                        <button type="submit">Login</button>
-                    </form>            
-                </div>
+                <form id="form-login" class="form-login">
+                    <label for="login-username">Nome: <span class="required">*</span></label>
+                    <input type="text" id="login-username" name="username" required>
+                    <label for="login-password">Password: <span class="required">*</span></label>
+                    <input type="password" id="login-password" name="password" required>
+                    <button class="submit" type="submit">Login</button>
+                </form>            
+            </div>
+            <!-- Formulário de Registo -->
             <div class="registar-container">
                 <h2>Registar</h2>
                 <form class="form-registar">
@@ -63,14 +73,16 @@
                     <label class="confirm_password" for="confirm_password">Confirmar Password: <span class="required">*</span></label>
                     <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
 
-                    <button id="submit_registar" type="submit">Registar</button>
+                    <button id="submit_registar" class="submit" type="submit">Registar</button>
                 </form>
             </div>
         </div>
     </main>
 
+    <!-- Footer com redes sociais e contactos -->
     <footer class="main-footer">
         <div class="footer-columns simplified">
+            <!-- Coluna de redes sociais -->
             <div class="footer-col social-col">
                 <h4>Siga-nos</h4>
                 <div class="social-icons">
@@ -79,6 +91,7 @@
                     <a href="https://www.linkedin.com/school/iplusofonia/"><img class="social-images" style="object-fit:scale-down; width: 4rem; height: 4rem;" src="../src/footer/linkedin.webp" alt="LinkedIn"></a>
                 </div>
             </div>
+            <!-- Coluna de contactos -->
             <div class="footer-col contact-col">
                 <h4>Contacte-nos</h4>
                 <p><a href="mailto:info@universidade.pt">info@universidade.pt</a></p>
@@ -86,12 +99,14 @@
                 <p>Campo Grande 400 | 1700-098 Lisboa</p>
             </div>
         </div>
+        <!-- Linha divisória do rodapé -->
         <hr style="margin: 1.2rem auto 2.5rem auto; width: 80%; border: 1px solid #efefef;">
         <div class="footer-bottom">
             <p>&copy; 2025 Universidade. Todos os direitos reservados.</p>
         </div>
     </footer>
     
+    <!-- Scripts JS para funcionalidades de login e navbar -->
     <script src="../components/login.js"></script>
     <script  src="../components/navbar.js"></script>
 </body>

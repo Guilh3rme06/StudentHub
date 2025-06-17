@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadados e links para estilos e fontes -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços</title>
+    <!-- Ícone do site -->
     <link rel="icon" href="../src/index/Ipluso_logo.webp" type="Logo">
+    <!-- Folhas de estilo -->
     <link rel="stylesheet" href="../css/servicos.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/header.css">
+    <!-- Fonte Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
-
 </head>
 <body>
+    <!-- Cabeçalho do site -->
     <header>
-        <!-- 1. Navbar -->
+        <!-- Barra de navegação principal -->
         <div class="div-nav">
+            <!-- Logo -->
             <div class="logo">
                 <a href="../index.html">
                     <img class="image-logo" src="../src/index/Ipluso_logo.webp" alt="Logo">
                 </a>
             </div>
+            <!-- Navegação com links principais -->
             <nav>
                 <ul class="nav-links">
                     <li><a class="home" href="../index.html">Início</a></li>
@@ -28,14 +34,19 @@
                     <li><a class="contact" href="../public/contactos.html">Contactos</a></li>
                 </ul>
             </nav>
+            <!-- Botão de login -->
             <div class="nav-login">
                 <a class="login_register" href="../public/login.html">Login</a>
             </div>
+            <!-- Botão hamburguer para menu responsivo -->
             <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu"><span>&#9776;</span></button>        
+        </div>
     </header>
-        <h1 class="welcome-title">Serviços</h1>
+    <!-- Título da página de serviços -->
+    <h1 class="servicos-title">Serviços</h1>
 
- <main class="main-content">
+    <main class="main-content">
+        <!-- Seção de destaque/hero -->
         <section class="hero-section">
             <div class="container hero-container">
                 <h1 class="hero-title">Apoio Completo para a Sua Jornada Acadêmica</h1>
@@ -43,35 +54,42 @@
             </div>
         </section>
 
+        <!-- Seção de serviços principais -->
         <section class="services-section section-padding">
             <div class="container services-container">
                 <h2 class="section-title">Nossos Serviços</h2>
                 <div class="services-grid">
+                    <!-- Cartão de serviço 1 -->
                     <div class="service-card">
                         <div class="card-icon"><i class="fas fa-book-open"></i></div>
                         <h3 class="card-title">Clube de Empreendedorismo</h3>
                         <p class="card-description">Iniciativa que ajuda os estudantes a desenvolverem ideias de negócio, com workshops, mentorias e acesso a incubadoras de startups.</p>
                     </div>
+                    <!-- Cartão de serviço 2 -->
                     <div class="service-card">
                         <div class="card-icon"><i class="fas fa-headset"></i></div>
                         <h3 class="card-title">Suporte Técnico</h3>
                         <p class="card-description">Assistência para resolução de problemas com equipamentos, software e acesso às plataformas digitais da universidade.</p>
                     </div>
+                    <!-- Cartão de serviço 3 -->
                     <div class="service-card">
                         <div class="card-icon"><i class="fas fa-briefcase"></i></div>
                         <h3 class="card-title">Orientação Profissional</h3>
                         <p class="card-description">Sessões personalizadas para ajudar os estudantes a planearem carreiras, prepararem currículos e se destacarem no mercado de trabalho.</p>
                     </div>
+                    <!-- Cartão de serviço 4 -->
                     <div class="service-card">
                         <div class="card-icon"><i class="fas fa-users"></i></div>
                         <h3 class="card-title">Apoio Psicopedagógico</h3>
                         <p class="card-description">Oferece suporte para a saúde mental e académica dos estudantes, com consultas individuais e workshops sobre gestão do stress.</p>
                     </div>
+                    <!-- Cartão de serviço 5 -->
                     <div class="service-card">
                         <div class="card-icon"><i class="fas fa-building"></i></div>
                         <h3 class="card-title">Centro de Estágios</h3>
                         <p class="card-description">Facilita o acesso a oportunidades de estágio, orientando os estudantes desde a candidatura até a integração no ambiente profissional.</p>
                     </div>
+                    <!-- Cartão de serviço 6 -->
                     <div class="service-card">
                         <div class="card-icon"><i class="fas fa-clipboard-list"></i></div>
                         <h3 class="card-title">Laboratório de Idiomas</h3>
@@ -81,88 +99,104 @@
             </div>
         </section>
 
+        <!-- Seção de serviços em destaque (carrossel) -->
         <section class="featured-section section-padding background-light">
             <div class="container featured-container">
                 <h2 class="section-title">Serviços em Destaque</h2>
                 <div class="carousel-wrapper">
                     <div class="carousel-track">
+                        <!-- Item 1 do carrossel -->
                         <div class="carousel-item highlight-card">
                             <img src="../src/servicos/biblioteca.webp" alt="Biblioteca Académica" class="highlight-image">
                             <h3 class="highlight-title">Biblioteca Académica</h3>
                             <p class="highlight-description">Disponibiliza uma vasta coleção de livros, artigos e recursos digitais, além de áreas de estudo silenciosas e colaborativas.</p>
                         </div>
+                        <!-- Item 2 do carrossel -->
                         <div class="carousel-item highlight-card">
                             <img src="../src/servicos/investidacao.webp" alt="Serviço de Apoio à Investigação" class="highlight-image">
                             <h3 class="highlight-title">Serviço de Apoio à Investigação</h3>
                             <p class="highlight-description">Apoio técnico e académico para estudantes que realizam projetos de investigação, incluindo acesso a bases de dados e materiais científicos.</p>
                         </div>
+                        <!-- Item 3 do carrossel -->
                         <div class="carousel-item highlight-card">
                             <img src="../src/servicos/estudante.Internacional.webp" alt="Serviço de Apoio ao Estudante Internacional" class="highlight-image">
                             <h3 class="highlight-title">Serviço de Apoio ao Estudante Internacional</h3>
                             <p class="highlight-description">Apoio para estudantes estrangeiros, incluindo orientação sobre vistos, adaptação cultural e integração na comunidade académica.</p>
                         </div>
+                        <!-- Item 4 do carrossel -->
                         <div class="carousel-item highlight-card">
                             <img src="../src/servicos/voluntariado.webp" alt="Programa de Voluntariado" class="highlight-image">
                             <h3 class="highlight-title">Programa de Voluntariado</h3>
                             <p class="highlight-description">Oportunidades para os estudantes contribuírem para a comunidade, enquanto desenvolvem competências interpessoais e profissionais.</p>
                         </div>
+                        <!-- Item 5 do carrossel -->
                         <div class="carousel-item highlight-card">
                             <img src="../src/servicos/atividadesDesportivas.webp" alt="Atividades Desportivas" class="highlight-image">
                             <h3 class="highlight-title">Atividades Desportivas</h3>
                             <p class="highlight-description">Programação semanal de atividades físicas e desportivas, como aulas de yoga, torneios de futsal e treinos ao ar livre.</p>
                         </div>
+                        <!-- Item 6 do carrossel -->
                         <div class="carousel-item highlight-card">
                             <img src="../src/servicos/alojamento.webp" alt="Gestão de Alojamento" class="highlight-image">
                             <h3 class="highlight-title">Gestão de Alojamento</h3>
                             <p class="highlight-description">Serviço que auxilia os estudantes a encontrar acomodações próximas ao campus, com opções de residências universitárias ou privadas.</p>
                         </div>
                     </div>
+                    <!-- Botões do carrossel -->
                     <button class="carousel-button carousel-prev-button">&#10094;</button>
                     <button class="carousel-button carousel-next-button">&#10095;</button>
                 </div>
             </div>
         </section>
 
+        <!-- Seção de perguntas frequentes (FAQ) -->
         <section class="faq-section section-padding">
             <div class="container faq-container">
                 <h2 class="section-title">Esclareça Suas Dúvidas</h2>
                 <div class="faq-list">
+                    <!-- FAQ 1 -->
                     <div class="faq-item">
                         <button class="faq-question">Como posso reservar uma sala de estudo na biblioteca?</button>
                         <div class="faq-answer">
                             <p>A reserva pode ser feita diretamente na página de Serviços do StudentHub, na seção "Biblioteca Académica". Basta selecionar o horário desejado e confirmar a reserva com o seu login de estudante.</p>
                         </div>
                     </div>
+                    <!-- FAQ 2 -->
                     <div class="faq-item">
                         <button class="faq-question">Quem pode aceder ao Apoio Psicopedagógico?</button>
                         <div class="faq-answer">
                             <p>O serviço está disponível para todos os estudantes matriculados na universidade. Pode marcar uma consulta através do formulário na página de Serviços ou dirigindo-se diretamente ao balcão de apoio.</p>
                         </div>
                     </div>
+                    <!-- FAQ 3 -->
                     <div class="faq-item">
                         <button class="faq-question">Como posso candidatar-me a estágios pelo Centro de Estágios?</button>
                         <div class="faq-answer">
                             <p>Para candidatar-se a um estágio, aceda à seção "Centro de Estágios" no StudentHub, onde encontrará uma lista de oportunidades disponíveis. Siga as instruções para enviar o seu currículo e candidatura.</p>
                         </div>
                     </div>
+                    <!-- FAQ 4 -->
                     <div class="faq-item">
                         <button class="faq-question">O que fazer se tiver problemas técnicos com o StudentHub?</button>
                         <div class="faq-answer">
                             <p>Caso enfrente dificuldades técnicas, pode contactar o Suporte Técnico através do formulário de contacto na página de Serviços ou pelo e-mail disponibilizado. O atendimento é rápido e eficiente.</p>
                         </div>
                     </div>
+                    <!-- FAQ 5 -->
                     <div class="faq-item">
                         <button class="faq-question">Há algum custo para utilizar o Laboratório de Idiomas?</button>
                         <div class="faq-answer">
                             <p>Não, o acesso ao Laboratório de Idiomas é gratuito para todos os estudantes. Apenas é necessário agendar previamente o horário de utilização.</p>
                         </div>
                     </div>
+                    <!-- FAQ 6 -->
                     <div class="faq-item">
                         <button class="faq-question">Como posso participar no Programa de Voluntariado?</button>
                         <div class="faq-answer">
                             <p>Basta aceder à seção "Programa de Voluntariado" no StudentHub e inscrever-se nos projetos disponíveis. Os estudantes também podem participar nas sessões informativas realizadas mensalmente.</p>
                         </div>
                     </div>
+                    <!-- FAQ 7 -->
                     <div class="faq-item">
                         <button class="faq-question">O que inclui o Clube de Empreendedorismo?</button>
                         <div class="faq-answer">
@@ -171,35 +205,41 @@
                     </div>
                 </div>
             </div>
+            <!-- Botão para página de contactos -->
             <div class="button-contact">
-        <a href="../public/contactos.html" class="button-cont">Contacte-nos</a>
-    </div>
+                <a href="../public/contactos.html" class="button-cont">Contacte-nos</a>
+            </div>
         </section>
+    </main>
 
-    <!-- fotter -->
-<footer class="main-footer">
-    <div class="footer-columns simplified">
-        <div class="footer-col social-col">
-            <h4>Siga-nos</h4>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/iplusofonia/"><img class="social-images" style="object-fit:scale-down; width: 4rem; height: 4rem;" src="../src/footer/facebook.webp" alt="Facebook"></a>
-                <a href="https://www.instagram.com/iplusofonia/"><img class="social-images" style="object-fit:scale-down; width: 4rem; height: 4rem;" src="../src/footer/instagram.webp" alt="Instagram"></a>
-                <a href="https://www.linkedin.com/school/iplusofonia/"><img class="social-images" style="object-fit:scale-down; width: 4rem; height: 4rem;" src="../src/footer/linkedin.webp" alt="LinkedIn"></a>
+    <!-- Rodapé do site -->
+    <footer class="main-footer">
+        <div class="footer-columns simplified">
+            <!-- Coluna de redes sociais -->
+            <div class="footer-col social-col">
+                <h4>Siga-nos</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/iplusofonia/"><img class="social-images" style="object-fit:scale-down; width: 4rem; height: 4rem;" src="../src/footer/facebook.webp" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/iplusofonia/"><img class="social-images" style="object-fit:scale-down; width: 4rem; height: 4rem;" src="../src/footer/instagram.webp" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com/school/iplusofonia/"><img class="social-images" style="object-fit:scale-down; width: 4rem; height: 4rem;" src="../src/footer/linkedin.webp" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <!-- Coluna de contactos -->
+            <div class="footer-col contact-col">
+                <h4>Contacte-nos</h4>
+                <p><a href="mailto:info@universidade.pt">info@universidade.pt</a></p>
+                <p>+351 123 456 789</p>
+                <p>Campo Grande 400 | 1700-098 Lisboa</p>
             </div>
         </div>
-        <div class="footer-col contact-col">
-            <h4>Contacte-nos</h4>
-            <p><a href="mailto:info@universidade.pt">info@universidade.pt</a></p>
-            <p>+351 123 456 789</p>
-            <p>Campo Grande 400 | 1700-098 Lisboa</p>
+        <!-- Linha divisória do rodapé -->
+        <hr style="margin: 1.2rem auto 2.5rem auto; width: 80%; border: 1px solid #efefef;">
+        <div class="footer-bottom">
+            <p>&copy; 2025 Universidade. Todos os direitos reservados.</p>
         </div>
-    </div>
-    <hr style="margin: 1.2rem auto 2.5rem auto; width: 80%; border: 1px solid #efefef;">
-    <div class="footer-bottom">
-        <p>&copy; 2025 Universidade. Todos os direitos reservados.</p>
-    </div>
-</footer>
+    </footer>
 
+    <!-- Scripts JS para funcionalidades dos serviços e navbar -->
     <script src="../components/servicos.js"></script>
     <script  src="../components/navbar.js"></script>
 </body>

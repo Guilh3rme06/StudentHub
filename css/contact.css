@@ -8,6 +8,28 @@
     padding-bottom: 2rem;
 }
 
+.contactos-title{
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: black;
+    margin-top: 4rem;
+    padding: 3.5rem;
+
+}
+
+.contactos-title::after {
+    content: "";
+    display: block;
+    width: 18rem;
+    height: 0.3rem;
+    background: #ed1c24;
+    border-radius: 2px;
+    margin: 0.5rem auto;
+}
+
 .contacts-left {
     display: flex;
     flex-direction: column;

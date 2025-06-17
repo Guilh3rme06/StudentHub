@@ -2,6 +2,27 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.espaco-title{
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: black;
+    margin-top: 4rem;
+    padding: 3.5rem;
+}
+
+.espaco-title::after {
+    content: "";
+    display: block;
+    width: 25rem;
+    height: 0.3rem;
+    background: #ed1c24;
+    border-radius: 2px;
+    margin: 0.5rem auto;
+}
+
 .hero-section {
     background-color: #555;
     color: #fff;
@@ -139,7 +160,6 @@ body {
     color: #000;
 }
 
-/* --- Media Queries for Responsiveness --- */
 
 /* For screens smaller than 1024px (e.g., tablets and smaller laptops) */
 @media (max-width: 1024px) {

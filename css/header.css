@@ -146,6 +146,7 @@ nav {
     display: inline-block;
 }
 
+
 @media (max-width: 990px) {
     .div-nav {
         flex-direction: row;
@@ -218,19 +219,20 @@ nav {
     }
 
     .nav-login {
-        position: absolute;
-        bottom: 2rem;
-        left: 1rem;
-        width: calc(100% - 2rem);
-        display: block;
-        text-align: left;
-        margin: 0;
+        position: static;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: right;
+        margin: 0.5rem 0 0.5rem 0;
+        order: 2;
     }
 
     .login_register {
-        width: 100%;
-        box-sizing: border-box;
-        margin: 0;
+        width: auto;
+        margin: 0 1rem 0 0;
+        display: inline-block;
     }
 
     .welcome-title {

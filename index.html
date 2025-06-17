@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadados e links para estilos e fontes -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudentHub</title>
+    <!-- Ícone do site -->
     <link rel="icon" href="../src/index/Ipluso_logo.webp" type="Logo">
+    <!-- Folhas de estilo -->
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/mosaics.css">
     <link rel="stylesheet" href="css/events_news.css">
     <link rel="stylesheet" href="css/footer.css">
+    <!-- Fonte Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
 </head>
 <body style="background-color: #f0f0f0;">
+    <!-- Cabeçalho do site -->
     <header>
-        <!-- 1. Navbar -->
+        <!-- Barra de navegação principal -->
         <div class="div-nav">
+            <!-- Logo -->
             <div class="logo">
                 <a href="index.html">
                     <img class="image-logo" src="src/index/Ipluso_logo.webp" alt="Logo">
                 </a>
             </div>
+            <!-- Navegação com links principais -->
             <nav>
                 <ul class="nav-links">
                     <li><a class="home" href="index.html">Início</a></li>
@@ -29,15 +36,19 @@
                     <li><a class="contact" href="public/contactos.html">Contactos</a></li>
                 </ul>
             </nav>
+            <!-- Botão de login -->
             <div class="nav-login">
                 <a class="login_register" href="public/login.html">Login</a>
             </div>
+            <!-- Botão hamburguer para menu responsivo -->
             <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu"><span>&#9776;</span></button>        
+        </div>
     </header>   
-            <h1 class="welcome-title">Bem-Vindo ao StudentHub!</h1>
+    <!-- Título de boas-vindas -->
+    <h1 class="welcome-title">Bem-Vindo ao StudentHub!</h1>
     <main>
         <section class="main">
-            <!-- 2. Carousel -->
+            <!-- Carrossel de imagens -->
             <div class="carousel-background">
                 <div class="carousel">
                     <div class="carousel-inner">
@@ -51,8 +62,10 @@
                             <img src="src/index/carousel/Carrosell Student Hub 3.webp" alt="Image3">
                         </div>
                     </div>
+                    <!-- Controles do carrossel -->
                     <button class="carousel-control prev" onclick="prevSlideManual()">&#10094;</button>
                     <button class="carousel-control next" onclick="nextSlideManual()">&#10095;</button>
+                    <!-- Indicadores do carrossel -->
                     <div class="carousel-indicators">
                         <span onclick="goToSlide(0)" class="active"></span>
                         <span onclick="goToSlide(1)"></span>
@@ -61,11 +74,13 @@
                 </div>
             </div>
 
+            <!-- Linha divisória -->
             <hr style="margin: 4rem auto; width: 80%; border: 1px solid #ccc;">
 
-            <!-- 3. Informative Mosaics -->
+            <!-- Mosaicos informativos sobre o StudentHub -->
             <h1 class="mosaic-title">Sobre StudentHub</h1>
             <div class="mosaic-container">
+                <!-- Mosaico 1 -->
                 <div class="mosaic-box">
                     <img src="src/index/mosaics/estudoIntensivo.webp" alt="Estudo Intensivo">
                     <div class="overlay"></div>
@@ -75,6 +90,7 @@
                         <p>Ambiente ideal para foco e concentração nos estudos.</p>
                     </div>
                 </div>
+                <!-- Mosaico 2 -->
                 <div class="mosaic-box">
                     <img src="src/index/mosaics/SuporteAcademico.webp" alt="Over & Out 2025">
                     <div class="overlay"></div>
@@ -84,6 +100,7 @@
                         <p>Apoio de tutores e mentores sempre disponível.</p>
                     </div>
                 </div>
+                <!-- Mosaico 3 -->
                 <div class="mosaic-box">
                     <img src="src/index/mosaics/PartilhaConhecimento.webp" alt="IV Bio.Natural Conference">
                     <div class="overlay"></div>
@@ -93,6 +110,7 @@
                         <p>Desenvolvimento de competências de comunicação e exposição.</p>
                     </div>
                 </div>
+                <!-- Mosaico 4 -->
                 <div class="mosaic-box">
                     <img src="src/index/mosaics/cargaAcademica.webp" alt="NECS Conference 2025">
                     <div class="overlay"></div>
@@ -104,10 +122,11 @@
                 </div>
             </div>
 
-            <!-- 4. Events and News -->
+            <!-- Seção de Eventos e Notícias -->
             <h1 class="events-news-title">Eventos e Notícias</h1>
             <!-- Eventos -->
             <div class="events-news-container">
+                <!-- Evento 1 -->
                 <div class="events-news-box">
                     <img src="src/index/events_news/img-6.webp" alt="Dia do Desporto Universitário">
                     <div class="overlay"></div>
@@ -117,6 +136,7 @@
                         <p>O campus acolheu o seu aguardado Dia do Desporto, reunindo estudantes para uma série de competições atléticas e atividades recreativas, promovendo a união e o bem-estar.</p>
                     </div>
                 </div>
+                <!-- Evento 2 -->
                 <div class="events-news-box">
                     <img src="src/index/events_news/img-4.webp" alt="Conferência Anual de Inovação e Tecnologia">
                     <div class="overlay"></div>
@@ -126,6 +146,7 @@
                         <p>A nossa conferência anual atraiu especialistas e estudantes para discutir as últimas tendências em tecnologia e inovação, com palestras inspiradoras e sessões interativas.</p>
                     </div>
                 </div>
+                <!-- Evento 3 -->
                 <div class="events-news-box">
                     <img src="src/index/events_news/img-5.webp" alt="Cerimónia de Graduação">
                     <div class="overlay"></div>
@@ -135,6 +156,7 @@
                         <p>Mais uma turma de finalistas celebrou a sua graduação numa emotiva cerimónia, marcando o culminar de anos de esforço e dedicação.</p>
                     </div>
                 </div>
+                <!-- Evento 4 -->
                 <div class="events-news-box">
                     <img src="src/index/events_news/img-10.webp" alt="Workshop de Inteligência Artificial">
                     <div class="overlay"></div>
@@ -144,6 +166,7 @@
                         <p>Um workshop prático sobre Inteligência Artificial, onde os participantes aprenderam sobre os fundamentos e aplicações práticas desta tecnologia emergente.</p>
                     </div>
                 </div>
+                <!-- Evento 5 -->
                 <div class="events-news-box">
                     <img src="src/index/events_news/img-13.webp" alt="Workshop de Inteligência Artificial">
                     <div class="overlay"></div>
@@ -153,6 +176,7 @@
                         <p>O campus vibrou com o nosso festival de música, apresentando talentos locais e proporcionando um ambiente descontraído para os estudantes socializarem e desfrutarem de boa música.</p>
                     </div>
                 </div>
+                <!-- Evento 6 -->
                 <div class="events-news-box">
                     <img src="src/index/events_news/img-11.webp" alt="Sessão de Orientação para Novos Alunos">
                     <div class="overlay"></div>
@@ -164,8 +188,9 @@
                 </div>
             </div><br><br><br><br>
 
-            <!-- Noticias -->
+            <!-- Notícias -->
             <div class="events-news-container">
+                <!-- Notícia 1 -->
                 <div class="events-news-box">
                     <img src="src/index/events_news/img-2.webp" alt="Novos Doutores Honram o Campus">
                     <div class="overlay"></div>
@@ -175,6 +200,7 @@
                         <p>Dois dos nossos mais recentes graduados foram destaque por suas notáveis contribuições para a pesquisa e inovação, elevando o nome da instituição a nível nacional.</p>
                     </div>
                 </div>
+                <!-- Notícia 2 -->
                 <div class="events-news-box">
                     <img src="src/index/events_news/img-3.webp" alt="Modernização da Biblioteca Central">
                     <div class="overlay"></div>
@@ -184,6 +210,7 @@
                         <p>A Biblioteca Central passou por uma ampla modernização, resultando num aumento significativo de postos de estudo e acesso a recursos digitais, melhorando a experiência académica dos estudantes.</p>
                     </div>
                 </div>
+                <!-- Notícia 3 -->
                 <div class="events-news-box">
                     <img src="src/index/events_news/img-9.webp" alt="Aulas Mais Interativas e Dinâmicas">
                     <div class="overlay"></div>
@@ -193,6 +220,7 @@
                         <p>Novos métodos de ensino estão a ser implementados nas salas de aula, focando na interatividade e participação dos alunos, com resultados promissores na aprendizagem.</p>
                     </div>
                 </div>
+                <!-- Notícia 4 -->
                 <div class="events-news-box">
                     <img src="src/index/events_news/img-12.webp" alt="Novo Edifício Tecnológico Inaugurado no Coração do Campus">
                     <div class="overlay"></div>
@@ -202,6 +230,7 @@
                         <p>Foi inaugurado um edifício de última geração, com laboratórios modernos e espaços colaborativos, destinado a impulsionar a pesquisa e o desenvolvimento em áreas tecnológicas.</p>
                     </div>
                 </div>
+                <!-- Notícia 5 -->
                 <div class="events-news-box">
                     <img src="src/index/events_news/img-14.webp" alt="A Biblioteca Oferece Apoio Académico">
                     <div class="overlay"></div>
@@ -211,6 +240,7 @@
                         <p>Um novo programa de mentoria na biblioteca conecta estudantes mais experientes com colegas que precisam de ajuda, oferecendo suporte personalizado em diversas áreas do conhecimento.</p>
                     </div>
                 </div>
+                <!-- Notícia 6 -->
                 <div class="events-news-box">
                     <img src="src/index/events_news/img-7.webp" alt="Protrama de Mentoria Impulsiona o Futuro dos Estudantes">
                     <div class="overlay"></div>
@@ -223,8 +253,10 @@
             </div><br><br>
         </section>
     </main>
+    <!-- Rodapé do site -->
     <footer class="main-footer">
         <div class="footer-columns simplified">
+            <!-- Coluna de redes sociais -->
             <div class="footer-col social-col">
                 <h4>Siga-nos</h4>
                 <div class="social-icons">
@@ -233,6 +265,7 @@
                     <a href="https://www.linkedin.com/school/iplusofonia/"><img class="social-images" style="object-fit:scale-down; width: 4rem; height: 4rem;" src="../src/footer/linkedin.webp" alt="LinkedIn"></a>
                 </div>
             </div>
+            <!-- Coluna de contactos -->
             <div class="footer-col contact-col">
                 <h4>Contacte-nos</h4>
                 <p><a href="mailto:info@universidade.pt">info@universidade.pt</a></p>
@@ -240,12 +273,14 @@
                 <p>Campo Grande 400 | 1700-098 Lisboa</p>
             </div>
         </div>
+        <!-- Linha divisória do rodapé -->
         <hr style="margin: 1.2rem auto 2.5rem auto; width: 80%; border: 1px solid #efefef;">
         <div class="footer-bottom">
             <p>&copy; 2025 Universidade. Todos os direitos reservados.</p>
         </div>
     </footer>
 
+    <!-- Scripts JS para funcionalidades do carrossel e navbar -->
     <script src="components/carousel.js"></script>
     <script  src="components/navbar.js"></script>
 </body>

@@ -15,7 +15,7 @@
     align-items: flex-start;
     gap: 4rem;
     max-width: 75rem;
-    width: 100%;    
+    width: 90%;    
     margin: 0 auto 0.2rem auto; 
 }
 
@@ -52,7 +52,7 @@
 .footer-col h4::after {
     content: "";
     display: block;
-    width: 100%;
+    width: 90%;
     height: 0.1875rem;
     background: #ed1c24;
     margin: 0.25rem auto 1rem auto;
@@ -111,7 +111,7 @@
         flex-direction: column;
         gap: 2rem;
         align-items: stretch;
-        max-width: 100%;
+        max-width: 90%;
         padding: 0 1rem;
     }
 
@@ -119,7 +119,7 @@
     .footer-col.contact-col {
         align-items: flex-start;
         min-width: 0;
-        width: 100%;
+        width: 90%;
     }
 
     .footer-col h4 {

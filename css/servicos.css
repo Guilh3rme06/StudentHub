@@ -6,6 +6,28 @@ body {
     color: #333;
 }
 
+.servicos-title{
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: black;
+    margin-top: 4rem;
+    padding: 3.5rem;
+
+}
+
+.servicos-title::after {
+    content: "";
+    display: block;
+    width: 15rem;
+    height: 0.3rem;
+    background: #ed1c24;
+    border-radius: 2px;
+    margin: 0.5rem auto;
+}
+
 .container {
     max-width: 1000px;
     margin: 0 auto;
