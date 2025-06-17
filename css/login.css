@@ -1,9 +1,16 @@
-body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    padding-top: 4rem;
+html, body {
+    height: 100%;
+    margin: 0;
+    margin-top: 2rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+main {
+    flex: 1 0 auto;
+}
 .forms-container {
     display: flex;
     width: 80vw;
@@ -117,14 +124,30 @@ button:hover {
 
 /* PARTE JS */
 
+.user-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-user{
+    margin-top: 2rem;
+}
+
 .cliente{
     margin:1rem 0;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 0.5rem;
+    
 }
 
 .servicos{
     background:#f9f9f9; 
     padding:1rem; 
     border-radius:0.5rem;
+    /* margin-bottom: 25rem; */
 }
 
 .tabela-utilizadores {
@@ -145,4 +168,25 @@ button:hover {
 
 .tabela-body {
     background-color: #ffffff;
+}
+
+.eventos {
+    margin: 1rem 1rem;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 0.5rem;
+}
+
+.link-eventos {
+    color: red;
+    text-decoration: none;
+}
+
+.link{
+    color: red;
+    text-decoration: none;
+}
+
+.link:active{
+    color: #d9534f;
 }
