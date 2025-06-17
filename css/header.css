@@ -147,7 +147,7 @@ nav {
     display: inline-block;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 990px) {
     .div-nav {
         flex-direction: row;
         justify-content: flex-start;
