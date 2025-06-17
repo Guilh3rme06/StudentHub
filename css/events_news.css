@@ -1,188 +1,181 @@
 .events-news-title {
-    font-family: 'Montserrat', sans-serif; /* Define a fonte como Montserrat. */
-    text-align: center; /* Centraliza o texto do título. */
-    font-size: 3rem; /* Define o tamanho da fonte. */
-    font-weight: bold; /* Deixa o texto em negrito. */
-    color: black; /* Define a cor do texto como preto. */
-    margin-top: 8rem; /* Adiciona uma margem superior. */
-    margin-bottom: 2rem; /* Adiciona uma margem inferior. */
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: black;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
 }
 
 .events-news-title::after {
-    content: ""; /* Cria um pseudo-elemento para a linha decorativa. */
-    display: block; /* Garante que o pseudo-elemento seja um bloco para aplicar largura e altura. */
-    width: 25rem; /* Define a largura da linha. */
-    height: 0.3rem; /* Define a altura da linha. */
-    background: red; /* Define a cor de fundo da linha como vermelho. */
-    border-radius: 2px; /* Adiciona um pequeno arredondamento nas bordas da linha. */
-    margin: 0.5rem auto; /* Centraliza a linha horizontalmente abaixo do título. */
-}   
+    content: "";
+    display: block;
+    width: 25rem;
+    height: 0.3rem;
+    background: red;
+    border-radius: 2px;
+    margin: 0.5rem auto;
+}   
 
 .events-news-container {
-    display: flex; /* Utiliza Flexbox para organizar os elementos. */
-    justify-content: center; /* Centraliza os itens horizontalmente. */
-    align-items: center; /* Centraliza os itens verticalmente. */
-    gap: 1rem; /* Adiciona um espaçamento de 1rem entre os itens. */
-    width: 97.9%; /* Define a largura do contêiner. */
-    padding: 1rem; /* Adiciona preenchimento interno. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 97.9%;
+    padding: 1rem;
 }
 
 .events-news-box {
-    position: relative; /* Define a posição como relativa para que os overlays e textos internos possam ser posicionados de forma absoluta. */
-    width: 24%; /* Define a largura de cada caixa de notícia/evento. */
-    overflow: hidden; /* Oculta qualquer conteúdo que transborde (usado para o efeito de zoom na imagem). */
-    border-radius: 0.5rem; /* Adiciona arredondamento nas bordas da caixa. */
+    position: relative;
+    width: 24%;
+    overflow: hidden;
+    border-radius: 0.5rem;
 }
 
 .events-news-box img {
-    width: 100%; /* A imagem ocupa 100% da largura da sua caixa. */
-    height: 300px; /* Define uma altura fixa para a imagem. */
-    object-fit: cover; /* A imagem cobre a área definida, cortando as partes extras se necessário. */
-    transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito de zoom da imagem. */
-}
-
-.events-news-box:hover img {
-    transform: scale(1.05); /* Aumenta ligeiramente a imagem ao passar o mouse. */
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
 .events-news-box .overlay {
-    position: absolute; /* Posiciona o overlay de forma absoluta dentro da caixa. */
-    bottom: 0; /* Alinha o overlay à parte inferior da caixa. */
-    width: 100%; /* Ocupa 100% da largura da caixa. */
-    height: 100%; /* Ocupa 100% da altura da caixa. */
-    /* Cria um gradiente linear semi-transparente para escurecer a parte inferior da imagem. */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 80%);
 }
 
 .event-news-section {
-    position: absolute; /* Posiciona o texto da seção de notícia/evento de forma absoluta. */
-    top: 0; /* Alinha o texto ao topo da caixa. */
-    left: 2rem; /* Define um deslocamento à esquerda. */
-    transform: translateX(-50%); /* Centraliza o texto horizontalmente (ajusta 50% para a esquerda). */
-    width: auto; /* A largura é automática para se ajustar ao conteúdo. */
-    color: white; /* Define a cor do texto como branco. */
-    text-align: center; /* Centraliza o texto. */
-    padding: 1rem; /* Adiciona preenchimento interno. */
-    font-family: 'Montserrat', sans-serif; /* Define a fonte. */
-    font-size: 0.5rem; /* Define o tamanho da fonte. */
-    z-index: 2; /* Garante que o texto fique acima do overlay. */
-    transition: transform 0.3s ease; /* Adiciona uma transição suave para o movimento do texto. */
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    transform: translateX(-50%);
+    width: auto;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.5rem;
+    z-index: 2;
+    transition: transform 0.3s ease;
 }
 
 .events-news-box:hover .event-news-section {
-    transform: translate(-50%, -120%); /* Move o texto para cima (fora da vista) ao passar o mouse. */
+    transform: translate(-50%, -120%);
 }
 
 .events-news-box .title {
-    position: absolute; /* Posiciona o título de forma absoluta. */
-    bottom: 20px; /* Alinha o título a 20px da parte inferior. */
-    left: 50%; /* Centraliza o título horizontalmente. */
-    transform: translateX(-50%); /* Ajusta a centralização horizontal. */
-    width: auto; /* A largura é automática. */
-    color: white; /* Define a cor do texto como branco. */
-    text-align: center; /* Centraliza o texto. */
-    padding: 1rem; /* Adiciona preenchimento interno. */
-    font-family: 'Montserrat', sans-serif; /* Define a fonte. */
-    z-index: 2; /* Garante que o título fique acima do overlay. */
-    transition: transform 0.3s ease; /* Adiciona uma transição suave para o movimento do título. */
-    width: 90%; /* Define uma largura de 90% para o título. */
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 2;
+    transition: transform 0.3s ease;
+    width: 90%;
 }
 
 .events-news-box:hover .title {
-    transform: translate(-50%, -100%); /* Move o título para cima (fora da vista) ao passar o mouse. */
+    transform: translate(-50%, -100%);
 }
 
 .events-news {
-    position: absolute; /* Posiciona o texto de notícias/eventos de forma absoluta. */
-    bottom: 0; /* Alinha o texto à parte inferior. */
-    left: 50%; /* Centraliza o texto horizontalmente. */
-    transform: translateX(-50%); /* Ajusta a centralização horizontal. */
-    color: white; /* Define a cor do texto como branco. */
-    padding: 1rem; /* Adiciona preenchimento interno. */
-    font-size: 0.7rem; /* Define o tamanho da fonte. */
-    text-align: center; /* Centraliza o texto. */
-    opacity: 0; /* Por padrão, o texto está invisível. */
-    z-index: 1; /* Garante que o texto fique acima do overlay. */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Adiciona transições suaves para opacidade e movimento. */
-    width: 90%; /* Define uma largura de 90%. */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 1rem;
+    font-size: 0.7rem;
+    text-align: center;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    width: 90%;
 }
 
 .events-news-box:hover .events-news {
-    opacity: 1; /* Torna o texto visível ao passar o mouse. */
-    transform: translate(-50%, -10%); /* Move o texto ligeiramente para cima ao passar o mouse. */
+    opacity: 1;
+    transform: translate(-50%, -10%);
 }
 
-/* --- Media Queries para Responsividade --- */
-
-/* Para telas menores que 990px (tablets e laptops menores) */
 @media (max-width: 990px) {
     .events-news-title {
-        font-size: 2rem; /* Ajusta o tamanho da fonte do título. */
-        margin-top: 4rem; /* Ajusta a margem superior. */
-        margin-bottom: 1rem; /* Ajusta a margem inferior. */
-        transform: translate(-50%, -90%); /* Ajusta a transformação do título. */
-        padding-left: auto; /* Garante que o preenchimento esquerdo seja automático. */
+        font-size: 2rem;
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+        transform: translate(-50%, -90%);
+        padding-left: auto;
     }
     .events-news-container {
-        flex-direction: column; /* Organiza os itens em coluna (um abaixo do outro). */
-        align-items: stretch; /* Estica os itens para preencher a largura disponível. */
-        gap: 1rem; /* Mantém o espaçamento entre os itens. */
-        padding: 0; /* Remove o preenchimento lateral. */
-        display: grid; /* Altera para um layout de grid. */
-        grid-template-columns: repeat(3, auto); /* Define 3 colunas de largura automática. */
-        grid-template-rows: repeat(3, auto); /* Define 3 linhas de altura automática. */
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, auto);
     }
     .events-news-box {
-        width: 100%; /* A caixa ocupa 100% da largura disponível. */
-        height: auto; /* A altura é automática. */
-        margin-bottom: 1rem; /* Adiciona uma margem inferior. */
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
     }
     .events-news-box img {
-        height: 180px; /* Reduz a altura da imagem. */
+        height: 180px;
     }
     .events-news-box,
     .events-news,
     .event-news-section {
-        font-size: 0.6rem; /* Reduz o tamanho da fonte para todos os textos dentro da caixa. */
-        padding: 0.5rem; /* Reduz o preenchimento. */
+        font-size: 0.6rem;
+        padding: 0.5rem;
     }
+    
 }
 
-/* Para telas menores que 600px (celulares) */
 @media (max-width: 600px) {
     .events-news-title {
-        font-size: 2rem; /* Mantém o tamanho da fonte. */
-        margin-top: 4rem; /* Mantém a margem superior. */
-        margin-bottom: 1rem; /* Mantém a margem inferior. */
-        transform: none; /* Remove qualquer transformação. */
-        left: 0; /* Alinha à esquerda. */
-        position: relative; /* Define a posição como relativa. */
-        display: block; /* Garante que seja um bloco. */
-        text-align: center; /* Centraliza o texto. */
-        width: 100%; /* Ocupa 100% da largura. */
+        font-size: 2rem;
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+        transform: none;
+        left: 0;
+        position: relative;
+        display: block;
+        text-align: center;
+        width: 100%;
     }
 
     .events-news-container {
-        flex-direction: column; /* Mantém os itens em coluna. */
-        align-items: stretch; /* Mantém o esticamento dos itens. */
-        gap: 1rem; /* Mantém o espaçamento. */
-        padding: 0; /* Remove o preenchimento. */
-        display: grid; /* Mantém o layout de grid. */
-        grid-template-columns: repeat(2, auto); /* Define 2 colunas de largura automática. */
-        grid-template-rows: repeat(2, auto); /* Define 2 linhas de altura automática. */
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
     }
     .events-news-box {
-        width: 100%; /* Mantém a largura da caixa. */
-        height: auto; /* Mantém a altura automática. */
-        margin-bottom: 1rem; /* Mantém a margem inferior. */
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
     }
     .events-news-box img {
-        height: 180px; /* Mantém a altura da imagem. */
+        height: 180px;
     }
     .events-news-box,
     .events-news,
     .event-news-section {
-        font-size: 0.6rem; /* Mantém o tamanho da fonte. */
-        padding: 0.5rem; /* Mantém o preenchimento. */
+        font-size: 0.6rem;
+        padding: 0.5rem;
     }
+    
 }

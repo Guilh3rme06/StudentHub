@@ -1,215 +1,277 @@
 body {
-    font-family: Arial, sans-serif; /* Define a fonte padrão para o corpo do documento. */
+    font-family: Arial, sans-serif;
 }
 
-.espaco-title {
-    background-color: #fff; /* Cor de fundo branca para o título da seção de espaços. */
-    font-family: 'Montserrat', sans-serif; /* Define a fonte Montserrat. */
-    text-align: center; /* Centraliza o texto. */
-    font-size: 3rem; /* Tamanho da fonte grande. */
-    font-weight: bold; /* Texto em negrito. */
-    color: black; /* Cor do texto preta. */
-    margin-top: 4rem; /* Margem superior. */
-    padding: 3.5rem; /* Preenchimento interno. */
+.espaco-title{
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: black;
+    margin-top: 4rem;
+    padding: 3.5rem;
 }
 
 .espaco-title::after {
-    content: ""; /* Cria um pseudo-elemento para a linha decorativa. */
-    display: block; /* Torna o pseudo-elemento um bloco para que possa ter largura e altura. */
-    width: 25rem; /* Largura da linha. */
-    height: 0.3rem; /* Altura da linha. */
-    background: #ed1c24; /* Cor da linha (vermelho específico). */
-    border-radius: 2px; /* Pequeno arredondamento nas bordas da linha. */
-    margin: 0.5rem auto; /* Centraliza a linha abaixo do título. */
+    content: "";
+    display: block;
+    width: 25rem;
+    height: 0.3rem;
+    background: #ed1c24;
+    border-radius: 2px;
+    margin: 0.5rem auto;
 }
 
 .hero-section {
-    background-color: #555; /* Cor de fundo cinza escura para a seção de herói. */
-    color: #fff; /* Cor do texto branca. */
-    padding: 80px 15px; /* Preenchimento superior/inferior e lateral. */
-    text-align: center; /* Centraliza o texto. */
+    background-color: #555;
+    color: #fff;
+    padding: 80px 15px;
+    text-align: center;
 }
 
 .hero-title {
-    font-size: 36px; /* Tamanho da fonte do título principal. */
-    margin-bottom: 15px; /* Margem inferior. */
-    color: #fff; /* Cor do texto branca. */
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #fff;
 }
 
 .hero-description {
-    font-size: 18px; /* Tamanho da fonte da descrição. */
-    max-width: 700px; /* Largura máxima para o texto da descrição. */
-    margin: 0 auto; /* Centraliza o texto horizontalmente. */
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .spaces-section {
-    padding: 2rem; /* Preenchimento interno para a seção de espaços. */
-    margin: 0 auto; /* Centraliza a seção horizontalmente. */
+    padding: 2rem;
+    margin: 0 auto;
 }
 
 .section-title {
-    background-color: #ffffff; /* Cor de fundo branca para títulos de seção. */
-    padding: 2rem; /* Preenchimento interno. */
-    color: black; /* Cor do texto preta. */
-    font-size: 2.5rem; /* Tamanho da fonte. */
-    font-weight: bold; /* Texto em negrito. */
-    text-align: center; /* Centraliza o texto. */
-    position: relative; /* Define posição relativa para posicionamento de pseudo-elementos. */
-    margin-top: 2rem; /* Margem superior. */
-    margin-bottom: 2rem; /* Margem inferior. */
+    background-color: #ffffff;
+    padding: 2rem;
+    color: black;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .space-container-normal,
 .space-container-reverse {
-    display: flex; /* Usa flexbox para organizar imagem e texto lado a lado. */
-    align-items: center; /* Alinha os itens verticalmente ao centro. */
-    justify-content: center; /* Centraliza os itens horizontalmente. */
-    gap: 2rem; /* Espaçamento entre a imagem e o texto. */
-    margin-bottom: 2rem; /* Margem inferior para separar os contêineres. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .space-container-reverse {
-    flex-direction: row-reverse; /* Inverte a ordem dos itens (texto antes da imagem). */
+    flex-direction: row-reverse;
 }
 
 .image-normal,
 .image-reverse {
-    width: 28vw; /* Largura da imagem baseada na largura da viewport. */
-    min-width: 30vw; /* Largura mínima da imagem. Pode ser removido se causar problemas em telas muito pequenas. */
-    max-width: 40vw; /* Largura máxima da imagem. */
-    display: block; /* Garante que a imagem se comporte como um bloco. */
-    border-radius: 0.7em; /* Arredondamento das bordas da imagem. */
-    object-fit: cover; /* A imagem cobre a área definida, cortando se necessário. */
+    width: 28vw;
+    min-width: 30vw; /* Consider removing min-width if it causes issues on very small screens */
+    max-width: 40vw;
+    display: block;
+    border-radius: 0.7em;
+    object-fit: cover;
 }
 
 .space-info {
-    color: #333; /* Cor do texto cinza escuro. */
-    text-align: left; /* Alinha o texto à esquerda. */
-    margin-left: 0; /* Remove margem esquerda padrão. */
-    align-items: flex-start; /* Alinha os itens flex verticalmente ao início. */
-    justify-content: flex-start; /* Alinha os itens flex horizontalmente ao início. */
+    color: #333;
+    text-align: left;
+    margin-left: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .space-carrosel {
-    background-color: aliceblue; /* Cor de fundo azul claro para a seção do carrossel. */
-    padding: 2rem; /* Preenchimento interno. */
+    background-color: aliceblue;
+    padding: 2rem;
 }
 
 .carrosel-title {
-    padding: 2rem; /* Preenchimento interno. */
-    color: black; /* Cor do texto preta. */
-    font-size: 2.5rem; /* Tamanho da fonte. */
-    font-weight: bold; /* Texto em negrito. */
-    text-align: center; /* Centraliza o texto. */
-    position: relative; /* Define posição relativa para pseudo-elementos. */
-    margin-bottom: 2rem; /* Margem inferior. */
+    padding: 2rem;
+    color: black;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    margin-bottom: 2rem;
 }
 
 .event-grid {
-    display: grid; /* Usa CSS Grid para organizar os eventos em uma grade. */
-    grid-template-columns: repeat(3, minmax(300px, 1fr)); /* 3 colunas, cada uma com largura mínima de 300px e flexível. */
-    gap: 1.2rem; /* Espaçamento entre os itens da grade. */
-    padding: 0 1.2rem; /* Preenchimento lateral. */
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 1.2rem;
+    padding: 0 1.2rem;
 }
 
 .event-card {
-    background: #fff; /* Cor de fundo branca para os cartões de evento. */
-    border-radius: 10px; /* Arredondamento das bordas. */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade. */
-    padding: 1.5rem; /* Preenchimento interno. */
-    text-align: center; /* Centraliza o texto dentro do cartão. */
-    transition: transform 0.3s ease; /* Transição suave para efeitos de hover. */
-}
-
-.event-card:hover {
-    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse. */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .image-card {
-    max-width: 100%; /* A imagem ocupa no máximo 100% da largura do seu contêiner pai. */
-    height: auto; /* Mantém a proporção da imagem. */
-    display: block; /* Remove o espaço extra abaixo da imagem. */
-    border-radius: 10px; /* Arredondamento das bordas da imagem. */
-    margin-bottom: 1rem; /* Margem inferior. */
-    object-fit: cover; /* A imagem cobre a área definida, cortando se necessário. */
+    max-width: 100%; /* Changed from 20rem for better responsiveness */
+    height: auto; /* Ensures aspect ratio is maintained */
+    display: block; /* To remove extra space below the image */
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    object-fit: cover;
 }
 
 .button-contact {
-    display: flex; /* Usa flexbox para centralizar o botão. */
-    justify-content: center; /* Centraliza horizontalmente. */
-    align-items: center; /* Centraliza verticalmente. */
-    margin-top: 2rem; /* Margem superior. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
 }
 
 .button-cont {
-    border: none; /* Remove a borda do botão. */
-    color: #000; /* Cor do texto preta. */
-    background-color: #fff; /* Cor de fundo branca. */
-    padding: 1.5rem; /* Preenchimento interno. */
-    border-radius: 1rem; /* Arredondamento das bordas. */
-    border: 1px solid red; /* Borda vermelha. */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável. */
-    font-size: 0.9rem; /* Tamanho da fonte. */
-    text-decoration: none; /* Remove sublinhado para links. */
+    border: none;
+    color: #000;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid red;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: none;
 }
 
 .button-cont:hover {
-    background-color: red; /* Muda o fundo para vermelho ao passar o mouse. */
-    color: #fff; /* Muda a cor do texto para branco ao passar o mouse. */
-    transition: background-color 0.3s ease; /* Transição suave para a mudança de cor de fundo. */
+    background-color: red;
+    color: #fff;
+    transition: background-color 0.3s ease;
 }
 
 .button-cont:active {
-    background-color: lightgray; /* Muda o fundo para cinza claro ao clicar. */
-    color: #000; /* Muda a cor do texto para preto ao clicar. */
+    background-color: lightgray;
+    color: #000;
 }
 
 
----
-## Media Queries para Responsividade
-
-### Telas Maiores (até 1024px, por exemplo, tablets e laptops menores)
-```css
+/* For screens smaller than 1024px (e.g., tablets and smaller laptops) */
 @media (max-width: 1024px) {
     .hero-title {
-        font-size: 30px; /* Ajusta o tamanho da fonte do título do herói. */
+        font-size: 30px;
     }
 
     .hero-description {
-        font-size: 16px; /* Ajusta o tamanho da fonte da descrição do herói. */
+        font-size: 16px;
     }
 
     .section-title,
     .carrosel-title {
-        font-size: 2rem; /* Ajusta o tamanho da fonte para títulos de seção e carrossel. */
-        padding: 1.5rem; /* Ajusta o preenchimento dos títulos. */
+        font-size: 2rem;
+        padding: 1.5rem;
     }
 
     .space-container-normal,
     .space-container-reverse {
-        flex-direction: column; /* Empilha os itens verticalmente (imagem em cima, texto embaixo). */
-        text-align: center; /* Centraliza o texto. */
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
     }
 
     .image-normal,
     .image-reverse {
-        width: 80vw; /* Aumenta a largura da imagem para ocupar mais espaço na tela. */
-        min-width: unset; /* Remove a largura mínima para evitar problemas de layout. */
-        max-width: 100%; /* Garante que a imagem não transborde. */
+        width: 80vw; /* Take up more width on smaller screens */
+        min-width: unset; /* Reset min-width */
+        max-width: 100%; /* Ensure it doesn't overflow */
     }
 
     .space-info {
-        text-align: center; /* Centraliza o texto do bloco de informações do espaço. */
-        margin-left: 0; /* Remove a margem esquerda. */
-        padding: 0 15px; /* Adiciona preenchimento lateral para melhor legibilidade. */
+        text-align: center;
+        margin-left: 0;
+        padding: 0 15px; /* Add some padding for better readability */
     }
 
     .event-grid {
-        grid-template-columns: repeat(2, minmax(250px, 1fr)); /* Altera a grade para 2 colunas para tablets. */
-        padding: 0 1rem; /* Ajusta o preenchimento lateral da grade. */
+        grid-template-columns: repeat(2, minmax(250px, 1fr)); /* 2 columns for tablets */
+        padding: 0 1rem;
     }
 
     .image-card {
-        max-width: 100%; /* Garante que as imagens dos cartões de evento ocupem a largura total. */
+        max-width: 100%;
+    }
+}
+
+/* For screens smaller than 768px (e.g., most mobile devices) */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 10px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .section-title,
+    .carrosel-title {
+        font-size: 1.8rem;
+        padding: 1rem;
+    }
+
+    .spaces-section,
+    .space-carrosel {
+        padding: 1rem;
+    }
+
+    .space-container-normal,
+    .space-container-reverse {
+        gap: 1rem;
+    }
+
+    .image-normal,
+    .image-reverse {
+        width: 90vw; /* Almost full width on mobile */
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr; /* Single column for mobile */
+        padding: 0 0.5rem;
+    }
+
+    .event-card {
+        padding: 1rem;
+    }
+
+    .button-cont {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* For very small screens (e.g., older phones) */
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 40px 5px;
+    }
+
+    .hero-title {
+        font-size: 20px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .section-title,
+    .carrosel-title {
+        font-size: 1.5rem;
     }
 }

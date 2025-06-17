@@ -1,107 +1,101 @@
-.main {
-    background-color: #fff; /* Define a cor de fundo da área principal como branco. */
+.main{
+    background-color: #fff;
 }
 
 .carousel {
-    width: 100%; /* Ocupa toda a largura disponível. */
-    max-width: 100%; /* Garante que não exceda a largura do seu contêiner. */
-    height: 32.7rem; /* Define uma altura fixa para o carrossel. */
-    margin: 0; /* Remove margens externas. */
-    border-radius: 0; /* Remove qualquer arredondamento nas bordas. */
-    overflow: hidden; /* Oculta qualquer conteúdo que transborde dos limites do carrossel. */
-    position: relative; /* Define a posição como relativa para que elementos filhos posicionados (controles, indicadores) funcionem corretamente. */
+    width: 100%;
+    max-width: 100%;
+    height: 32.7rem;
+    margin: 0;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
 }
 
 .carousel-background {
-    background: #fff; /* Define o fundo como branco. */
-    display: flex; /* Usa flexbox para alinhamento dos itens internos. */
-    padding: 0; /* Remove preenchimento interno. */
-    margin: 0; /* Remove margens. */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente. */
-    align-items: center; /* Centraliza o conteúdo verticalmente. */
-    border-radius: 0.5rem; /* Adiciona um pequeno arredondamento nas bordas. */
-    box-shadow: 0 8px 32px rgba(0,0,0,0.35); /* Adiciona uma sombra para dar profundidade. */
+    background: #fff;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
 }
 
 .carousel-inner {
-    display: flex; /* Usa flexbox para que os itens do carrossel fiquem lado a lado. */
-    transition: transform 0.5s ease-in-out; /* Adiciona uma transição suave para o movimento do carrossel. */
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .carousel-item {
-    display: none; /* Por padrão, os itens do carrossel estão ocultos. */
-    min-width: 100%; /* Cada item ocupa no mínimo 100% da largura do contêiner para garantir que seja um slide completo. */
-    transition: opacity 0.5s ease-in-out; /* Adiciona uma transição suave para a opacidade (usado para mostrar/ocultar itens). */
+    display: none;
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .carousel-item.active {
-    display: block; /* Quando um item tem a classe 'active', ele é exibido. */
+    display: block;
 }
 
 .carousel-item img {
-    width: 100%; /* A imagem dentro do item do carrossel ocupa 100% da largura do seu contêiner. */
-    height: 100%; /* A imagem dentro do item do carrossel ocupa 100% da altura do seu contêiner. */
-    object-fit: cover; /* Redimensiona a imagem para cobrir todo o espaço, cortando as partes extras se necessário. */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .carousel-control {
-    position: absolute; /* Posiciona os controles (botões de navegação) de forma absoluta dentro do carrossel. */
-    top: 50%; /* Alinha o topo dos controles ao meio do carrossel. */
-    transform: translateY(-50%); /* Ajusta a posição vertical para centralizar o controle perfeitamente. */
-    background-color: rgba(0, 0, 0, 0.5); /* Define um fundo semitransparente para os controles. */
-    color: white; /* Define a cor do texto/ícone como branco. */
-    border: none; /* Remove a borda dos botões. */
-    font-size: 2rem; /* Define o tamanho da fonte para o ícone de controle. */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável. */
-    padding: 0.5rem 1rem; /* Adiciona preenchimento interno aos botões. */
-    z-index: 10; /* Garante que os controles fiquem acima dos itens do carrossel. */
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
 }
 
 .carousel-control.prev {
-    left: 0.625rem; /* Posiciona o botão "anterior" a 10px da borda esquerda. */
+    left: 0.625rem;
 }
 
 .carousel-control.next {
-    right: 0.625rem; /* Posiciona o botão "próximo" a 10px da borda direita. */
+    right: 0.625rem;
 }
 
 .carousel-indicators {
-    position: absolute; /* Posiciona os indicadores de forma absoluta dentro do carrossel. */
-    bottom: 0.625rem; /* Alinha os indicadores a 10px da parte inferior. */
-    left: 0; /* Alinha à esquerda. */
-    right: 0; /* Alinha à direita. */
-    margin: 0 auto; /* Centraliza os indicadores horizontalmente. */
-    display: flex; /* Usa flexbox para organizar os indicadores. */
-    justify-content: center; /* Centraliza os indicadores horizontalmente. */
-    gap: 0.5rem; /* Adiciona espaçamento entre os indicadores. */
-    z-index: 10; /* Garante que os indicadores fiquem acima dos itens do carrossel. */
+    position: absolute;
+    bottom: 0.625rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 .carousel-indicators span {
-    width: 0.625rem; /* Define a largura dos indicadores (pontos). */
-    height: 0.625rem; /* Define a altura dos indicadores (pontos). */
-    background-color: white; /* Define a cor de fundo dos indicadores como branco. */
-    border-radius: 50%; /* Torna os indicadores circulares. */
-    cursor: pointer; /* Muda o cursor para indicar que são clicáveis. */
+    width: 0.625rem;
+    height: 0.625rem;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .carousel-indicators .active {
-    background-color: rgba(0, 0, 0, 0.5); /* Quando um indicador está ativo, seu fundo fica semitransparente preto. */
+    background-color: rgba(0, 0, 0, 0.5);
 }
-
-/* --- Media Queries para Responsividade --- */
 
 @media (max-width: 900px) {
     .carousel {
-        height: 18rem; /* Ajusta a altura do carrossel para telas menores que 900px. */
+        height: 18rem;
     }
 }
-
 @media (max-width: 600px) {
     .carousel {
-        height: 10rem; /* Ajusta a altura do carrossel para telas menores que 600px (celulares). */
+        height: 10rem;
     }
     .carousel-item img {
-        height: 10rem; /* Ajusta a altura das imagens do carrossel para telas menores que 600px. */
+        height: 10rem;
     }
 }
