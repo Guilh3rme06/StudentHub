@@ -109,23 +109,21 @@ function mostrarAdmin() {
     const main = document.querySelector('main');
     if (main) {
         main.innerHTML = `
-            <h2>Utilizadores registados</h2>
+            <h2 class="title-page" >Utilizadores registados</h2>
             <table class="tabela-utilizadores" border="1">
-                <thead>
+                <thead class="tabela-head">
                     <tr>
                         <th>Nome</th>
                         <th>NIF</th>
                         <th>Email</th>
-                        <th>Permissão</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="tabela-body">
                     ${users.map(user => `
                         <tr>
-                            <td>${user.nome}</td>
+                            <td class="tabela-head">${user.nome}</td>
                             <td>${user.nif}</td>
                             <td>${user.email}</td>
-                            <td>${user.permissao === 1 ? 'Admin' : 'User'}</td>
                         </tr>
                     `).join('')}
                 </tbody>

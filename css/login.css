@@ -92,6 +92,11 @@ button:hover {
 
 
 @media (max-width: 768px) {
+
+    .title-page{
+        margin-top: 2rem;
+    }
+
     .forms-container {
         flex-direction: column;
         width: 95vw;
@@ -110,6 +115,8 @@ button:hover {
     }
 }
 
+/* PARTE JS */
+
 .cliente{
     margin:1rem 0;
 }
@@ -122,5 +129,20 @@ button:hover {
 
 .tabela-utilizadores {
     border: 1px solid #ccc;
-    margin:1rem 0;
+    margin:1rem 1rem;
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    position: relative;
+    justify-items: center;
+    
+}
+
+.tabela-head{
+    background-color: #ffffff;
+    font-weight: bold;
+}
+
+.tabela-body {
+    background-color: #ffffff;
 }
