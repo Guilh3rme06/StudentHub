@@ -103,7 +103,7 @@
     margin-top: 0.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 990px) {
     .footer-columns.simplified {
         flex-direction: column;
         gap: 2rem;
