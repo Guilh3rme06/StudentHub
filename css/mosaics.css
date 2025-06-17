@@ -1,118 +1,113 @@
 .mosaic-title {
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    font-size: 3rem;
-    font-weight: bold;
-    color: black;
-    margin-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif; /* Define a fonte como Montserrat, com uma fonte sans-serif genérica como alternativa. */
+    text-align: center; /* Centraliza o texto horizontalmente. */
+    font-size: 3rem; /* Define um tamanho de fonte grande para o título. */
+    font-weight: bold; /* Torna o texto do título em negrito. */
+    color: black; /* Define a cor do texto como preto. */
+    margin-bottom: 2rem; /* Adiciona um espaço abaixo do título. */
 }
 
 .mosaic-title::after {
-    content: "";
-    display: block;
-    width: 25rem;
-    height: 0.3rem;
-    background: red;
-    border-radius: 2px;
-    margin: 0.5rem auto;
-}   
+    content: ""; /* Cria um pseudo-elemento vazio para uma linha decorativa. */
+    display: block; /* Torna o pseudo-elemento um elemento de nível de bloco, permitindo que tenha largura e altura. */
+    width: 25rem; /* Define a largura da linha decorativa. */
+    height: 0.3rem; /* Define a altura da linha decorativa. */
+    background: red; /* Define a cor de fundo da linha como vermelho. */
+    border-radius: 2px; /* Adiciona uma ligeira curvatura aos cantos da linha. */
+    margin: 0.5rem auto; /* Centraliza a linha horizontalmente abaixo do título com algum espaçamento vertical. */
+}    
 
 .mosaic-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 97.9%;
-    padding: 1rem;
+    display: flex; /* Usa Flexbox para organizar as caixas do mosaico em uma linha. */
+    justify-content: center; /* Centraliza as caixas horizontalmente dentro do contêiner. */
+    align-items: center; /* Centraliza as caixas verticalmente (se tiverem alturas diferentes). */
+    gap: 1rem; /* Adiciona 1rem de espaço entre as caixas do mosaico. */
+    width: 97.9%; /* Define a largura do contêiner para quase largura total. */
+    padding: 1rem; /* Adiciona preenchimento ao redor das caixas do mosaico. */
 }
 
 .mosaic-box {
-    position: relative;
-    width: 24%;
-    overflow: hidden;
-    border-radius: 0.5rem;
+    position: relative; /* Permite o posicionamento absoluto de elementos filhos (como o overlay e o texto) dentro desta caixa. */
+    width: 24%; /* Cada caixa do mosaico ocupa aproximadamente 24% da largura do contêiner, permitindo quatro caixas por linha com algum espaçamento. */
+    overflow: hidden; /* Oculta qualquer conteúdo que transborde da caixa, crucial para efeitos de hover na imagem. */
+    border-radius: 0.5rem; /* Arredonda os cantos da caixa do mosaico. */
 }
 
 .mosaic-box img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+    width: 100%; /* Faz a imagem preencher toda a largura da sua caixa pai. */
+    height: 300px; /* Define uma altura fixa para a imagem. */
+    object-fit: cover; /* Garante que a imagem cubra toda a área da caixa, cortando se necessário, mantendo a proporção. */
+    transition: transform 0.3s ease; /* Aplica uma transição suave para quaisquer mudanças de `transform`, como o dimensionamento ao passar o mouse. */
+}
+
+.mosaic-box:hover img {
+    transform: scale(1.05); /* Aumenta ligeiramente a imagem ao passar o mouse sobre a caixa do mosaico. */
 }
 
 .mosaic-box .overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
+    position: absolute; /* Posiciona o overlay absolutamente dentro da caixa do mosaico. */
+    bottom: 0; /* Alinha a parte inferior do overlay com a parte inferior da caixa. */
+    width: 100%; /* Faz o overlay abranger toda a largura da caixa. */
+    height: 100%; /* Faz o overlay abranger toda a altura da caixa. */
+    /* Cria um overlay gradiente do transparente na parte superior ao escuro na parte inferior, tornando o texto mais legível. */
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 80%);
 }
 
 .mosaic-box .title {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    z-index: 2;
-    transition: transform 0.3s ease;
-    width: 90%;
+    position: absolute; /* Posiciona o título absolutamente dentro da caixa do mosaico. */
+    bottom: 20px; /* Posiciona o título 20px da parte inferior da caixa. */
+    left: 50%; /* Inicia o título no centro horizontal da caixa. */
+    transform: translateX(-50%); /* Ajusta a posição do título para realmente centralizá-lo horizontalmente. */
+    width: auto; /* Permite que a largura seja determinada pelo seu conteúdo. */
+    color: white; /* Define a cor do texto do título como branco. */
+    text-align: center; /* Centraliza o texto dentro do elemento do título. */
+    padding: 1rem; /* Adiciona preenchimento ao redor do texto do título. */
+    font-family: 'Montserrat', sans-serif; /* Define a fonte para o título. */
+    z-index: 2; /* Garante que o título apareça acima do overlay. */
+    transition: transform 0.3s ease; /* Aplica uma transição suave para quaisquer mudanças de `transform`. */
+    width: 90%; /* Define a largura do título como 90% da sua caixa pai do mosaico. */
 }
 
 .mosaic-box:hover .title {
-    transform: translate(-50%, -150%);
+    transform: translate(-50%, -150%); /* Move o título significativamente para cima (para fora da vista) ao passar o mouse. */
 }
 
 .advantages {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    opacity: 0;
-    z-index: 1;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    width: 90%;
+    position: absolute; /* Posiciona o texto de vantagens absolutamente dentro da caixa do mosaico. */
+    bottom: 0; /* Alinha o texto de vantagens à parte inferior da caixa. */
+    left: 50%; /* Inicia o texto no centro horizontal da caixa. */
+    transform: translateX(-50%); /* Ajusta a posição do texto para realmente centralizá-lo horizontalmente. */
+    color: white; /* Define a cor do texto como branco. */
+    padding: 1rem; /* Adiciona preenchimento ao redor do texto de vantagens. */
+    text-align: center; /* Centraliza o texto dentro do elemento de vantagens. */
+    opacity: 0; /* Torna o texto de vantagens inicialmente invisível. */
+    z-index: 1; /* Garante que o texto de vantagens apareça acima do overlay. */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Aplica transições suaves para mudanças de opacidade e transform. */
+    width: 90%; /* Define a largura do texto de vantagens como 90% da sua caixa pai do mosaico. */
 
 }
 
 .mosaic-box:hover .advantages {
-    opacity: 1;
-    transform: translate(-50%, -10%);
+    opacity: 1; /* Torna o texto de vantagens totalmente visível ao passar o mouse. */
+    transform: translate(-50%, -10%); /* Move o texto de vantagens ligeiramente para cima enquanto o centraliza, criando um efeito de "deslizar para dentro". */
 }
 
+---
 
+## Ajustes de Design Responsivo
+
+Essas *media queries* garantem que seu layout de mosaico se adapte bem a diferentes tamanhos de tela, proporcionando uma melhor experiência ao usuário em vários dispositivos.
+
+### Para telas menores que 900px (por exemplo, tablets)
+
+```css
 @media (max-width: 900px) {
     .mosaic-container {
-        flex-wrap: wrap;
-        gap: 1rem;
+        flex-wrap: wrap; /* Permite que as caixas do mosaico quebrem para a próxima linha se não houver espaço horizontal suficiente. */
+        gap: 1rem; /* Mantém 1rem de espaço entre as caixas quebradas. */
     }
     .mosaic-box {
-        width: 48%;
-        margin-bottom: 1rem;
-    }
-}
-@media (max-width: 600px) {
-    .mosaic-title::after {
-        width: 90%;
-    }
-    .mosaic-container {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 1rem;
-        padding: 0;
-    }
-    .mosaic-box {
-        width: 100%;
-        height: auto;
-    }
-    .mosaic-box img {
-        height: 180px;
+        width: 48%; /* Cada caixa do mosaico agora ocupa 48% da largura do contêiner, resultando em duas caixas por linha. */
+        margin-bottom: 1rem; /* Adiciona espaço abaixo de cada caixa quando elas quebram. */
     }
 }

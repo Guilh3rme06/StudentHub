@@ -1,246 +1,250 @@
 * {
-    margin: 0;
-    font-family: Arial, sans-serif;
+    margin: 0; /* Remove a margem padrão de todos os elementos. */
+    font-family: Arial, sans-serif; /* Define a fonte padrão para Arial ou uma sans-serif genérica. */
 }
 
 .div-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 0.7rem 4rem 0.7rem 2rem;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    display: flex; /* Utiliza Flexbox para organizar os elementos da barra de navegação. */
+    align-items: center; /* Alinha os itens verticalmente ao centro. */
+    justify-content: space-between; /* Distribui o espaço entre os itens, colocando o logo à esquerda, links no meio e login à direita. */
+    position: fixed; /* Fixa a barra de navegação no topo da tela. */
+    top: 0; /* Alinha ao topo. */
+    left: 0; /* Alinha à esquerda. */
+    width: 100%; /* Ocupa 100% da largura da viewport. */
+    z-index: 1000; /* Define uma alta ordem de empilhamento para garantir que fique acima de outros elementos. */
+    padding: 0.7rem 4rem 0.7rem 2rem; /* Adiciona preenchimento interno: superior/inferior, direita, e esquerda. */
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil na parte inferior. */
+    background-color: #fff; /* Define a cor de fundo como branco. */
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
+    display: flex; /* Utiliza Flexbox para o contêiner da navegação. */
+    align-items: center; /* Alinha os itens verticalmente ao centro. */
+    justify-content: center; /* Centraliza os itens horizontalmente. */
+    background: transparent; /* Fundo transparente para a navegação em si. */
 }
 
 .logo {
-    margin-left: 10rem;
-    margin-right: 0;
+    margin-left: 10rem; /* Adiciona uma margem à esquerda para o logo. */
+    margin-right: 0; /* Remove a margem direita. */
 }
 
 .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    padding-top: 0.5rem;
-    background: transparent;
+    display: flex; /* Utiliza Flexbox para os links de navegação. */
+    align-items: center; /* Alinha os links verticalmente ao centro. */
+    gap: 1.5rem; /* Adiciona um espaçamento de 1.5rem entre os links. */
+    justify-content: center; /* Centraliza os links horizontalmente. */
+    list-style: none; /* Remove os marcadores de lista padrão. */
+    margin: 0; /* Remove margens padrão. */
+    padding: 0; /* Remove preenchimento padrão. */
+    padding-top: 0.5rem; /* Adiciona um pequeno preenchimento superior. */
+    background: transparent; /* Fundo transparente. */
 }
 
 .home, .spaces_and_events, .services, .contact {
-    position: relative;
-    display: inline-block;
-    color: black;
-    text-decoration: none;
-    font-size: 0.95rem;
-    padding: 0.5rem 1rem;
+    position: relative; /* Define a posição relativa para permitir o posicionamento do pseudo-elemento `::after`. */
+    display: inline-block; /* Permite que os links tenham largura e altura e que o `::after` funcione corretamente. */
+    color: black; /* Define a cor do texto como preto. */
+    text-decoration: none; /* Remove o sublinhado padrão dos links. */
+    font-size: 0.95rem; /* Define o tamanho da fonte. */
+    padding: 0.5rem 1rem; /* Adiciona preenchimento interno. */
 }
 
 .nav-login {
-    margin-left: 0;
-    margin-right: 13rem;
-    display: flex;
-    align-items: center;
-    height: 100%;
+    margin-left: 0; /* Remove a margem esquerda. */
+    margin-right: 13rem; /* Adiciona uma margem direita para a seção de login. */
+    display: flex; /* Utiliza Flexbox para organizar os itens de login/registro. */
+    align-items: center; /* Alinha os itens verticalmente ao centro. */
+    height: 100%; /* Ocupa 100% da altura do contêiner pai. */
 }
 
 .login_register {
-    color: #ed1c24;
-    border: 1.5px solid #ed1c24;
-    background: transparent;
-    border-radius: 8px;
-    padding: 0.5rem 1.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background 0.2s, color 0.2s;
+    color: #ed1c24; /* Define a cor do texto do botão como vermelho. */
+    border: 1.5px solid #ed1c24; /* Adiciona uma borda vermelha. */
+    background: transparent; /* Fundo transparente. */
+    border-radius: 8px; /* Adiciona arredondamento nas bordas. */
+    padding: 0.5rem 1.5rem; /* Adiciona preenchimento interno. */
+    font-size: 1rem; /* Define o tamanho da fonte. */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável. */
+    text-decoration: none; /* Remove o sublinhado. */
+    transition: background 0.2s, color 0.2s; /* Adiciona uma transição suave para as mudanças de fundo e cor. */
 }
 
 .home:hover, .spaces_and_events:hover, .services:hover, .contact:hover {
-    color: #ed1c24;
+    color: #ed1c24; /* Muda a cor do texto para vermelho ao passar o mouse. */
 }
 
 .login_register:hover {
-    background: #ed1c24;
-    color: #fff;
+    background: #ed1c24; /* Muda o fundo para vermelho ao passar o mouse. */
+    color: #fff; /* Muda a cor do texto para branco ao passar o mouse. */
 }
 
 .image-logo {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.5rem; /* Define a largura da imagem do logo. */
+    height: 2.5rem; /* Define a altura da imagem do logo. */
 }
 
 .home::after, .spaces_and_events::after, .services::after, .contact::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #ed1c24;
-    transition: width 0.3s;
-    margin: 0 auto;
+    content: ""; /* Cria um pseudo-elemento para a linha de hover. */
+    display: block; /* Garante que o pseudo-elemento seja um bloco para aplicar largura e altura. */
+    width: 0; /* Largura inicial da linha (invisível). */
+    height: 2px; /* Altura da linha. */
+    background: #ed1c24; /* Cor da linha (vermelho). */
+    transition: width 0.3s; /* Adiciona uma transição suave para a mudança de largura. */
+    margin: 0 auto; /* Centraliza a linha horizontalmente. */
 }
 
 .home:hover::after, .spaces_and_events:hover::after, .services:hover::after, .contact:hover::after {
-    width: 100%;
+    width: 100%; /* Expande a linha para 100% da largura do link ao passar o mouse. */
 }
 
 .welcome-title {
-    background-color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    font-size: 3rem;
-    font-weight: bold;
-    color: black;
-    margin-top: 4rem;
-    padding: 3.5rem;
+    background-color: #fff; /* Cor de fundo branca para o título de boas-vindas. */
+    font-family: 'Montserrat', sans-serif; /* Define a fonte. */
+    text-align: center; /* Centraliza o texto. */
+    font-size: 3rem; /* Tamanho da fonte grande. */
+    font-weight: bold; /* Texto em negrito. */
+    color: black; /* Cor do texto preta. */
+    margin-top: 4rem; /* Margem superior. */
+    padding: 3.5rem; /* Preenchimento interno. */
 }
 
 .welcome-title::after {
-    content: "";
-    display: block;
-    width: 40rem;
-    height: 0.3rem;
-    background: #ed1c24;
-    border-radius: 2px;
-    margin: 0.5rem auto;
+    content: ""; /* Cria um pseudo-elemento para a linha decorativa. */
+    display: block; /* Garante que seja um bloco. */
+    width: 40rem; /* Largura da linha. */
+    height: 0.3rem; /* Altura da linha. */
+    background: #ed1c24; /* Cor da linha vermelha. */
+    border-radius: 2px; /* Arredondamento nas bordas. */
+    margin: 0.5rem auto; /* Centraliza a linha abaixo do título. */
 }
 
 .hamburger {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 2.2rem;
-    z-index: 1101;
-    padding: 0.2rem;
+    display: none; /* Por padrão, o ícone do hambúrguer está oculto em telas maiores. */
+    background: none; /* Remove o fundo. */
+    border: none; /* Remove a borda. */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável. */
+    font-size: 2.2rem; /* Tamanho da fonte para o ícone. */
+    z-index: 1101; /* Alta ordem de empilhamento para ficar acima da nav. */
+    padding: 0.2rem; /* Adiciona um pequeno preenchimento. */
 }
 
 .hamburger span {
-    display: inline;
-    font-size: 2.2rem;
-    color: #ed1c24;
+    display: inline; /* Exibe o ícone de hambúrguer (normalmente ☰). */
+    font-size: 2.2rem; /* Tamanho da fonte. */
+    color: #ed1c24; /* Cor do ícone vermelha. */
 }
 
 .hamburger.open span {
-    display: none;
+    display: none; /* Oculta o ícone de hambúrguer quando a classe 'open' está presente. */
 }
 
 .hamburger.open::before {
-    content: "✖";
-    font-size: 2.2rem;
-    color: #ed1c24;
-    display: inline-block;
+    content: "✖"; /* Exibe um 'X' quando a classe 'open' está presente (para fechar o menu). */
+    font-size: 2.2rem; /* Tamanho da fonte. */
+    color: #ed1c24; /* Cor do 'X' vermelha. */
+    display: inline-block; /* Garante que seja exibido como um bloco em linha. */
 }
 
+---
+## Media Queries para Responsividade
 
+### Para telas menores que 990px (tablets e laptops menores)
+```css
 @media (max-width: 990px) {
     .div-nav {
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 0.5rem 0.7rem 0.5rem 0;
-        gap: 0.5rem;
+        flex-direction: row; /* Mantém os itens na mesma linha. */
+        justify-content: flex-start; /* Alinha os itens ao início (esquerda). */
+        align-items: center; /* Alinha os itens verticalmente ao centro. */
+        padding: 0.5rem 0.7rem 0.5rem 0; /* Ajusta o preenchimento da barra de navegação. */
+        gap: 0.5rem; /* Reduz o espaçamento entre os itens. */
     }
 
     .hamburger {
-        display: block;
-        margin-left: 0;
-        margin-right: 0.7rem;
-        order: 0;
+        display: block; /* Exibe o ícone do hambúrguer. */
+        margin-left: 0; /* Remove a margem esquerda. */
+        margin-right: 0.7rem; /* Adiciona uma pequena margem direita. */
+        order: 0; /* Define a ordem de exibição do hambúrguer (primeiro). */
     }
 
     .logo {
-        margin-left: 0.5rem;
-        margin-right: 0;
-        order: 1;
+        margin-left: 0.5rem; /* Ajusta a margem esquerda do logo. */
+        margin-right: 0; /* Remove a margem direita. */
+        order: 1; /* Define a ordem de exibição do logo (segundo). */
     }
 
-    .image-logo{
-        width: 2rem;
-        height: 2rem;
-        padding-top: 0.2rem;
+    .image-logo {
+        width: 2rem; /* Reduz a largura do logo. */
+        height: 2rem; /* Reduz a altura do logo. */
+        padding-top: 0.2rem; /* Adiciona um pequeno preenchimento superior. */
     }
 
     nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 75vw;
-        max-width: 320px;
-        height: 100vh;
-        background: #fff;
-        box-shadow: 2px 0 10px rgba(0,0,0,0.08);
-        transform: translateX(-100%);
-        transition: transform 0.3s;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding-top: 4.5rem;
-        z-index: 1100;
+        position: fixed; /* Fixa a navegação lateral. */
+        top: 0; /* Alinha ao topo. */
+        left: 0; /* Alinha à esquerda. */
+        width: 75vw; /* Ocupa 75% da largura da viewport. */
+        max-width: 320px; /* Define uma largura máxima para o menu lateral. */
+        height: 100vh; /* Ocupa 100% da altura da viewport. */
+        background: #fff; /* Fundo branco para o menu. */
+        box-shadow: 2px 0 10px rgba(0,0,0,0.08); /* Adiciona uma sombra na lateral. */
+        transform: translateX(-100%); /* Oculta o menu movendo-o para fora da tela à esquerda. */
+        transition: transform 0.3s; /* Adiciona uma transição suave para o movimento do menu. */
+        display: flex; /* Utiliza Flexbox para organizar os itens do menu. */
+        flex-direction: column; /* Organiza os itens verticalmente. */
+        align-items: flex-start; /* Alinha os itens ao início (esquerda). */
+        padding-top: 4.5rem; /* Adiciona preenchimento superior para acomodar a barra fixa. */
+        z-index: 1100; /* Garante que o menu fique acima da barra de navegação principal. */
     }
 
     nav.active {
-        transform: translateX(0);
+        transform: translateX(0); /* Move o menu para a tela quando a classe 'active' está presente. */
     }
 
     .nav-links {
-        flex-direction: column;
-        gap: 0.5rem;
-        width: 100%;
-        align-items: flex-start;
-        padding: 0 1rem;
+        flex-direction: column; /* Empilha os links verticalmente. */
+        gap: 0.5rem; /* Reduz o espaçamento entre os links. */
+        width: 100%; /* Os links ocupam 100% da largura do menu. */
+        align-items: flex-start; /* Alinha os links ao início (esquerda). */
+        padding: 0 1rem; /* Adiciona preenchimento lateral. */
     }
 
     .nav-links li, .nav-links a {
-        width: 100%;
-        text-align: left;
-        padding: 1rem 0.5rem;
-        font-size: 1.1rem;
-        border-radius: 0.3rem;
+        width: 100%; /* Garante que cada item de lista e link ocupe 100% da largura. */
+        text-align: left; /* Alinha o texto à esquerda. */
+        padding: 1rem 0.5rem; /* Ajusta o preenchimento dos links. */
+        font-size: 1.1rem; /* Aumenta o tamanho da fonte dos links. */
+        border-radius: 0.3rem; /* Adiciona arredondamento nas bordas. */
     }
 
     .home, .spaces_and_events, .services, .contacts {
-        padding: 0.5rem 0.5rem;
-        font-size: 1rem;
+        padding: 0.5rem 0.5rem; /* Ajusta o preenchimento para links individuais. */
+        font-size: 1rem; /* Ajusta o tamanho da fonte. */
     }
 
     .nav-login {
-        position: static;
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        text-align: right;
-        margin: 0.5rem 0 0.5rem 0;
-        order: 2;
+        position: static; /* Remove o posicionamento absoluto. */
+        width: 100%; /* Ocupa 100% da largura. */
+        display: flex; /* Utiliza Flexbox. */
+        justify-content: flex-end; /* Alinha os itens de login/registro ao final (direita). */
+        align-items: center; /* Alinha verticalmente ao centro. */
+        text-align: right; /* Alinha o texto à direita. */
+        margin: 0.5rem 0 0.5rem 0; /* Ajusta as margens. */
+        order: 2; /* Define a ordem de exibição (último). */
     }
 
     .login_register {
-        width: auto;
-        margin: 0 1rem 0 0;
-        display: inline-block;
+        width: auto; /* A largura é automática. */
+        margin: 0 1rem 0 0; /* Adiciona margem direita. */
+        display: inline-block; /* Exibe como um bloco em linha. */
     }
 
     .welcome-title {
-        font-size: 2rem;
-        padding: 1.2rem;
+        font-size: 2rem; /* Reduz o tamanho da fonte do título de boas-vindas. */
+        padding: 1.2rem; /* Reduz o preenchimento. */
     }
 
     .welcome-title::after {
-        width: 20rem;
+        width: 20rem; /* Reduz a largura da linha decorativa. */
     }
 }

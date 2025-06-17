@@ -1,194 +1,126 @@
 html, body {
-    height: 100%;
-    margin: 0;
-    margin-top: 2rem;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    height: 100%; /* Garante que o html e o body ocupem 100% da altura da viewport. */
+    margin: 0; /* Remove as margens padrão do body. */
+    margin-top: 2rem; /* Adiciona uma margem superior ao body. */
+    padding: 0; /* Remove o preenchimento padrão do body. */
+    display: flex; /* Usa Flexbox para o layout do body. */
+    flex-direction: column; /* Organiza os filhos do body em uma coluna. */
+    min-height: 100vh; /* Garante que o body tenha no mínimo 100% da altura da viewport. */
 }
 
 main {
-    flex: 1 0 auto;
+    flex: 1 0 auto; /* Permite que o elemento <main> cresça para ocupar o espaço disponível, mas não encolha abaixo do seu conteúdo. Essencial para rodapés "sticky". */
 }
+
 .forms-container {
-    display: flex;
-    width: 80vw;
-    margin: 2.5rem auto 0 auto;
-    min-height: 22rem;
+    display: flex; /* Usa Flexbox para organizar os formulários de login e registro lado a lado. */
+    width: 80vw; /* Define a largura do contêiner de formulários como 80% da largura da viewport. */
+    margin: 2.5rem auto 0 auto; /* Centraliza o contêiner horizontalmente e adiciona margens superior e inferior. */
+    min-height: 22rem; /* Define uma altura mínima para o contêiner. */
 }
 
 .login-container, .registar-container {
-    background: #fff;
-    padding: 2rem 1.5rem;
-    box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.07);
-    border-radius: 0.5rem;
-    width: 50%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 2rem;
+    background: #fff; /* Define o fundo como branco para ambos os contêineres. */
+    padding: 2rem 1.5rem; /* Adiciona preenchimento interno. */
+    box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.07); /* Adiciona uma sombra suave. */
+    border-radius: 0.5rem; /* Arredonda as bordas. */
+    width: 50%; /* Cada contêiner ocupa 50% da largura do seu pai (.forms-container). */
+    box-sizing: border-box; /* Inclui padding e border na largura total do elemento. */
+    display: flex; /* Usa Flexbox para organizar os elementos internos (título, formulário). */
+    flex-direction: column; /* Organiza os elementos internos em coluna. */
+    align-items: flex-start; /* Alinha os itens ao início (esquerda). */
+    margin-bottom: 2rem; /* Adiciona uma margem inferior. */
 }
 
 .login-container {
-    /* deixar a parte da direita da box tem o radios*/
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-right: 0.0625rem solid #eee;
+    border-top-right-radius: 0; /* Remove o arredondamento da borda superior direita. */
+    border-bottom-right-radius: 0; /* Remove o arredondamento da borda inferior direita. */
+    border-right: 0.0625rem solid #eee; /* Adiciona uma pequena borda direita para separação. */
 }
 
-#submit_login{
-    margin-top: 15.5rem;
+#submit_login {
+    margin-top: 15.5rem; /* Define uma margem superior específica para o botão de login, empurrando-o para baixo. */
 }
 
 .registar-container {
-    /* deixar a parte da esquerda da box tem o radios*/
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    align-items: flex-start;
+    border-top-left-radius: 0; /* Remove o arredondamento da borda superior esquerda. */
+    border-bottom-left-radius: 0; /* Remove o arredondamento da borda inferior esquerda. */
+    align-items: flex-start; /* Alinha os itens ao início (esquerda). */
 }
 
 h2 {
-    margin-top: 0;
-    margin-bottom: 1.125rem;
+    margin-top: 0; /* Remove a margem superior padrão do h2. */
+    margin-bottom: 1.125rem; /* Adiciona uma margem inferior para espaçar do formulário. */
 }
 
 form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    width: 100%; /* O formulário ocupa 100% da largura do seu contêiner pai. */
+    display: flex; /* Usa Flexbox para organizar os campos do formulário. */
+    flex-direction: column; /* Organiza os campos verticalmente. */
+    gap: 1rem; /* Adiciona um espaçamento de 1rem entre os campos. */
 }
 
 label {
-    margin: 0;
-    font-size: 1rem;
-    min-width: 8rem;
-    text-align: left;
+    margin: 0; /* Remove as margens padrão do label. */
+    font-size: 1rem; /* Define o tamanho da fonte. */
+    min-width: 8rem; /* Define uma largura mínima para o label. */
+    text-align: left; /* Alinha o texto do label à esquerda. */
 }
 
 input {
-    margin: 0;
-    padding: 0.375rem 0.5rem;
-    width: 100%;
-    border: 0.0625rem solid #ccc;
-    border-radius: 0.25rem;
-    box-sizing: border-box;
+    margin: 0; /* Remove as margens padrão do input. */
+    padding: 0.375rem 0.5rem; /* Adiciona preenchimento interno. */
+    width: 100%; /* O input ocupa 100% da largura do seu contêiner pai. */
+    border: 0.0625rem solid #ccc; /* Adiciona uma borda cinza clara. */
+    border-radius: 0.25rem; /* Arredonda as bordas. */
+    box-sizing: border-box; /* Inclui padding e border na largura total do elemento. */
 }
 
-.submit{    
-    margin-top: 0.625rem;
-    padding: 0.5rem 1.125rem;
-    border: none;
-    background: red;
-    color: #fff;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    align-self: center;
+.submit {    
+    margin-top: 0.625rem; /* Adiciona uma margem superior. */
+    padding: 0.5rem 1.125rem; /* Adiciona preenchimento interno. */
+    border: none; /* Remove a borda. */
+    background: red; /* Define o fundo como vermelho. */
+    color: #fff; /* Define a cor do texto como branco. */
+    border-radius: 0.25rem; /* Arredonda as bordas. */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável. */
+    align-self: center; /* Centraliza o botão dentro do seu contêiner flex. */
 }
 
 .submit:hover {
-    background: red;
+    background: red; /* Mantém o fundo vermelho ao passar o mouse. */
 }
-
-
 
 .required {
-    color: #d9534f;
-    font-size: 0.875rem;
+    color: #d9534f; /* Define a cor do texto para indicar campos obrigatórios (vermelho). */
+    font-size: 0.875rem; /* Define o tamanho da fonte. */
 }
 
+---
+## Media Queries para Responsividade
 
+### Para telas menores que 768px (a maioria dos dispositivos móveis)
+```css
 @media (max-width: 768px) {
 
-    .title-page{
-        margin-top: 2rem;
+    .title-page {
+        margin-top: 2rem; /* Ajusta a margem superior do título da página. */
     }
 
     .forms-container {
-        flex-direction: column;
-        width: 95vw;
+        flex-direction: column; /* Altera o layout para empilhar os formulários verticalmente. */
+        width: 95vw; /* Aumenta a largura do contêiner de formulários para 95% da largura da viewport. */
     }
 
     .login-container,
     .registar-container {
-        width: 100%;
-        border-radius: 0.5rem;
-        border-right: none;
-        margin-bottom: 1rem;
+        width: 100%; /* Cada formulário ocupa 100% da largura do seu contêiner pai. */
+        border-radius: 0.5rem; /* Aplica arredondamento total das bordas. */
+        border-right: none; /* Remove a borda direita da caixa de login. */
+        margin-bottom: 1rem; /* Adiciona uma margem inferior para separar os formulários. */
     }
 
     .registar-container {
-        margin-bottom: 0;
+        margin-bottom: 0; /* Remove a margem inferior do formulário de registro para evitar espaço extra. */
     }
-}
-
-/* PARTE JS */
-
-.user-info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.title-user{
-    margin-top: 2rem;
-}
-
-.cliente{
-    margin:1rem 0;
-    padding: 1rem;
-    background-color: #f0f0f0;
-    border-radius: 0.5rem;
-    
-}
-
-.servicos{
-    background:#f9f9f9; 
-    padding:1rem; 
-    border-radius:0.5rem;
-    /* margin-bottom: 25rem; */
-}
-
-.tabela-utilizadores {
-    border: 1px solid #ccc;
-    margin:1rem 1rem;
-    background-color: #f0f0f0;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    position: relative;
-    justify-items: center;
-    
-}
-
-.tabela-head{
-    background-color: #ffffff;
-    font-weight: bold;
-}
-
-.tabela-body {
-    background-color: #ffffff;
-}
-
-.eventos {
-    margin: 1rem 1rem;
-    padding: 1rem;
-    background-color: #f0f0f0;
-    border-radius: 0.5rem;
-}
-
-.link-eventos {
-    color: red;
-    text-decoration: none;
-}
-
-.link{
-    color: red;
-    text-decoration: none;
-}
-
-.link:active{
-    color: #d9534f;
 }

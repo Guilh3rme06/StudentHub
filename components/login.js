@@ -48,68 +48,103 @@ const users = [
 
 // LOGIN
 document.addEventListener('DOMContentLoaded', function() {
+    // Adiciona um listener para o evento 'DOMContentLoaded', garantindo que o script só execute após o HTML ser completamente carregado.
     const loginForm = document.getElementById('form-login');
+    // Obtém o elemento do formulário de login pelo seu ID.
     if (loginForm) {
+        // Verifica se o formulário de login existe.
 
         loginForm.addEventListener('submit', function(event) {
+            // Adiciona um listener para o evento 'submit' do formulário de login.
             event.preventDefault();
+            // Previne o comportamento padrão de submissão do formulário, que recarregaria a página.
             const username = document.getElementById('login-username').value.trim();
+            // Obtém o valor do campo de nome de usuário, removendo espaços em branco extras.
             const password = document.getElementById('login-password').value.trim();
+            // Obtém o valor do campo de senha, removendo espaços em branco extras.
 
             const user = users.find(user => user.nome.toLowerCase() === username.toLowerCase() && user.password === password);
+            // Procura na array 'users' por um usuário cujo nome e senha correspondam aos inseridos (ignorando maiúsculas/minúsculas para o nome).
             if (user) {
+                // Se um usuário for encontrado:
                 if (user.permissao === 1) {
+                    // Se o usuário tiver permissão de administrador (permissao: 1):
                     mostrarAdmin();
+                    // Chama a função para exibir a interface de administrador.
                 } else {
+                    // Se o usuário tiver permissão normal (permissao: 0):
                     mostrarUser(user);
+                    // Chama a função para exibir a interface de usuário comum, passando os dados do usuário.
                 }
             } else {
+                // Se nenhum usuário for encontrado com as credenciais fornecidas:
                 alert('Nome ou password incorretos!');
+                // Exibe um alerta de erro.
             }
         });
     }
 
-// REGISTO  
+// REGISTO 
     const registarForm = document.querySelector('.form-registar');
+    // Obtém o elemento do formulário de registro pela sua classe.
     if (registarForm) {
+        // Verifica se o formulário de registro existe.
         registarForm.addEventListener('submit', function(event) {
+            // Adiciona um listener para o evento 'submit' do formulário de registro.
             event.preventDefault();
+            // Previne o comportamento padrão de submissão do formulário.
             const nome = document.getElementById('username').value.trim();
+            // Obtém o nome do usuário do campo de registro.
             const nif = document.getElementById('nif').value.trim();
+            // Obtém o NIF do campo de registro.
             const email = document.getElementById('email').value.trim();
+            // Obtém o email do campo de registro.
             const password = document.getElementById('password').value.trim();
+            // Obtém a senha do campo de registro.
             const confirmPassword = document.getElementById('confirm_password').value.trim();
+            // Obtém a confirmação da senha do campo de registro.
 
             if (password !== confirmPassword) {
+                // Verifica se as senhas digitadas não coincidem.
                 alert("As passwords não coincidem!");
-                return;
+                // Exibe um alerta.
+                return; // Interrompe a execução da função.
             }
 
             const existe = users.some(user => user.nome.toLowerCase() === nome.toLowerCase() || user.email.toLowerCase() === email.toLowerCase());
+            // Verifica se já existe um usuário com o mesmo nome ou email (ignorando maiúsculas/minúsculas).
             if (existe) {
+                // Se um usuário existente for encontrado:
                 alert("Já existe um utilizador com esse nome ou email!");
-                return;
+                // Exibe um alerta.
+                return; // Interrompe a execução da função.
             }
 
             users.push({
-                nome,
-                nif,
-                email,
-                password,
-                permissao: 0,
-                numero: String(Math.floor(Math.random() * 9000000000) + 1000000000)
+                // Adiciona um novo objeto de usuário à array 'users'.
+                nome, // Nome do usuário.
+                nif,  // NIF do usuário.
+                email, // Email do usuário.
+                password, // Senha do usuário.
+                permissao: 0, // Define a permissão como 0 (usuário comum).
+                numero: String(Math.floor(Math.random() * 9000000000) + 1000000000) // Gera um número de telefone aleatório.
             });
 
             alert("Registo efetuado com sucesso! Pode agora fazer login.");
+            // Exibe um alerta de sucesso.
             registarForm.reset();
+            // Limpa os campos do formulário de registro.
         });
     }
 });
 
 // Parte Admin
 function mostrarAdmin() {
+    // Função para exibir a interface de administrador.
     const main = document.querySelector('main');
+    // Obtém o elemento <main> da página.
     if (main) {
+        // Se o elemento <main> existir:
         main.innerHTML = `
             <h2 class="title-page" >Utilizadores registados</h2>
             <table class="tabela-utilizadores" border="1">
@@ -133,13 +168,18 @@ function mostrarAdmin() {
                 </tbody>
             </table>
         `;
+        // Insere o HTML da tabela de usuários registrados no elemento <main>.
+        // Ele itera sobre a array 'users' para criar uma linha de tabela para cada usuário.
     }
 }
 
 // Parte Users
 function mostrarUser(user) {
+    // Função para exibir a interface de usuário comum.
     const main = document.querySelector('main');
+    // Obtém o elemento <main> da página.
     if (main) {
+        // Se o elemento <main> existir:
         main.innerHTML = `
             <div class="user-info">
             <h2 class="title-user">Bem-vindo, ${user.nome}!</h2>
@@ -155,12 +195,14 @@ function mostrarUser(user) {
                         <li class="link-eventos"><a class="link" href="espacoeeventos.html#Demonstracao">Demonstração do StudentHub</a></li>
                         <li class="link-eventos"><a class="link" href="espacoeeventos.html#Feira">Feira de Estágios e Demonstrações do StudentHub</a></li>
                         <li class="link-eventos"><a class="link" href="espacoeeventos.html#biblioteca-digital">Inauguração da Biblioteca Digital</a></li>
-                        <li class="link-eventos"><a class="link" href="espacoeeventos.html#Formacao">Sessão de Formação Especial para Novos Alunos</a></li>                
-                        <li class="link-eventos"><a class="link" href="espacoeeventos.html#Espaco">Tour pelos Novos Espaços de Estudos</a></li>                
-                        <li class="link-eventos"><a class="link" href="espacoeeventos.html#Boas-Vindas">Boas-Vindas para Estudantes</a></li>                
+                        <li class="link-eventos"><a class="link" href="espacoeeventos.html#Formacao">Sessão de Formação Especial para Novos Alunos</a></li>         
+                        <li class="link-eventos"><a class="link" href="espacoeeventos.html#Espaco">Tour pelos Novos Espaços de Estudos</a></li>         
+                        <li class="link-eventos"><a class="link" href="espacoeeventos.html#Boas-Vindas">Boas-Vindas para Estudantes</a></li>         
                     </ul>
                 </div>
             </div>
         `;
+        // Insere o HTML de boas-vindas do usuário e a lista de eventos no elemento <main>.
+        // Ele exibe as informações do usuário logado e links para páginas de eventos.
     }
 }

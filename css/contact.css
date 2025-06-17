@@ -1,160 +1,158 @@
 .contacts {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 3rem;
-    max-width: 1100px;
-    margin: 3rem auto 0 auto;
-    align-items: center; /* Alinha verticalmente ao centro */
-    padding-bottom: 2rem;
+    display: grid; /* Usa CSS Grid para organizar os itens em colunas. */
+    grid-template-columns: 1.2fr 1fr; /* Define duas colunas, a primeira sendo ligeiramente maior que a segunda. */
+    gap: 3rem; /* Espaçamento entre as colunas e linhas do grid. */
+    max-width: 1100px; /* Define uma largura máxima para o contêiner de contatos. */
+    margin: 3rem auto 0 auto; /* Centraliza o contêiner horizontalmente e define margens superior e inferior. */
+    align-items: center; /* Alinha os itens do grid verticalmente ao centro. */
+    padding-bottom: 2rem; /* Adiciona preenchimento na parte inferior. */
 }
 
-.contactos-title{
-    background-color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    font-size: 3rem;
-    font-weight: bold;
-    color: black;
-    margin-top: 4rem;
-    padding: 3.5rem;
-
+.contactos-title {
+    background-color: #fff; /* Cor de fundo branca para o título principal da seção de contatos. */
+    font-family: 'Montserrat', sans-serif; /* Define a fonte. */
+    text-align: center; /* Centraliza o texto. */
+    font-size: 3rem; /* Tamanho da fonte grande. */
+    font-weight: bold; /* Texto em negrito. */
+    color: black; /* Cor do texto preta. */
+    margin-top: 4rem; /* Margem superior. */
+    padding: 3.5rem; /* Preenchimento interno. */
 }
 
 .contactos-title::after {
-    content: "";
-    display: block;
-    width: 18rem;
-    height: 0.3rem;
-    background: #ed1c24;
-    border-radius: 2px;
-    margin: 0.5rem auto;
+    content: ""; /* Cria um pseudo-elemento para a linha decorativa. */
+    display: block; /* Torna o pseudo-elemento um bloco para que possa ter largura e altura. */
+    width: 18rem; /* Largura da linha. */
+    height: 0.3rem; /* Altura da linha. */
+    background: #ed1c24; /* Cor da linha (vermelho específico). */
+    border-radius: 2px; /* Pequeno arredondamento nas bordas da linha. */
+    margin: 0.5rem auto; /* Centraliza a linha abaixo do título. */
 }
 
 .contacts-left {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    display: flex; /* Usa flexbox para organizar os elementos internos em coluna. */
+    flex-direction: column; /* Organiza os itens verticalmente. */
+    gap: 2rem; /* Espaçamento entre os itens internos. */
 }
 
 .contact-map {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+    display: flex; /* Usa flexbox para centralizar o mapa. */
+    align-items: center; /* Alinha itens verticalmente ao centro. */
+    justify-content: center; /* Alinha itens horizontalmente ao centro. */
+    height: 100%; /* Ocupa 100% da altura disponível no seu contêiner pai. */
 }
 
-.contact-title{
-    background-color: #ffffff;
-    padding: 2rem;
-    color: red;
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    position: relative;
+.contact-title {
+    background-color: #ffffff; /* Cor de fundo branca para o título do formulário ou seção específica. */
+    padding: 2rem; /* Preenchimento interno. */
+    color: red; /* Cor do texto vermelha. */
+    font-size: 2.5rem; /* Tamanho da fonte. */
+    font-weight: bold; /* Texto em negrito. */
+    text-align: center; /* Centraliza o texto. */
+    position: relative; /* Define a posição relativa para posicionar o pseudo-elemento. */
 }
 
 .contact-title::after {
-    content: "";
-    display: block;
-    width: 15rem;
-    height: 0.3rem;
-    background: red;
-    border-radius: 2px;
-    margin: 0.5rem auto 0 auto;
+    content: ""; /* Cria um pseudo-elemento para a linha decorativa. */
+    display: block; /* Torna o pseudo-elemento um bloco. */
+    width: 15rem; /* Largura da linha. */
+    height: 0.3rem; /* Altura da linha. */
+    background: red; /* Cor da linha vermelha. */
+    border-radius: 2px; /* Pequeno arredondamento nas bordas. */
+    margin: 0.5rem auto 0 auto; /* Centraliza a linha abaixo do título. */
 }
 
-
 .form-group {
-    margin-bottom: 1.2rem;
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 1.2rem; /* Margem inferior para espaçar grupos de formulário. */
+    display: flex; /* Usa flexbox para organizar label e input/textarea. */
+    flex-direction: column; /* Organiza label e input/textarea verticalmente. */
 }
 
 .form-group label {
-    margin-bottom: 0.4rem;
-    color: red;
-    font-weight: 600;
-    font-size: 1rem;
+    margin-bottom: 0.4rem; /* Margem inferior para espaçar o label do input. */
+    color: red; /* Cor do texto do label. */
+    font-weight: 600; /* Peso da fonte seminegrito. */
+    font-size: 1rem; /* Tamanho da fonte do label. */
 }
 
 .horarios {
-    background: #f6faff;
-    border-left: 4px solid red;
-    border-radius: 0.7rem;
-    box-shadow: 0 2px 8px rgba(0,120,212,0.05);
-    margin-bottom: 2rem;
-    padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+    background: #f6faff; /* Cor de fundo clara para a caixa de horários. */
+    border-left: 4px solid red; /* Borda esquerda vermelha para destaque. */
+    border-radius: 0.7rem; /* Arredondamento das bordas. */
+    box-shadow: 0 2px 8px rgba(0,120,212,0.05); /* Sombra suave para profundidade. */
+    margin-bottom: 2rem; /* Margem inferior. */
+    padding: 1.2rem 1.2rem 1.2rem 1.2rem; /* Preenchimento interno. */
 }
 
 .horarios h3 {
-    margin-top: 0;
-    color: red;
-    font-size: 1.15rem;
-    margin-bottom: 0.7rem;
+    margin-top: 0; /* Remove margem superior padrão do h3. */
+    color: red; /* Cor do título dos horários. */
+    font-size: 1.15rem; /* Tamanho da fonte do título. */
+    margin-bottom: 0.7rem; /* Margem inferior para espaçar do conteúdo. */
 }
 
 .horarios ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style: none; /* Remove os marcadores de lista padrão. */
+    padding: 0; /* Remove o preenchimento padrão da lista. */
+    margin: 0; /* Remove a margem padrão da lista. */
 }
 
 .horarios li {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
+    margin-bottom: 0.5rem; /* Margem inferior para espaçar itens da lista. */
+    font-size: 1rem; /* Tamanho da fonte dos itens da lista. */
 }
 
 .form-contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 60vh;
-    margin-bottom: 10rem;
+    display: flex; /* Usa flexbox para centralizar o formulário de contato. */
+    justify-content: center; /* Centraliza horizontalmente. */
+    align-items: center; /* Centraliza verticalmente. */
+    min-height: 60vh; /* Define uma altura mínima de 60% da altura da viewport. */
+    margin-bottom: 10rem; /* Margem inferior para espaçamento. */
 }
 
 .contact-form {
-    width: 100%;
-    max-width: 30rem;
-    background: #fff;
-    padding: 2rem;
-    box-sizing: border-box;
+    width: 100%; /* Ocupa toda a largura disponível. */
+    max-width: 30rem; /* Define uma largura máxima para o formulário. */
+    background: #fff; /* Cor de fundo branca. */
+    padding: 2rem; /* Preenchimento interno. */
+    box-sizing: border-box; /* Inclui padding e border na largura/altura total do elemento. */
 }
 
 .contact-form h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
+    text-align: center; /* Centraliza o título do formulário. */
+    margin-bottom: 1.5rem; /* Margem inferior do título. */
 }
 
 .contact-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
+    display: flex; /* Usa flexbox para organizar os campos do formulário. */
+    flex-direction: column; /* Organiza os campos verticalmente. */
+    gap: 0.8rem; /* Espaçamento entre os campos. */
 }
 
 .contact-form label {
-    font-weight: bold;
+    font-weight: bold; /* Texto em negrito para os labels dos campos. */
 }
 
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border-radius: 0.5rem;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    width: 100%; /* Ocupa 100% da largura do seu contêiner pai. */
+    padding: 0.5rem; /* Preenchimento interno dos campos. */
+    font-size: 1rem; /* Tamanho da fonte dos campos. */
+    border-radius: 0.5rem; /* Arredondamento das bordas dos campos. */
+    border: 1px solid #ccc; /* Borda cinza clara. */
+    box-sizing: border-box; /* Inclui padding e border na largura/altura total. */
 }
 
 .submit {
-    color: #fff;
-    background-color: red;
-    border: none;
-    padding: 0.8rem 2rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    font-size: 1.1rem;
-    font-weight: bold;
-    align-self: center;
-    margin-top: 1rem;
+    color: #fff; /* Cor do texto do botão de envio. */
+    background-color: red; /* Cor de fundo vermelha. */
+    border: none; /* Remove a borda. */
+    padding: 0.8rem 2rem; /* Preenchimento interno do botão. */
+    border-radius: 0.5rem; /* Arredondamento das bordas do botão. */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável. */
+    font-size: 1.1rem; /* Tamanho da fonte do botão. */
+    font-weight: bold; /* Texto em negrito. */
+    align-self: center; /* Centraliza o botão dentro do formulário flex. */
+    margin-top: 1rem; /* Margem superior. */
 }

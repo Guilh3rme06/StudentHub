@@ -1,145 +1,163 @@
 .main-footer {
-    background: #fff;
-    color: #222;
-    padding: 3rem 0 0.75rem 0;
-    font-family: 'Montserrat', Arial, sans-serif;
-    box-shadow: 1px 10px 22px rgba(0, 0, 0, 0.2);
-    position: relative;
-
-
+    background: #fff; /* Define o fundo do rodapé como branco. */
+    color: #222; /* Define a cor do texto padrão do rodapé como um cinza escuro. */
+    padding: 3rem 0 0.75rem 0; /* Adiciona preenchimento superior, inferior e sem preenchimento lateral. */
+    font-family: 'Montserrat', Arial, sans-serif; /* Define a família da fonte para o rodapé. */
+    box-shadow: 1px 10px 22px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para dar profundidade. */
+    position: relative; /* Define a posição como relativa para que elementos filhos com posição absoluta possam ser posicionados dentro dele. */
 }
 
 .footer-columns.simplified {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 4rem;
-    max-width: 75rem;
-    width: 90%;    
-    margin: 0 auto 0.2rem auto; 
+    display: flex; /* Utiliza Flexbox para organizar as colunas do rodapé. */
+    justify-content: space-between; /* Distribui o espaço igualmente entre as colunas. */
+    align-items: flex-start; /* Alinha as colunas ao topo. */
+    gap: 4rem; /* Adiciona um espaçamento de 4rem entre as colunas. */
+    max-width: 75rem; /* Define uma largura máxima para as colunas do rodapé. */
+    width: 90%; /* A largura das colunas será de 90% do contêiner pai. */
+    margin: 0 auto 0.2rem auto; /* Centraliza as colunas horizontalmente e adiciona uma pequena margem inferior. */
 }
 
 .footer-col {
-    flex: 1 1 0;
-    min-width: 15.625rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex: 1 1 0; /* Permite que as colunas cresçam e encolham, com uma base de 0. */
+    min-width: 15.625rem; /* Define uma largura mínima para cada coluna. */
+    display: flex; /* Usa Flexbox para os itens dentro de cada coluna. */
+    flex-direction: column; /* Organiza os itens da coluna verticalmente. */
+    align-items: flex-start; /* Alinha os itens da coluna ao início (esquerda). */
 }
 
 .footer-col.contact-col {
-    align-items: flex-end; 
+    align-items: flex-end; /* Alinha os itens da coluna de contato ao final (direita). */
 }
 
 .social-icons {
-    justify-content: flex-start;
-    margin-bottom: 0.2rem;
+    justify-content: flex-start; /* Alinha os ícones sociais ao início (esquerda). */
+    margin-bottom: 0.2rem; /* Adiciona uma pequena margem inferior. */
 }
 
 .footer-col.contact-col .social-icons {
-    justify-content: flex-end;
+    justify-content: flex-end; /* Alinha os ícones sociais na coluna de contato ao final (direita). */
 }
 
 .footer-col h4 {
-    color: #222;
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    margin-top: 0;
-    position: relative;
+    color: #222; /* Define a cor do título da coluna como cinza escuro. */
+    font-size: 1.3rem; /* Define o tamanho da fonte do título. */
+    font-weight: 700; /* Define o peso da fonte como negrito. */
+    margin-bottom: 0.5rem; /* Adiciona uma margem inferior. */
+    margin-top: 0; /* Remove a margem superior padrão. */
+    position: relative; /* Define a posição como relativa para o pseudo-elemento `::after`. */
 }
 
 .footer-col h4::after {
-    content: "";
-    display: block;
-    width: 90%;
-    height: 0.1875rem;
-    background: #ed1c24;
-    margin: 0.25rem auto 1rem auto;
-    border-radius: 0.125rem;
+    content: ""; /* Cria um pseudo-elemento para a linha decorativa abaixo do título. */
+    display: block; /* Garante que seja um bloco para aplicar largura e altura. */
+    width: 90%; /* Define a largura da linha como 90% do seu contêiner pai. */
+    height: 0.1875rem; /* Define a altura da linha. */
+    background: #ed1c24; /* Define a cor da linha como vermelho. */
+    margin: 0.25rem auto 1rem auto; /* Centraliza a linha horizontalmente e define margens. */
+    border-radius: 0.125rem; /* Adiciona um pequeno arredondamento nas bordas da linha. */
 }
 
 .social-icons {
-    display: flex;
-    gap: 3rem;
-    justify-content: center;
-    margin-bottom: 1.5rem;
+    display: flex; /* Utiliza Flexbox para organizar os ícones sociais. */
+    gap: 3rem; /* Adiciona um espaçamento de 3rem entre os ícones. */
+    justify-content: center; /* Centraliza os ícones horizontalmente. */
+    margin-bottom: 1.5rem; /* Adiciona uma margem inferior. */
 }
 
 .social-icons img.social-images {
-    width: 1.8rem;
-    height: 1.8rem;
-    object-fit: contain;
-    background: transparent;
-    padding: 0;
-    box-shadow: none;
-    transition: transform 0.3s, box-shadow 0.3s;
-    filter: none;
+    width: 1.8rem; /* Define a largura dos ícones sociais. */
+    height: 1.8rem; /* Define a altura dos ícones sociais. */
+    object-fit: contain; /* A imagem é dimensionada para caber no contêiner, mantendo sua proporção. */
+    background: transparent; /* Remove qualquer cor de fundo. */
+    padding: 0; /* Remove preenchimento. */
+    box-shadow: none; /* Remove qualquer sombra. */
+    transition: transform 0.3s, box-shadow 0.3s; /* Adiciona transições suaves para efeitos de hover. */
+    filter: none; /* Remove qualquer filtro padrão. */
 }
 
 .social-icons img.social-images:hover {
-    transform: scale(1.15);
-    /* Link do filter: https://codepen.io/sosuke/pen/Pjoqqp */
+    transform: scale(1.15); /* Aumenta o tamanho do ícone ao passar o mouse. */
+    /* Aplica um filtro de cor (vermelho) ao passar o mouse. Link de referência: https://codepen.io/sosuke/pen/Pjoqqp */
     filter: invert(22%) sepia(56%) saturate(6688%) hue-rotate(339deg) brightness(91%) contrast(104%);
 } 
 
 .contact-col a {
-    color: #222;
-    text-decoration: underline;
-    transition: color 0.3s;
+    color: #222; /* Define a cor dos links na coluna de contato como cinza escuro. */
+    text-decoration: underline; /* Adiciona um sublinhado aos links. */
+    transition: color 0.3s; /* Adiciona uma transição suave para a mudança de cor. */
 }
 
 .contact-col a:hover {
-    color: #ed1c24;
+    color: #ed1c24; /* Muda a cor dos links para vermelho ao passar o mouse. */
 }
 
 .footer-col p {
-    margin: 0.3rem 0;
-    font-size: 1.1rem;
-    text-align: center;
+    margin: 0.3rem 0; /* Adiciona uma pequena margem vertical aos parágrafos. */
+    font-size: 1.1rem; /* Define o tamanho da fonte dos parágrafos. */
+    text-align: center; /* Centraliza o texto dos parágrafos. */
 }
 
 .footer-bottom {
-    text-align: center;
-    color: #ccc;
-    font-size: 1rem;
-    margin-top: 0.5rem;
+    text-align: center; /* Centraliza o texto da parte inferior do rodapé. */
+    color: #ccc; /* Define a cor do texto como cinza claro. */
+    font-size: 1rem; /* Define o tamanho da fonte. */
+    margin-top: 0.5rem; /* Adiciona uma margem superior. */
 }
 
+/* --- Media Queries para Responsividade --- */
+
+/* Para telas menores que 990px (tablets e laptops menores) */
 @media (max-width: 990px) {
     .footer-columns.simplified {
-        flex-direction: column;
-        gap: 2rem;
-        align-items: stretch;
-        max-width: 90%;
-        padding: 0 1rem;
+        flex-direction: column; /* Altera o layout das colunas para empilhá-las verticalmente. */
+        gap: 2rem; /* Reduz o espaçamento entre as colunas empilhadas. */
+        align-items: stretch; /* Estica as colunas para preencher a largura disponível. */
+        max-width: 90%; /* Aumenta a largura máxima para 90%. */
+        padding: 0 1rem; /* Adiciona preenchimento lateral. */
     }
 
     .footer-col,
     .footer-col.contact-col {
-        align-items: flex-start;
-        min-width: 0;
-        width: 90%;
+        align-items: flex-start; /* Alinha os itens de todas as colunas ao início (esquerda). */
+        min-width: 0; /* Remove a largura mínima para melhor adaptação em telas menores. */
+        width: 90%; /* Define a largura das colunas como 90%. */
     }
 
     .footer-col h4 {
-        text-align: left;
+        text-align: left; /* Alinha o texto dos títulos das colunas à esquerda. */
     }
 
     .footer-col p {
-        text-align: left;
+        text-align: left; /* Alinha o texto dos parágrafos das colunas à esquerda. */
     }
 
     .social-icons {
-        justify-content: flex-start;
-        gap: 1.5rem;
+        justify-content: flex-start; /* Alinha os ícones sociais à esquerda. */
+        gap: 1.5rem; /* Reduz o espaçamento entre os ícones sociais. */
     }
 }
 
-/* Login */
-.footer-col contact-col2 {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
+/* --- Estilos para a coluna de Login (comentado no código original, mas definido aqui) --- */
+/* Estes estilos parecem estar incompletos ou mal aplicados no código original (`.footer-col contact-col2`).
+   Assumindo que `contact-col2` deveria ser uma classe e não um seletor composto sem separador.
+   Se a intenção é que um elemento com a classe `contact-col2` se comporte como um item de rodapé,
+   e tenha um posicionamento específico, ele precisaria ser um filho direto de um contêiner
+   que permita posicionamento absoluto para que `bottom`, `right`, `left` funcionem como esperado.
+   No contexto de `.footer-columns.simplified` sendo um flex container, adicionar um elemento
+   com `position: absolute` pode tirá-lo do fluxo do layout flex.
+   Se a intenção é que seja um elemento à parte no rodapé, sua estrutura HTML e o contexto CSS
+   precisam ser revistos. */
+/* .footer-col contact-col2 { /* Isto é um seletor inválido se 'contact-col2' é uma classe */
+/* Para aplicar os estilos, o seletor deveria ser `.footer-col.contact-col2` se fosse uma combinação de classes,
+   ou `.contact-col2` se fosse uma classe sozinha. */
+/* No exemplo, se estivesse dentro do .main-footer e com display flex, ele seria absoluto
+   em relação ao .main-footer, mas não faria parte do fluxo normal do flexbox `footer-columns.simplified`. */
+/*
+.footer-col.contact-col2 { /* Exemplo de correção do seletor se fosse uma classe combinada */
+    position: absolute; /* Posiciona o elemento de forma absoluta. */
+    bottom: 0; /* Alinha à parte inferior do elemento pai posicionado. */
+    right: 0; /* Alinha à direita do elemento pai posicionado. */
+    left: 0; /* Estica o elemento por toda a largura. */
+    /* Isso fará com que o elemento ocupe toda a largura inferior do rodapé, potencialmente sobrepondo o footer-bottom. */
 }
+*/
