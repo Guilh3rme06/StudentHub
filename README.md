@@ -4,11 +4,11 @@ StudentHub é uma plataforma desenvolvida para facilitar a vida acadêmica de es
 
 ## 🚀 Funcionalidades
 
-- Organização de tarefas e cronogramas acadêmicos
-- Painel centralizado para avisos e recados
-- Integração de recursos educacionais (materiais, links, etc.)
-- Interface responsiva e intuitiva
-
+- Organização de Eventos
+- Notícias acadêmicas
+- Serviços e Perguntas Frequêsntes
+- Contactos
+  
 ## 🛠️ Tecnologias Utilizadas
 
 - **HTML**: Estrutura da interface e páginas
@@ -105,10 +105,11 @@ bash
    
 2. Abra o arquivo `index.html` no seu navegador.
 
-## 🙌 Contribuição
+##
+Em caso de dúvidas sinta-se a vontade para entrar em contacto connosco atraves do nosso gmail: 
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
+Guilherme Rodrigues- 2006guiirodrigues@gmail.com
 
-## 📄 Licença
+Gustavo Rodrigues- gurodriguesalves12@gmail.com
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes. 
+Pedro Place- pedro.place11@gmail.com
