@@ -100,8 +100,9 @@ Projeto
 
 1. Clone este repositório:
    
-bash
-   git clone https://github.com/Guilh3rme06/StudentHub.git
+```bash
+git clone https://github.com/Guilh3rme06/StudentHub.git
+```
    
 2. Abra o arquivo `index.html` no seu navegador.
 
